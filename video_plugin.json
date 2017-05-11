@@ -1,0 +1,2246 @@
+{
+    "items": [
+        {
+            "download_link": "https://offshoregit.com/xbmchub/xbmc-hub-repo/raw/master/repository.xbmchub/repository.xbmchub-1.0.6.zip", 
+            "kind": "Playlists", 
+            "plugin_name": "Phoenix", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.video.phstreams/", 
+            "released": "2017-05-09", 
+            "summary": "Phoenix", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/playlists/", 
+            "version": "3.3.1"
+        }, 
+        {
+            "download_link": "https://offshoregit.com/xbmchub/xbmc-hub-repo/raw/master/repository.xbmchub/repository.xbmchub-1.0.6.zip", 
+            "kind": "Playlists", 
+            "plugin_name": "One242415", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.video.one242415/", 
+            "released": "2017-05-11", 
+            "summary": "One242415", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/playlists/", 
+            "version": "1.0.6"
+        }, 
+        {
+            "download_link": "https://offshoregit.com/Nemzzy668/repository.streamarmy/zips/repository.StreamArmy/repository.StreamArmy-3.1.zip", 
+            "kind": "Playlists", 
+            "plugin_name": "STREAM ARMY", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.video.streamarmy/", 
+            "released": "2017-05-10", 
+            "summary": "The Home Of Stream Army Add-on  Stream Army Addon Fully Loaded With Great Playlists", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/playlists/", 
+            "version": "3.3.3"
+        }, 
+        {
+            "download_link": "https://offshoregit.com/metalkettle/zips/repository.metalkettle/repository.metalkettle-1.7.3.zip", 
+            "kind": "Playlists", 
+            "plugin_name": "UK Turk Playlists", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.video.ukturk/", 
+            "released": "2017-05-09", 
+            "summary": "Free Playlists courtesy of @uk_turk", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/playlists/", 
+            "version": "3.0.31"
+        }, 
+        {
+            "download_link": "https://offshoregit.com/xbmchub/xbmc-hub-repo/raw/master/repository.xbmchub/repository.xbmchub-1.0.6.zip", 
+            "kind": "Playlists", 
+            "plugin_name": "Navi-X", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/script.navi-x/", 
+            "released": "2017-05-09", 
+            "summary": "Media Browser Addon for Kodi", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/playlists/", 
+            "version": "4.0.1"
+        }, 
+        {
+            "download_link": "https://offshoregit.com/pulsarunofficial/Unofficial-Quasar-Repo/repository.unofficialquasar/repository.unofficialquasar-1.0.4.zip", 
+            "kind": "Programs", 
+            "plugin_name": "1337x MC's Magnetic Parser", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/script.magnetic.1337x-mc/", 
+            "released": "2017-05-09", 
+            "summary": "1337x MC's Magnetic Parser", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/programs/", 
+            "version": "1.0.0"
+        }, 
+        {
+            "download_link": "https://offshoregit.com/tknorris/tknorris-release-repo/raw/master/zips/repository.tknorris.release/repository.tknorris.release-1.0.2.zip", 
+            "kind": "Programs", 
+            "plugin_name": "1Channel Themepak", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/script.1channel.themepak/", 
+            "released": "2017-05-09", 
+            "summary": "Themes for the 1Channel/PrimeWire Addon", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/programs/", 
+            "version": "0.0.6"
+        }, 
+        {
+            "download_link": "https://offshoregit.com/pulsarunofficial/Unofficial-Quasar-Repo/repository.unofficialquasar/repository.unofficialquasar-1.0.4.zip", 
+            "kind": "Programs", 
+            "plugin_name": "AlphaReign MC's Magnetic Parser", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/script.magnetic.alphareign-mc/", 
+            "released": "2017-05-09", 
+            "summary": "AlphaReign  MC's Magnetic Parser", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/programs/", 
+            "version": "1.0.0"
+        }, 
+        {
+            "download_link": "https://offshoregit.com/pulsarunofficial/Unofficial-Quasar-Repo/repository.unofficialquasar/repository.unofficialquasar-1.0.4.zip", 
+            "kind": "Programs", 
+            "plugin_name": "Bitsnoop MC's Magnetic Parser", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/script.magnetic.bitsnoop-mc/", 
+            "released": "2017-05-09", 
+            "summary": "Bitsnoop MC's Magnetic Parser", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/programs/", 
+            "version": "1.0.0"
+        }, 
+        {
+            "download_link": "https://offshoregit.com/pulsarunofficial/Unofficial-Quasar-Repo/repository.unofficialquasar/repository.unofficialquasar-1.0.4.zip", 
+            "kind": "Programs", 
+            "plugin_name": "BTjunkie MC's Magnetic Parser", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/script.magnetic.btjunkie-mc/", 
+            "released": "2017-05-09", 
+            "summary": "BTjunkie MC's Magnetic Parser", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/programs/", 
+            "version": "1.0.0"
+        }, 
+        {
+            "download_link": "https://offshoregit.com/pulsarunofficial/Unofficial-Quasar-Repo/repository.unofficialquasar/repository.unofficialquasar-1.0.4.zip", 
+            "kind": "Programs", 
+            "plugin_name": "Btstorrent MC's Magnetic Parser", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/script.magnetic.btstorrent-mc/", 
+            "released": "2017-05-09", 
+            "summary": "Btstorrent MC's Magnetic Parser", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/programs/", 
+            "version": "1.0.0"
+        }, 
+        {
+            "download_link": "http://offshoregit.com/podgod/repo/zips/repository.podgod/repository.podgod-1.7.zip", 
+            "kind": "Programs", 
+            "plugin_name": "cCloud TV", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.video.ccloudtv/", 
+            "released": "2017-05-09", 
+            "summary": "All the best from cCloud TV", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/programs/", 
+            "version": "1.5.3"
+        }, 
+        {
+            "download_link": "https://offshoregit.com/pulsarunofficial/Unofficial-Quasar-Repo/repository.unofficialquasar/repository.unofficialquasar-1.0.4.zip", 
+            "kind": "Programs", 
+            "plugin_name": "Cpasbien MC's Magnetic Parser", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/script.magnetic.cpasbien-mc/", 
+            "released": "2017-05-09", 
+            "summary": "Cpasbien MC's Magnetic Parser", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/programs/", 
+            "version": "1.0.0"
+        }, 
+        {
+            "download_link": "https://github.com/elmerohueso/xbmc.repo.elmerohueso/raw/master/download/xbmc.repo.elmerohueso/xbmc.repo.elmerohueso-1.0.zip", 
+            "kind": "Programs", 
+            "plugin_name": "Crackle", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/script.program.FTVcrackle/", 
+            "released": "2017-05-09", 
+            "summary": "Crackle shortcut for Android", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/programs/", 
+            "version": "1.0"
+        }, 
+        {
+            "download_link": "https://offshoregit.com/pulsarunofficial/Unofficial-Quasar-Repo/repository.unofficialquasar/repository.unofficialquasar-1.0.4.zip", 
+            "kind": "Programs", 
+            "plugin_name": "Divxatope MC's Magnetic Parser", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/script.magnetic.divxatope-mc/", 
+            "released": "2017-05-09", 
+            "summary": "Divxatope MC's Magnetic Parser", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/programs/", 
+            "version": "1.0.0"
+        }, 
+        {
+            "download_link": "https://offshoregit.com/xbmchub/xbmc-hub-repo/raw/master/repository.xbmchub/repository.xbmchub-1.0.6.zip", 
+            "kind": "Programs", 
+            "plugin_name": "Easy Advanced Settings", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.program.advancedsettings/", 
+            "released": "2017-05-09", 
+            "summary": "Create, view, edit and delete your advancedsettings.xml file in a user-friendly gui", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/programs/", 
+            "version": "0.8.8"
+        }, 
+        {
+            "download_link": "https://github.com/zag2me/repository.urepo/raw/master/repository.urepo.zip", 
+            "kind": "Programs", 
+            "plugin_name": "eBooks", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/script.ebooks/", 
+            "released": "2017-05-09", 
+            "summary": "View eBooks", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/programs/", 
+            "version": "100.5.1"
+        }, 
+        {
+            "download_link": "https://offshoregit.com/echocoder/main/zips/repository.echo/repository.echo-2.01.zip", 
+            "kind": "Programs", 
+            "plugin_name": "Echo TV Guide", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/script.tvguide.echo/", 
+            "released": "2017-05-09", 
+            "summary": "Echo Blue, Jay", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/programs/", 
+            "version": "0.0.4"
+        }, 
+        {
+            "download_link": "https://offshoregit.com/pulsarunofficial/Unofficial-Quasar-Repo/repository.unofficialquasar/repository.unofficialquasar-1.0.4.zip", 
+            "kind": "Programs", 
+            "plugin_name": "EliteTorrent MC's Magnetic Parser", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/script.magnetic.elitetorrent-mc/", 
+            "released": "2017-05-09", 
+            "summary": "EliteTorrent MC's Magnetic Parser", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/programs/", 
+            "version": "1.0.0"
+        }, 
+        {
+            "download_link": "https://offshoregit.com/pulsarunofficial/Unofficial-Quasar-Repo/repository.unofficialquasar/repository.unofficialquasar-1.0.4.zip", 
+            "kind": "Programs", 
+            "plugin_name": "EZTV MC's Magnetic Parser", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/script.magnetic.eztv-mc/", 
+            "released": "2017-05-09", 
+            "summary": "EZTV MC's Magnetic Parser", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/programs/", 
+            "version": "1.0.0"
+        }, 
+        {
+            "download_link": "https://offshoregit.com/Shani-08/repository.shani-2.9.zip", 
+            "kind": "Programs", 
+            "plugin_name": "F4mProxy", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/script.video.F4mProxy/", 
+            "released": "2017-05-09", 
+            "summary": "Proxy for f4m", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/programs/", 
+            "version": "2.8.6"
+        }, 
+        {
+            "download_link": "https://github.com/finalmakerr/featherence/raw/master/repository.featherence/repository.featherence-1.1.0.zip", 
+            "kind": "Programs", 
+            "plugin_name": "Featherence Emu", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.program.featherence.emu/", 
+            "released": "2017-05-09", 
+            "summary": "Nostalgia Games", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/programs/", 
+            "version": "0.1.3"
+        }, 
+        {
+            "download_link": "https://github.com/finalmakerr/featherence/raw/master/repository.featherence/repository.featherence-1.1.0.zip", 
+            "kind": "Programs", 
+            "plugin_name": "Featherence Emu Console - Android", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/emulator.retroarch_android/", 
+            "released": "2017-05-09", 
+            "summary": "Multi-emulator frontend based on libretro", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/programs/", 
+            "version": "1.0.0"
+        }, 
+        {
+            "download_link": "https://github.com/finalmakerr/featherence/raw/master/repository.featherence/repository.featherence-1.1.0.zip", 
+            "kind": "Programs", 
+            "plugin_name": "Featherence Emu Console - OpenELEC", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/emulator.retroarch/", 
+            "released": "2017-05-09", 
+            "summary": "Multi-emulator frontend based on libretro", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/programs/", 
+            "version": "1.0.7"
+        }, 
+        {
+            "download_link": "https://github.com/finalmakerr/featherence/raw/master/repository.featherence/repository.featherence-1.1.0.zip", 
+            "kind": "Programs", 
+            "plugin_name": "Featherence Emu Console - OpenELEC i386", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/emulator.retroarch_i386/", 
+            "released": "2017-05-09", 
+            "summary": "Multi-emulator frontend based on libretro", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/programs/", 
+            "version": "1.0.1"
+        }, 
+        {
+            "download_link": "https://github.com/finalmakerr/featherence/raw/master/repository.featherence/repository.featherence-1.1.0.zip", 
+            "kind": "Programs", 
+            "plugin_name": "Featherence Emu Console - OpenELEC2", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/emulator.tools.retroarch/", 
+            "released": "2017-05-09", 
+            "summary": "Multi-emulator frontend based on libretro", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/programs/", 
+            "version": "1.0.2"
+        }, 
+        {
+            "download_link": "https://github.com/finalmakerr/featherence/raw/master/repository.featherence/repository.featherence-1.1.0.zip", 
+            "kind": "Programs", 
+            "plugin_name": "Featherence Emu Console - Windows x64", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/emulator.retroarch_win64/", 
+            "released": "2017-05-09", 
+            "summary": "Multi-emulator frontend based on libretro", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/programs/", 
+            "version": "1.0.0"
+        }, 
+        {
+            "download_link": "https://github.com/finalmakerr/featherence/raw/master/repository.featherence/repository.featherence-1.1.0.zip", 
+            "kind": "Programs", 
+            "plugin_name": "Featherence Emu Console - Windows x86", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/emulator.retroarch_win32/", 
+            "released": "2017-05-09", 
+            "summary": "Multi-emulator frontend based on libretro", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/programs/", 
+            "version": "1.0.0"
+        }, 
+        {
+            "download_link": "https://github.com/finalmakerr/featherence/raw/master/repository.featherence/repository.featherence-1.1.0.zip", 
+            "kind": "Programs", 
+            "plugin_name": "Featherence Remote", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/script.featherence.remote/", 
+            "released": "2017-05-09", 
+            "summary": "Control your OpenELEC with any standard Remote Control", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/programs/", 
+            "version": "0.1.3"
+        }, 
+        {
+            "download_link": "https://github.com/finalmakerr/featherence/raw/master/repository.featherence/repository.featherence-1.1.0.zip", 
+            "kind": "Programs", 
+            "plugin_name": "Featherence Service", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/script.featherence.service/", 
+            "released": "2017-05-09", 
+            "summary": "Add-on for skins and video plugins to provide simple development", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/programs/", 
+            "version": "0.3.73"
+        }, 
+        {
+            "download_link": "https://offshoregit.com/pulsarunofficial/Unofficial-Quasar-Repo/repository.unofficialquasar/repository.unofficialquasar-1.0.4.zip", 
+            "kind": "Programs", 
+            "plugin_name": "FileList MC's Magnetic Parser", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/script.magnetic.filelist-mc/", 
+            "released": "2017-05-09", 
+            "summary": "Filelist MC's Magnetic Parser", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/programs/", 
+            "version": "1.0.0"
+        }, 
+        {
+            "download_link": "https://offshoregit.com/pulsarunofficial/Unofficial-Quasar-Repo/repository.unofficialquasar/repository.unofficialquasar-1.0.4.zip", 
+            "kind": "Programs", 
+            "plugin_name": "FinBytes MC's Magnetic Parser", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/script.magnetic.finbytes-mc/", 
+            "released": "2017-05-09", 
+            "summary": "FinBytes MC's Magnetic Parser", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/programs/", 
+            "version": "1.0.0"
+        }, 
+        {
+            "download_link": "https://github.com/LS80/repository.leopold/raw/master/repository.leopold/repository.leopold-3.0.0.zip", 
+            "kind": "Programs", 
+            "plugin_name": "Foscam HD", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/script.foscam/", 
+            "released": "2017-05-09", 
+            "summary": "Foscam HD camera video with camera control", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/programs/", 
+            "version": "0.0.21"
+        }, 
+        {
+            "download_link": "https://github.com/bluezed/FTV-Guide-Repo/raw/master/zips/repository.FTV-Guide-Repo/repository.FTV-Guide-Repo-1.1.zip", 
+            "kind": "Programs", 
+            "plugin_name": "FTV Guide", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/script.ftvguide/", 
+            "released": "2017-05-09", 
+            "summary": "FTV Guide allows you to combine some of your favourite live TV plugins for use with a fully working EPG", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/programs/", 
+            "version": "2.0.25"
+        }, 
+        {
+            "download_link": "https://github.com/elmerohueso/xbmc.repo.elmerohueso/raw/master/download/xbmc.repo.elmerohueso/xbmc.repo.elmerohueso-1.0.zip", 
+            "kind": "Programs", 
+            "plugin_name": "FTV Launcher", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/script.program.KFTVlauncher/", 
+            "released": "2017-05-09", 
+            "summary": "Shortcut to the Amazon FireTV Launcher", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/programs/", 
+            "version": "1.1"
+        }, 
+        {
+            "download_link": "https://offshoregit.com/pulsarunofficial/Unofficial-Quasar-Repo/repository.unofficialquasar/repository.unofficialquasar-1.0.4.zip", 
+            "kind": "Programs", 
+            "plugin_name": "GloTorrents MC's Magnetic Parser", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/script.magnetic.glotorrents-mc/", 
+            "released": "2017-05-09", 
+            "summary": "GloTorrents MC's Magnetic Parser", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/programs/", 
+            "version": "1.0.0"
+        }, 
+        {
+            "download_link": "https://github.com/zag2me/repository.urepo/raw/master/repository.urepo.zip", 
+            "kind": "Programs", 
+            "plugin_name": "Hello World", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/script.hello.world/", 
+            "released": "2017-05-09", 
+            "summary": "", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/programs/", 
+            "version": "1.0.2"
+        }, 
+        {
+            "download_link": "https://github.com/elmerohueso/xbmc.repo.elmerohueso/raw/master/download/xbmc.repo.elmerohueso/xbmc.repo.elmerohueso-1.0.zip", 
+            "kind": "Programs", 
+            "plugin_name": "Hulu Plus", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/script.program.FTVhulu/", 
+            "released": "2017-05-09", 
+            "summary": "Hulu Plus shortcut for Android", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/programs/", 
+            "version": "1.1"
+        }, 
+        {
+            "download_link": "https://offshoregit.com/Nemzzy668/repository.streamarmy/zips/repository.StreamArmy/repository.StreamArmy-3.1.zip", 
+            "kind": "Programs", 
+            "plugin_name": "Identify", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.program.identify/", 
+            "released": "2017-05-11", 
+            "summary": "Identify", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/programs/", 
+            "version": "0.0.1"
+        }, 
+        {
+            "download_link": "https://offshoregit.com/pulsarunofficial/Unofficial-Quasar-Repo/repository.unofficialquasar/repository.unofficialquasar-1.0.4.zip", 
+            "kind": "Programs", 
+            "plugin_name": "idope MC's Magnetic Parser", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/script.magnetic.idope-mc/", 
+            "released": "2017-05-09", 
+            "summary": "Idope MC's Magnetic Parser", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/programs/", 
+            "version": "1.0.0"
+        }, 
+        {
+            "download_link": "https://github.com/huballo/xbmc-huball-repository/raw/master/repository.huball.zip", 
+            "kind": "Programs", 
+            "plugin_name": "ILC", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.program.ILC/", 
+            "released": "2017-05-09", 
+            "summary": "ILC", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/programs/", 
+            "version": "0.3.0"
+        }, 
+        {
+            "download_link": "https://offshoregit.com/pulsarunofficial/Unofficial-Quasar-Repo/repository.unofficialquasar/repository.unofficialquasar-1.0.4.zip", 
+            "kind": "Programs", 
+            "plugin_name": "Ilcorsaronero MC's Magnetic Parser", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/script.magnetic.ilcorsaronero-mc/", 
+            "released": "2017-05-09", 
+            "summary": "Ilcorsaronero MC's Magnetic Parser", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/programs/", 
+            "version": "1.0.0"
+        }, 
+        {
+            "download_link": "https://offshoregit.com/xbmchub/xbmc-hub-repo/raw/master/repository.xbmchub/repository.xbmchub-1.0.6.zip", 
+            "kind": "Programs", 
+            "plugin_name": "Indigo", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.program.indigo/", 
+            "released": "2017-05-09", 
+            "summary": "Indigo is your gateway to the world of unofficial Kodi addons!", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/programs/", 
+            "version": "1.0.4"
+        }, 
+        {
+            "download_link": "https://github.com/LS80/repository.leopold/raw/master/repository.leopold/repository.leopold-3.0.0.zip", 
+            "kind": "Programs", 
+            "plugin_name": "IP Cam", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/script.ipcam/", 
+            "released": "2017-05-09", 
+            "summary": "IP camera video feed", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/programs/", 
+            "version": "0.0.3"
+        }, 
+        {
+            "download_link": "https://offshoregit.com/metalkettle/zips/repository.metalkettle/repository.metalkettle-1.7.3.zip", 
+            "kind": "Programs", 
+            "plugin_name": "Jolly Roger Cookbook", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.program.jollyroger/", 
+            "released": "2017-05-09", 
+            "summary": "Before you waste one entire second even considering mixing, creating, or otherwise implementing the instructions in these files, be aware that people have died from some of these very texts", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/programs/", 
+            "version": "1.0.0"
+        }, 
+        {
+            "download_link": "http://offshoregit.com/podgod/repo/zips/repository.podgod/repository.podgod-1.7.zip", 
+            "kind": "Live TV", 
+            "plugin_name": "Canada On Demand*", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.video.canada.on.demand.pg/", 
+            "released": "2017-05-09", 
+            "summary": "Video On Demand From Canada", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/livetv/", 
+            "version": "1.0"
+        }, 
+        {
+            "download_link": "http://offshoregit.com/podgod/repo/zips/repository.podgod/repository.podgod-1.7.zip", 
+            "kind": "Live TV", 
+            "plugin_name": "cCloud TV", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.video.ccloudtv/", 
+            "released": "2017-05-09", 
+            "summary": "All the best from cCloud TV", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/livetv/", 
+            "version": "1.5.3"
+        }, 
+        {
+            "download_link": "https://offshoregit.com/echocoder/main/zips/repository.echo/repository.echo-2.01.zip", 
+            "kind": "Live TV", 
+            "plugin_name": "Echo Streams", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.video.echostreams/", 
+            "released": "2017-05-09", 
+            "summary": "Twitter Support: @EchoCoder @dev_raiden @kodiapps", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/livetv/", 
+            "version": "1.24"
+        }, 
+        {
+            "download_link": "https://offshoregit.com/rw86/rw86-repo/zips/repository.rw86/repository.rw86-3.0.0.zip", 
+            "kind": "Live TV", 
+            "plugin_name": "Freeview", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.video.freeview/", 
+            "released": "2017-05-09", 
+            "summary": "UK Freeview Channels", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/livetv/", 
+            "version": "3.0.1"
+        }, 
+        {
+            "download_link": "https://offshoregit.com/metalkettle/zips/repository.metalkettle/repository.metalkettle-1.7.3.zip", 
+            "kind": "Live TV", 
+            "plugin_name": "Gobble", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.video.gobble/", 
+            "released": "2017-05-09", 
+            "summary": "", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/livetv/", 
+            "version": "1.0.13"
+        }, 
+        {
+            "download_link": "https://offshoregit.com/mathsgrinds/_repo/repository.mathsgrinds/repository.mathsgrinds-1.0.0.zip", 
+            "kind": "Live TV", 
+            "plugin_name": "IETVNOW", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.video.ietvnow/", 
+            "released": "2017-05-09", 
+            "summary": "Plays live Irish TV from Official Sources.", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/livetv/", 
+            "version": "1.0.18"
+        }, 
+        {
+            "download_link": "https://github.com/cubicle-vdo/xbmc-israel/raw/master/repo/repository.xbmc-israel/repository.xbmc-israel-1.0.4.zip", 
+            "kind": "Live TV", 
+            "plugin_name": "IsraeLIVE", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.video.israelive/", 
+            "released": "2017-05-09", 
+            "summary": "Benny123's project", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/livetv/", 
+            "version": "5.0.6"
+        }, 
+        {
+            "download_link": "https://offshoregit.com/ramicspa/kodi/zips/repository.ramic/repository.ramic-1.3.0.zip", 
+            "kind": "Live TV", 
+            "plugin_name": "Live IPTV", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.video.LiveIPTV/", 
+            "released": "2017-05-09", 
+            "summary": "Live IP TV ", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/livetv/", 
+            "version": "1.7"
+        }, 
+        {
+            "download_link": "https://offshoregit.com/metalkettle/zips/repository.metalkettle/repository.metalkettle-1.7.3.zip", 
+            "kind": "Live TV", 
+            "plugin_name": "Live Mix", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.video.livemix/", 
+            "released": "2017-05-09", 
+            "summary": "", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/livetv/", 
+            "version": "2.0.4"
+        }, 
+        {
+            "download_link": "https://offshoregit.com/TheKrazy0ne/repo/raw/master/zips/repository.TheKrazy0ne-1.0.zip", 
+            "kind": "Live TV", 
+            "plugin_name": "Made In Canada IPTV", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.video.mic/", 
+            "released": "2017-05-09", 
+            "summary": "Free Canadian IPTV", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/livetv/", 
+            "version": "2.1"
+        }, 
+        {
+            "download_link": "https://github.com/indiecrew/ProjectMRNetwork/raw/master/repository.projectmrnetwork/repository.projectmrnetwork-2.0.0.zip", 
+            "kind": "Live TV", 
+            "plugin_name": "mr network", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.video.mrnetworktv/", 
+            "released": "2017-05-09", 
+            "summary": "Watch livestreaming with MR Network", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/livetv/", 
+            "version": "3.0.9"
+        }, 
+        {
+            "download_link": "https://github.com/MetalChris/repository.metalchris/raw/master/zips/repository.metalchris/repository.metalchris-2.0.4.zip", 
+            "kind": "Live TV", 
+            "plugin_name": "Reuters TV", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.video.reuters/", 
+            "released": "2017-05-09", 
+            "summary": "Reuters TV: Live Breaking News, US, World, Business, Finance", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/livetv/", 
+            "version": "0.0.2"
+        }, 
+        {
+            "download_link": "https://offshoregit.com/Shiny/data/repository.shiny/repository.shiny-1.4.zip", 
+            "kind": "Live TV", 
+            "plugin_name": "Sylvr", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.video.sylvr/", 
+            "released": "2017-05-09", 
+            "summary": "Plays US and UK Live TV Channels from various sources", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/livetv/", 
+            "version": "1.5.0"
+        }, 
+        {
+            "download_link": "https://offshoregit.com/echocoder/main/zips/repository.echo/repository.echo-2.01.zip", 
+            "kind": "Live TV", 
+            "plugin_name": "Teevie", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.video.teevie/", 
+            "released": "2017-05-09", 
+            "summary": "Twitter Support: @EchoCoder", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/livetv/", 
+            "version": "1.03"
+        }, 
+        {
+            "download_link": "https://offshoregit.com/metalkettle/zips/repository.metalkettle/repository.metalkettle-1.7.3.zip", 
+            "kind": "Live TV", 
+            "plugin_name": "TV Mix", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.video.tvmix/", 
+            "released": "2017-05-09", 
+            "summary": "", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/livetv/", 
+            "version": "1.0.6"
+        }, 
+        {
+            "download_link": "https://offshoregit.com/metalkettle/zips/repository.metalkettle/repository.metalkettle-1.7.3.zip", 
+            "kind": "Live TV", 
+            "plugin_name": "UKTV Again", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.video.uktvnow/", 
+            "released": "2017-05-09", 
+            "summary": "", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/livetv/", 
+            "version": "2.0.9"
+        }, 
+        {
+            "download_link": "https://offshoregit.com/whitecream/ultimate/repository.ultimate/repository.ultimate-1.0.0.zip", 
+            "kind": "Live TV", 
+            "plugin_name": "Ultimate IPTV", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.video.uiptv/", 
+            "released": "2017-05-09", 
+            "summary": "Ultimate IPTV", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/livetv/", 
+            "version": "1.0.5"
+        }, 
+        {
+            "download_link": "https://offshoregit.com/xbmchub/xbmc-hub-repo/raw/master/repository.xbmchub/repository.xbmchub-1.0.6.zip", 
+            "kind": "Live TV", 
+            "plugin_name": "USTVnow Plus", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.video.ustvnow.tva/", 
+            "released": "2017-05-11", 
+            "summary": "Watch Major American Television Networks Live for Free!", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/livetv/", 
+            "version": "14.6.2"
+        }, 
+        {
+            "download_link": "https://github.com/moneymaker365/xbmc-xbmcplus-plugins/raw/master/download/repository.xbmcplus.xbmc-plugins/repository.xbmcplus.xbmc-plugins-1.4.zip", 
+            "kind": "Live TV", 
+            "plugin_name": "World News Live", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.video.world.news.live/", 
+            "released": "2017-05-09", 
+            "summary": "World News Channels", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/livetv/", 
+            "version": "1.5.1"
+        }, 
+        {
+            "download_link": "https://offshoregit.com/natko1412/zips/repo.natko1412/repo.natko1412-2.0.0.zip", 
+            "kind": "Sports", 
+            "plugin_name": "Castaway", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.video.castaway/", 
+            "released": "2017-05-09", 
+            "summary": "Just a castaway.", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/sports/", 
+            "version": "0.2.8"
+        }, 
+        {
+            "download_link": "https://github.com/MetalChris/repository.metalchris/raw/master/zips/repository.metalchris/repository.metalchris-2.0.4.zip", 
+            "kind": "Sports", 
+            "plugin_name": "Campus Insiders", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.video.campus-insiders/", 
+            "released": "2017-05-09", 
+            "summary": "College Sports.  All Day.  Every Day.", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/sports/", 
+            "version": "0.1.0"
+        }, 
+        {
+            "download_link": "https://github.com/MetalChris/repository.metalchris/raw/master/zips/repository.metalchris/repository.metalchris-2.0.4.zip", 
+            "kind": "Sports", 
+            "plugin_name": "CBC Sports", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.video.cbc-sports/", 
+            "released": "2017-05-09", 
+            "summary": "Live Events, Replays, and Highlights from CBC Sports", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/sports/", 
+            "version": "0.0.2"
+        }, 
+        {
+            "download_link": "https://offshoregit.com/xbmchub/xbmc-hub-repo/raw/master/repository.xbmchub/repository.xbmchub-1.0.6.zip", 
+            "kind": "Sports", 
+            "plugin_name": "College Football Replays", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.video.cfbr/", 
+            "released": "2017-05-09", 
+            "summary": "Watch NCAA College Football replays!", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/sports/", 
+            "version": "0.3.2"
+        }, 
+        {
+            "download_link": "https://offshoregit.com/echocoder/main/zips/repository.echo/repository.echo-2.01.zip", 
+            "kind": "Sports", 
+            "plugin_name": "Find My Game", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.video.FMG/", 
+            "released": "2017-05-09", 
+            "summary": "Find a stream for Your Game", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/sports/", 
+            "version": "2.11"
+        }, 
+        {
+            "download_link": "https://offshoregit.com/metalkettle/zips/repository.metalkettle/repository.metalkettle-1.7.3.zip", 
+            "kind": "Sports", 
+            "plugin_name": "Football Highlights", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.video.highlights/", 
+            "released": "2017-05-09", 
+            "summary": "Watch TV from S4U Media", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/sports/", 
+            "version": "1.1.5"
+        }, 
+        {
+            "download_link": "https://offshoregit.com/jsergio123/zips/repository.jsergio/repository.jsergio-1.0.2.zip", 
+            "kind": "Sports", 
+            "plugin_name": "Football Today", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.video.football.today/", 
+            "released": "2017-05-09", 
+            "summary": "Football on demand", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/sports/", 
+            "version": "3.0.5"
+        }, 
+        {
+            "download_link": "https://offshoregit.com/simtech/SIMTECH/raw/master/plugins/repository.simtech/repository.simtech-3.0.zip", 
+            "kind": "Sports", 
+            "plugin_name": "Live Premiership", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.video.livepremiership/", 
+            "released": "2017-05-09", 
+            "summary": "The Home Of Live Premiership Add-on Sportsdevil Required", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/sports/", 
+            "version": "3.0"
+        }, 
+        {
+            "download_link": "https://github.com/indiecrew/ProjectMRNetwork/raw/master/repository.projectmrnetwork/repository.projectmrnetwork-2.0.0.zip", 
+            "kind": "Sports", 
+            "plugin_name": "match replay", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.video.matchreplay/", 
+            "released": "2017-05-09", 
+            "summary": "Your favourite sport replay network", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/sports/", 
+            "version": "0.0.2"
+        }, 
+        {
+            "download_link": "https://offshoregit.com/echocoder/main/zips/repository.echo/repository.echo-2.01.zip", 
+            "kind": "Sports", 
+            "plugin_name": "Motor Replays", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.video.motorreplays/", 
+            "released": "2017-05-09", 
+            "summary": "Motor Replays", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/sports/", 
+            "version": "2.1"
+        }, 
+        {
+            "download_link": "https://offshoregit.com/natko1412/zips/repo.natko1412/repo.natko1412-2.0.0.zip", 
+            "kind": "Sports", 
+            "plugin_name": "NBA Full Games", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.video.nbafullgames/", 
+            "released": "2017-05-09", 
+            "summary": "The most complete NBA addon.", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/sports/", 
+            "version": "3.1.1"
+        }, 
+        {
+            "download_link": "https://offshoregit.com/jsergio123/zips/repository.jsergio/repository.jsergio-1.0.2.zip", 
+            "kind": "Sports", 
+            "plugin_name": "NBA On-demand", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.video.nbaondemand/", 
+            "released": "2017-05-09", 
+            "summary": "NBA on demand", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/sports/", 
+            "version": "2.0.7"
+        }, 
+        {
+            "download_link": "https://offshoregit.com/jsergio123/zips/repository.jsergio/repository.jsergio-1.0.2.zip", 
+            "kind": "Sports", 
+            "plugin_name": "NHL On-demand", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.video.nhlondemand/", 
+            "released": "2017-05-09", 
+            "summary": "NHL on demand", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/sports/", 
+            "version": "2.0.7"
+        }, 
+        {
+            "download_link": "https://github.com/MetalChris/repository.metalchris/raw/master/zips/repository.metalchris/repository.metalchris-2.0.4.zip", 
+            "kind": "Sports", 
+            "plugin_name": "NHL Rewind", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.video.nhl-rewind/", 
+            "released": "2017-05-09", 
+            "summary": "NHL Rewind", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/sports/", 
+            "version": "0.2.4"
+        }, 
+        {
+            "download_link": "http://offshoregit.com/iCanuck/iCanuck-Repo/raw/master/repository.icanuck/repository.icanuck-3.1.0.zip", 
+            "kind": "Sports", 
+            "plugin_name": "NHL Streams", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.video.nhlstreams/", 
+            "released": "2017-05-09", 
+            "summary": "NHL Streams", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/sports/", 
+            "version": "2.1.4"
+        }, 
+        {
+            "download_link": "https://offshoregit.com/xbmchub/xbmc-hub-repo/raw/master/repository.xbmchub/repository.xbmchub-1.0.6.zip", 
+            "kind": "Sports", 
+            "plugin_name": "Our Match", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.video.ourmatch/", 
+            "released": "2017-05-09", 
+            "summary": "Football highlights from around the world", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/sports/", 
+            "version": "1.0.0"
+        }, 
+        {
+            "download_link": "https://github.com/MetalChris/repository.metalchris/raw/master/zips/repository.metalchris/repository.metalchris-2.0.4.zip", 
+            "kind": "Sports", 
+            "plugin_name": "Premier Boxing Champions", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.video.pbc/", 
+            "released": "2017-05-09", 
+            "summary": "Get all the latest videos and fight replays from PBC", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/sports/", 
+            "version": "0.0.1"
+        }, 
+        {
+            "download_link": "http://offshoregit.com/iCanuck/iCanuck-Repo/raw/master/repository.icanuck/repository.icanuck-3.1.0.zip", 
+            "kind": "Sports", 
+            "plugin_name": "Pro Sport", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.video.prosport/", 
+            "released": "2017-05-09", 
+            "summary": "Live HD sport streams from reddit", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/sports/", 
+            "version": "0.82"
+        }, 
+        {
+            "download_link": "https://github.com/LS80/repository.leopold/raw/master/repository.leopold/repository.leopold-3.0.0.zip", 
+            "kind": "Sports", 
+            "plugin_name": "Sky Sports Video", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.video.skysports/", 
+            "released": "2017-05-09", 
+            "summary": "Watch videos clips from Sky Sports", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/sports/", 
+            "version": "0.2.0"
+        }, 
+        {
+            "download_link": "https://offshoregit.com/metalkettle/zips/repository.metalkettle/repository.metalkettle-1.7.3.zip", 
+            "kind": "Sports", 
+            "plugin_name": "SPEEDWAY PORTAL", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.video.speedway/", 
+            "released": "2017-05-09", 
+            "summary": "SPEEDWAY PORTAL is an add-on full of various videos and podcasts relating to all things Speedway from around the world.  It has been put together by the fans, for the fans.  At no point has, nor will there be any fee required by the user to access SPEEDWAY PORTAL.  It will remain free of charge.", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/sports/", 
+            "version": "1.0.8"
+        }, 
+        {
+            "download_link": "https://offshoregit.com/echocoder/main/zips/repository.echo/repository.echo-2.01.zip", 
+            "kind": "Sports", 
+            "plugin_name": "Sportie", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.video.sportie/", 
+            "released": "2017-05-09", 
+            "summary": "Support at: http://www.tvaddons.ag/forums", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/sports/", 
+            "version": "1.64"
+        }, 
+        {
+            "download_link": "https://offshoregit.com/unofficialsportsdevil/repository.unofficialsportsdevil/repository.unofficialsportsdevil-1.0.0.zip", 
+            "kind": "Sports", 
+            "plugin_name": "SportsDevil", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.video.SportsDevil/", 
+            "released": "2017-05-09", 
+            "summary": "Play videos of different sports streaming sites", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/sports/", 
+            "version": "2017.03.28"
+        }, 
+        {
+            "download_link": "https://offshoregit.com/metalkettle/zips/repository.metalkettle/repository.metalkettle-1.7.3.zip", 
+            "kind": "Sports", 
+            "plugin_name": "Sports Mix", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.video.sportsmix/", 
+            "released": "2017-05-09", 
+            "summary": "", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/sports/", 
+            "version": "1.0.6"
+        }, 
+        {
+            "download_link": "https://offshoregit.com/simtech/SIMTECH/raw/master/plugins/repository.simtech/repository.simtech-3.0.zip", 
+            "kind": "Sports", 
+            "plugin_name": "UEFA.TV", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.video.uefa-tv/", 
+            "released": "2017-05-09", 
+            "summary": "The Home For UEFA.TV Add-on", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/sports/", 
+            "version": "1.0"
+        }, 
+        {
+            "download_link": "https://offshoregit.com/echocoder/main/zips/repository.echo/repository.echo-2.01.zip", 
+            "kind": "Sports", 
+            "plugin_name": "UFC Finest", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.video.ufc-finest/", 
+            "released": "2017-05-10", 
+            "summary": "UFC Finest", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/sports/", 
+            "version": "2.2"
+        }, 
+        {
+            "download_link": "https://offshoregit.com/xbmchub/xbmc-hub-repo/raw/master/repository.xbmchub/repository.xbmchub-1.0.6.zip", 
+            "kind": "Sports", 
+            "plugin_name": "Wrestle Nation", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.video.wrestlenation/", 
+            "released": "2017-05-09", 
+            "summary": "Watch shows from WWE, UFC, TNA, etc.", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/sports/", 
+            "version": "1.0.0"
+        }, 
+        {
+            "download_link": "https://offshoregit.com/echocoder/main/zips/repository.echo/repository.echo-2.01.zip", 
+            "kind": "Sports", 
+            "plugin_name": "Wrestling On Demand", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.video.wwe-on-demand/", 
+            "released": "2017-05-10", 
+            "summary": "The Home Of Wrestling On Demand", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/sports/", 
+            "version": "3.5"
+        }, 
+        {
+            "download_link": "https://offshoregit.com/tknorris/tknorris-release-repo/raw/master/zips/repository.tknorris.release/repository.tknorris.release-1.0.2.zip", 
+            "kind": "Featured", 
+            "plugin_name": "1Channel", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.video.1channel/", 
+            "released": "2017-05-09", 
+            "summary": "Browse 1channel.ch", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/featured/", 
+            "version": "2.5.72"
+        }, 
+        {
+            "download_link": "https://offshoregit.com/dudehere-repository/addons/repository.dudehere.plugins/repository.dudehere.plugins-1.0.6.zip", 
+            "kind": "Featured", 
+            "plugin_name": "Alluc", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.video.alluc.api/", 
+            "released": "2017-05-09", 
+            "summary": "I want my All-You-See!", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/featured/", 
+            "version": "1.2.10"
+        }, 
+        {
+            "download_link": "https://offshoregit.com/natko1412/zips/repo.natko1412/repo.natko1412-2.0.0.zip", 
+            "kind": "Featured", 
+            "plugin_name": "Castaway", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.video.castaway/", 
+            "released": "2017-05-09", 
+            "summary": "Just a castaway.", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/featured/", 
+            "version": "0.2.8"
+        }, 
+        {
+            "download_link": "http://offshoregit.com/podgod/repo/zips/repository.podgod/repository.podgod-1.7.zip", 
+            "kind": "Featured", 
+            "plugin_name": "cCloud TV", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.video.ccloudtv/", 
+            "released": "2017-05-09", 
+            "summary": "All the best from cCloud TV", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/featured/", 
+            "version": "1.5.3"
+        }, 
+        {
+            "download_link": "https://offshoregit.com/xbmchub/xbmc-hub-repo/raw/master/repository.xbmchub/repository.xbmchub-1.0.6.zip", 
+            "kind": "Featured", 
+            "plugin_name": "EarthCam", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.video.earthcam/", 
+            "released": "2017-05-09", 
+            "summary": "EarthCam", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/featured/", 
+            "version": "1.0.12"
+        }, 
+        {
+            "download_link": "https://offshoregit.com/echocoder/main/zips/repository.echo/repository.echo-2.01.zip", 
+            "kind": "Featured", 
+            "plugin_name": "Echo Documentaries", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.video.echodocs/", 
+            "released": "2017-05-09", 
+            "summary": "This addon provides documenraries from a variety of sources.", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/featured/", 
+            "version": "1.06"
+        }, 
+        {
+            "download_link": "https://offshoregit.com/exodus/repository.exodus/repository.exodus-1.0.1.zip", 
+            "kind": "Featured", 
+            "plugin_name": "Exodus", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.video.exodus/", 
+            "released": "2017-05-09", 
+            "summary": "Exodus", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/featured/", 
+            "version": "3.1.10"
+        }, 
+        {
+            "download_link": "https://offshoregit.com/rw86/rw86-repo/zips/repository.rw86/repository.rw86-3.0.0.zip", 
+            "kind": "Featured", 
+            "plugin_name": "Freeview", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.video.freeview/", 
+            "released": "2017-05-09", 
+            "summary": "UK Freeview Channels", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/featured/", 
+            "version": "3.0.1"
+        }, 
+        {
+            "download_link": "https://offshoregit.com/metalkettle/zips/repository.metalkettle/repository.metalkettle-1.7.3.zip", 
+            "kind": "Featured", 
+            "plugin_name": "Gobble", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.video.gobble/", 
+            "released": "2017-05-09", 
+            "summary": "", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/featured/", 
+            "version": "1.0.13"
+        }, 
+        {
+            "download_link": "https://offshoregit.com/eleazarcoding/eleazar-xbmc/raw/master/repository.eleazar/repository.eleazar-1.5.zip", 
+            "kind": "Featured", 
+            "plugin_name": "Movie4K.to", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.video.movie4k/", 
+            "released": "2017-05-09", 
+            "summary": "Movie4K.to", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/featured/", 
+            "version": "1.4.7"
+        }, 
+        {
+            "download_link": "https://offshoregit.com/xbmchub/xbmc-hub-repo/raw/master/repository.xbmchub/repository.xbmchub-1.0.6.zip", 
+            "kind": "Featured", 
+            "plugin_name": "Phoenix", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.video.phstreams/", 
+            "released": "2017-05-09", 
+            "summary": "Phoenix", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/featured/", 
+            "version": "3.3.1"
+        }, 
+        {
+            "download_link": "http://offshoregit.com/iCanuck/iCanuck-Repo/raw/master/repository.icanuck/repository.icanuck-3.1.0.zip", 
+            "kind": "Featured", 
+            "plugin_name": "Pro Sport", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.video.prosport/", 
+            "released": "2017-05-09", 
+            "summary": "Live HD sport streams from reddit", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/featured/", 
+            "version": "0.82"
+        }, 
+        {
+            "download_link": "https://offshoregit.com/dudehere-repository/addons/repository.dudehere.plugins/repository.dudehere.plugins-1.0.6.zip", 
+            "kind": "Featured", 
+            "plugin_name": "Red Beard", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.video.redbeard/", 
+            "released": "2017-05-09", 
+            "summary": "Torrent Streaming", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/featured/", 
+            "version": "1.0.4"
+        }, 
+        {
+            "download_link": "https://offshoregit.com/tknorris/tknorris-release-repo/raw/master/zips/repository.tknorris.release/repository.tknorris.release-1.0.2.zip", 
+            "kind": "Featured", 
+            "plugin_name": "Stream All The Sources", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.video.salts/", 
+            "released": "2017-05-09", 
+            "summary": "Stream video from many difference sources", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/featured/", 
+            "version": "2.0.136"
+        }, 
+        {
+            "download_link": "https://offshoregit.com/echocoder/main/zips/repository.echo/repository.echo-2.01.zip", 
+            "kind": "Featured", 
+            "plugin_name": "Sportie", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.video.sportie/", 
+            "released": "2017-05-09", 
+            "summary": "Support at: http://www.tvaddons.ag/forums", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/featured/", 
+            "version": "1.64"
+        }, 
+        {
+            "download_link": "https://offshoregit.com/unofficialsportsdevil/repository.unofficialsportsdevil/repository.unofficialsportsdevil-1.0.0.zip", 
+            "kind": "Featured", 
+            "plugin_name": "SportsDevil", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.video.SportsDevil/", 
+            "released": "2017-05-09", 
+            "summary": "Play videos of different sports streaming sites", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/featured/", 
+            "version": "2017.03.28"
+        }, 
+        {
+            "download_link": "https://offshoregit.com/dudehere-repository/addons/repository.dudehere.plugins/repository.dudehere.plugins-1.0.6.zip", 
+            "kind": "Featured", 
+            "plugin_name": "The Royal We", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.video.theroyalwe/", 
+            "released": "2017-05-09", 
+            "summary": "The Royal We is about simplicity and sources.", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/featured/", 
+            "version": "1.3.7"
+        }, 
+        {
+            "download_link": "https://offshoregit.com/metalkettle/zips/repository.metalkettle/repository.metalkettle-1.7.3.zip", 
+            "kind": "Featured", 
+            "plugin_name": "UK Turk Playlists", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.video.ukturk/", 
+            "released": "2017-05-09", 
+            "summary": "Free Playlists courtesy of @uk_turk", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/featured/", 
+            "version": "3.0.31"
+        }, 
+        {
+            "download_link": "https://offshoregit.com/xbmchub/xbmc-hub-repo/raw/master/repository.xbmchub/repository.xbmchub-1.0.6.zip", 
+            "kind": "Featured", 
+            "plugin_name": "USTVnow Plus", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.video.ustvnow.tva/", 
+            "released": "2017-05-11", 
+            "summary": "Watch Major American Television Networks Live for Free!", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/featured/", 
+            "version": "14.6.2"
+        }, 
+        {
+            "download_link": "http://offshoregit.com/Blazetamer/repo/raw/master/zips/repository.BlazeRepo/repository.BlazeRepo-3.2.zip", 
+            "kind": "Featured", 
+            "plugin_name": "Velocity", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.video.velocity/", 
+            "released": "2017-05-09", 
+            "summary": "Stream Videos from multiple sources", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/featured/", 
+            "version": "1.1.1"
+        }, 
+        {
+            "download_link": "https://offshoregit.com/xbmchub/xbmc-hub-repo/raw/master/repository.xbmchub/repository.xbmchub-1.0.6.zip", 
+            "kind": "Featured", 
+            "plugin_name": "Navi-X", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/script.navi-x/", 
+            "released": "2017-05-09", 
+            "summary": "Media Browser Addon for Kodi", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/featured/", 
+            "version": "4.0.1"
+        }, 
+        {
+            "download_link": "https://offshoregit.com/xbmchub/xbmc-hub-repo/raw/master/repository.xbmchub/repository.xbmchub-1.0.6.zip", 
+            "kind": "Featured", 
+            "plugin_name": "TVA Log Uploader", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/script.tvaddons.debug.log/", 
+            "released": "2017-05-09", 
+            "summary": "Upload Debug Logs to Shareable Location", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/featured/", 
+            "version": "1.0.7"
+        }, 
+        {
+            "download_link": "https://github.com/MetalChris/repository.metalchris/raw/master/zips/repository.metalchris/repository.metalchris-2.0.4.zip", 
+            "kind": "Video", 
+            "plugin_name": "120 Sports", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.video.120sports/", 
+            "released": "2017-05-09", 
+            "summary": "Up-to-the-moment commentary on all trending sports topics.", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/video/", 
+            "version": "0.0.4"
+        }, 
+        {
+            "download_link": "https://offshoregit.com/tknorris/tknorris-release-repo/raw/master/zips/repository.tknorris.release/repository.tknorris.release-1.0.2.zip", 
+            "kind": "Video", 
+            "plugin_name": "1Channel", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.video.1channel/", 
+            "released": "2017-05-09", 
+            "summary": "Browse 1channel.ch", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/video/", 
+            "version": "2.5.72"
+        }, 
+        {
+            "download_link": "http://offshoregit.com/Blazetamer/repo/raw/master/zips/repository.BlazeRepo/repository.BlazeRepo-3.2.zip", 
+            "kind": "Video", 
+            "plugin_name": "2 Movies Evolved", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.video.twomovies/", 
+            "released": "2017-05-09", 
+            "summary": "Movies/TV/Anime", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/video/", 
+            "version": "2.6.5"
+        }, 
+        {
+            "download_link": "https://github.com/MrEntertainment/backupREPO/raw/master/zips/repository.entertainmentrepobackup/repository.entertainmentrepobackup-1.1.4.zip", 
+            "kind": "Video", 
+            "plugin_name": "2kpinoy", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.video.2kpinoyER/", 
+            "released": "2017-05-09", 
+            "summary": "movies", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/video/", 
+            "version": "0.0.1"
+        }, 
+        {
+            "download_link": "https://github.com/xbmc-catchuptv-au/repo/raw/master/repository.googlecode.xbmc-catchuptv-au/repository.googlecode.xbmc-catchuptv-au-1.3.zip", 
+            "kind": "Video", 
+            "plugin_name": "9Now", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.video.catchuptv.au.nine/", 
+            "released": "2017-05-09", 
+            "summary": "Watch videos from 9Now", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/video/", 
+            "version": "0.1.0"
+        }, 
+        {
+            "download_link": "https://github.com/xbmc-catchuptv-au/repo/raw/master/repository.googlecode.xbmc-catchuptv-au/repository.googlecode.xbmc-catchuptv-au-1.3.zip", 
+            "kind": "Video", 
+            "plugin_name": "ABC iView", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.video.abc_iview/", 
+            "released": "2017-05-09", 
+            "summary": "ABC iView addon by Andy Botting", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/video/", 
+            "version": "1.7.6"
+        }, 
+        {
+            "download_link": "https://github.com/xbmc-catchuptv-au/repo/raw/master/repository.googlecode.xbmc-catchuptv-au/repository.googlecode.xbmc-catchuptv-au-1.3.zip", 
+            "kind": "Video", 
+            "plugin_name": "AFL Video", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.video.afl-video/", 
+            "released": "2017-05-09", 
+            "summary": "AFL Video by Andy Botting", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/video/", 
+            "version": "1.8.0"
+        }, 
+        {
+            "download_link": "https://github.com/MetalChris/repository.metalchris/raw/master/zips/repository.metalchris/repository.metalchris-2.0.4.zip", 
+            "kind": "Video", 
+            "plugin_name": "Air & Space Smithsonian", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.video.airspace/", 
+            "released": "2017-05-09", 
+            "summary": "Watch videos from the Air & Space Smithsonian website", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/video/", 
+            "version": "0.0.3"
+        }, 
+        {
+            "download_link": "https://offshoregit.com/dudehere-repository/addons/repository.dudehere.plugins/repository.dudehere.plugins-1.0.6.zip", 
+            "kind": "Video", 
+            "plugin_name": "Alluc", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.video.alluc.api/", 
+            "released": "2017-05-09", 
+            "summary": "I want my All-You-See!", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/video/", 
+            "version": "1.2.10"
+        }, 
+        {
+            "download_link": "http://dmdsoftware.net/repository.ddurdle/repository.ddurdle.zip", 
+            "kind": "Video", 
+            "plugin_name": "Amazon Cloud Drive", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.video.acd/", 
+            "released": "2017-05-09", 
+            "summary": "Plays music and video from your Amazon Cloud Drive account", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/video/", 
+            "version": "0.2.13"
+        }, 
+        {
+            "download_link": "https://github.com/XLordKX/kodi/raw/master/zip/repository.xlordkx/repository.xlordkx-1.0.0.zip", 
+            "kind": "Video", 
+            "plugin_name": "Amazon Prime Instant Video", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.video.prime_instant/", 
+            "released": "2017-05-09", 
+            "summary": "Amazon Prime Instant Video Add-on (DE/UK)", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/video/", 
+            "version": "1.1.7"
+        }, 
+        {
+            "download_link": "https://github.com/MetalChris/repository.metalchris/raw/master/zips/repository.metalchris/repository.metalchris-2.0.4.zip", 
+            "kind": "Video", 
+            "plugin_name": "American Sports Network", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.video.asn/", 
+            "released": "2017-05-09", 
+            "summary": "Watch videos and live events from the American Sports Network", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/video/", 
+            "version": "0.0.7"
+        }, 
+        {
+            "download_link": "https://offshoregit.com/metalkettle/zips/repository.metalkettle/repository.metalkettle-1.7.3.zip", 
+            "kind": "Video", 
+            "plugin_name": "AMIKOdi", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.video.amikodi/", 
+            "released": "2017-05-09", 
+            "summary": "Stream Amiko A3 to Kodi", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/video/", 
+            "version": "1.0.1"
+        }, 
+        {
+            "download_link": "https://offshoregit.com/metalkettle/zips/repository.metalkettle/repository.metalkettle-1.7.3.zip", 
+            "kind": "Video", 
+            "plugin_name": "Angry Birds : Toons TV", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.video.toonstv/", 
+            "released": "2017-05-09", 
+            "summary": "", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/video/", 
+            "version": "1.0.0"
+        }, 
+        {
+            "download_link": "https://offshoregit.com/xbmchub/xbmc-hub-repo/raw/master/repository.xbmchub/repository.xbmchub-1.0.6.zip", 
+            "kind": "Video", 
+            "plugin_name": "Animal TV", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.video.animaltv/", 
+            "released": "2017-05-09", 
+            "summary": "Watch live streams of animals!", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/video/", 
+            "version": "0.2.4"
+        }, 
+        {
+            "download_link": "https://github.com/MetalChris/repository.metalchris/raw/master/zips/repository.metalchris/repository.metalchris-2.0.4.zip", 
+            "kind": "Video", 
+            "plugin_name": "Animalist", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.video.animalist/", 
+            "released": "2017-05-09", 
+            "summary": "Animalist", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/video/", 
+            "version": "3.0.3"
+        }, 
+        {
+            "download_link": "https://github.com/huballo/xbmc-huball-repository/raw/master/repository.huball.zip", 
+            "kind": "Video", 
+            "plugin_name": "Anime-IPTV", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.video.anime-iptv/", 
+            "released": "2017-05-09", 
+            "summary": "anime", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/video/", 
+            "version": "1.4.0"
+        }, 
+        {
+            "download_link": "https://github.com/huballo/xbmc-huball-repository/raw/master/repository.huball.zip", 
+            "kind": "Video", 
+            "plugin_name": "Animejoy", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.video.animejoy/", 
+            "released": "2017-05-09", 
+            "summary": "animejoy", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/video/", 
+            "version": "2.0.0"
+        }, 
+        {
+            "download_link": "https://offshoregit.com/simtech/SIMTECH/raw/master/plugins/repository.simtech/repository.simtech-3.0.zip", 
+            "kind": "Video", 
+            "plugin_name": "Aurora", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.video.aurora/", 
+            "released": "2017-05-09", 
+            "summary": "Aurora Addon - A home for entertainment.Credit MetalKettle ,Echo Coder for the base and thanks to @JMkodi for the menu pictures.", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/video/", 
+            "version": "1.0.6"
+        }, 
+        {
+            "download_link": "https://offshoregit.com/xbmchub/xbmc-hub-repo/raw/master/repository.xbmchub/repository.xbmchub-1.0.6.zip", 
+            "kind": "Video", 
+            "plugin_name": "Bad Lip Reading", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.video.blr/", 
+            "released": "2017-05-09", 
+            "summary": "Bad Lip Reading", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/video/", 
+            "version": "0.2.5"
+        }, 
+        {
+            "download_link": "https://offshoregit.com/xbmchub/xbmc-hub-repo/raw/master/repository.xbmchub/repository.xbmchub-1.0.6.zip", 
+            "kind": "Video", 
+            "plugin_name": "Bass Fishing Addon", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.video.BassFishing/", 
+            "released": "2017-05-09", 
+            "summary": "Bass Fishing Videos for Kodi", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/video/", 
+            "version": "1.0"
+        }, 
+        {
+            "download_link": "https://offshoregit.com/Nemzzy668/repository.streamarmy/zips/repository.StreamArmy/repository.StreamArmy-3.1.zip", 
+            "kind": "Video", 
+            "plugin_name": "BeatZ By Stream Army", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.audio.beatz/", 
+            "released": "2017-05-09", 
+            "summary": "Beatz By Stream Army", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/video/", 
+            "version": "1.0.3"
+        }, 
+        {
+            "download_link": "https://offshoregit.com/metalkettle/zips/repository.metalkettle/repository.metalkettle-1.7.3.zip", 
+            "kind": "Video", 
+            "plugin_name": "Big Buck Bunny", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.video.bigbuckbunny/", 
+            "released": "2017-05-09", 
+            "summary": "", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/video/", 
+            "version": "1.0.2"
+        }, 
+        {
+            "download_link": "https://github.com/MetalChris/repository.metalchris/raw/master/zips/repository.metalchris/repository.metalchris-2.0.4.zip", 
+            "kind": "Video", 
+            "plugin_name": "Big Cat Rescue", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.video.bigcatrescue/", 
+            "released": "2017-05-09", 
+            "summary": "Watch videos from Big Cat Rescue", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/video/", 
+            "version": "0.0.2"
+        }, 
+        {
+            "download_link": "https://github.com/MetalChris/repository.metalchris/raw/master/zips/repository.metalchris/repository.metalchris-2.0.4.zip", 
+            "kind": "Video", 
+            "plugin_name": "Big South Sports", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.video.bigsouth/", 
+            "released": "2017-05-09", 
+            "summary": "Big South Sports", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/video/", 
+            "version": "0.0.1"
+        }, 
+        {
+            "download_link": "https://github.com/MetalChris/repository.metalchris/raw/master/zips/repository.metalchris/repository.metalchris-2.0.4.zip", 
+            "kind": "Video", 
+            "plugin_name": "BigStar Movies", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.video.bigstar/", 
+            "released": "2017-05-09", 
+            "summary": "BigStar Movies", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/video/", 
+            "version": "0.1.4"
+        }, 
+        {
+            "download_link": "https://offshoregit.com/xbmchub/xbmc-hub-repo/raw/master/repository.xbmchub/repository.xbmchub-1.0.6.zip", 
+            "kind": "Video", 
+            "plugin_name": "Bin@ural", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.audio.binaural/", 
+            "released": "2017-05-09", 
+            "summary": "Audio and Video Music Streaming", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/video/", 
+            "version": "1.0.0a"
+        }, 
+        {
+            "download_link": "http://dmdsoftware.net/repository.ddurdle/repository.ddurdle.zip", 
+            "kind": "Video", 
+            "plugin_name": "Box", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.video.box/", 
+            "released": "2017-05-09", 
+            "summary": "Plays video and music from your Box.com/Box.net service", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/video/", 
+            "version": "0.1.4"
+        }, 
+        {
+            "download_link": "https://offshoregit.com/echocoder/main/zips/repository.echo/repository.echo-2.01.zip", 
+            "kind": "Video", 
+            "plugin_name": "Box TV", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.video.boxtv/", 
+            "released": "2017-05-09", 
+            "summary": "BoxTV is a video service that brings to you the latest movies, TV shows and video content in one place.   BoxTV provides you a way to access content from your favourite studios and channels in a highly optimized and world-class user experience.", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/video/", 
+            "version": "1.00"
+        }, 
+        {
+            "download_link": "https://offshoregit.com/simtech/SIMTECH/raw/master/plugins/repository.simtech/repository.simtech-3.0.zip", 
+            "kind": "Video", 
+            "plugin_name": "Brave Wilderness", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.video.bravewilderness/", 
+            "released": "2017-05-09", 
+            "summary": "The Home For Brave Wilderness Add-On", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/video/", 
+            "version": "1.0"
+        }, 
+        {
+            "download_link": "https://offshoregit.com/bubbles/repository/repository.bubbles/repository.bubbles-1.2.0.zip", 
+            "kind": "Video", 
+            "plugin_name": "Bubbles", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.video.bubbles/", 
+            "released": "2017-05-09", 
+            "summary": "Stream Movies and Shows", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/video/", 
+            "version": "1.3.0"
+        }, 
+        {
+            "download_link": "https://github.com/MetalChris/repository.metalchris/raw/master/zips/repository.metalchris/repository.metalchris-2.0.4.zip", 
+            "kind": "Video", 
+            "plugin_name": "Campus Insiders", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.video.campus-insiders/", 
+            "released": "2017-05-09", 
+            "summary": "College Sports.  All Day.  Every Day.", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/video/", 
+            "version": "0.1.0"
+        }, 
+        {
+            "download_link": "http://offshoregit.com/podgod/repo/zips/repository.podgod/repository.podgod-1.7.zip", 
+            "kind": "Video", 
+            "plugin_name": "Canada On Demand*", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.video.canada.on.demand.pg/", 
+            "released": "2017-05-09", 
+            "summary": "Video On Demand From Canada", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/video/", 
+            "version": "1.0"
+        }, 
+        {
+            "download_link": "https://github.com/MetalChris/repository.metalchris/raw/master/zips/repository.metalchris/repository.metalchris-2.0.4.zip", 
+            "kind": "Video", 
+            "plugin_name": "CarbonTV", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.video.carbon-tv/", 
+            "released": "2017-05-09", 
+            "summary": "CarbonTV", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/video/", 
+            "version": "0.0.2"
+        }, 
+        {
+            "download_link": "https://offshoregit.com/metalkettle/zips/repository.metalkettle/repository.metalkettle-1.7.3.zip", 
+            "kind": "Video", 
+            "plugin_name": "Cartoons8", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.video.cartoons8/", 
+            "released": "2017-05-09", 
+            "summary": "", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/video/", 
+            "version": "1.0.31"
+        }, 
+        {
+            "download_link": "https://offshoregit.com/natko1412/zips/repo.natko1412/repo.natko1412-2.0.0.zip", 
+            "kind": "Video", 
+            "plugin_name": "Castaway", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.video.castaway/", 
+            "released": "2017-05-09", 
+            "summary": "Just a castaway.", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/video/", 
+            "version": "0.2.8"
+        }, 
+        {
+            "download_link": "https://github.com/MetalChris/repository.metalchris/raw/master/zips/repository.metalchris/repository.metalchris-2.0.4.zip", 
+            "kind": "Video", 
+            "plugin_name": "CBC Sports", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.video.cbc-sports/", 
+            "released": "2017-05-09", 
+            "summary": "Live Events, Replays, and Highlights from CBC Sports", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/video/", 
+            "version": "0.0.2"
+        }, 
+        {
+            "download_link": "http://offshoregit.com/podgod/repo/zips/repository.podgod/repository.podgod-1.7.zip", 
+            "kind": "Video", 
+            "plugin_name": "cCloud TV", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.video.ccloudtv/", 
+            "released": "2017-05-09", 
+            "summary": "All the best from cCloud TV", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/video/", 
+            "version": "1.5.3"
+        }, 
+        {
+            "download_link": "https://github.com/MetalChris/repository.metalchris/raw/master/zips/repository.metalchris/repository.metalchris-2.0.4.zip", 
+            "kind": "Video", 
+            "plugin_name": "CFL Video", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.video.cfl/", 
+            "released": "2017-05-09", 
+            "summary": "CFL Video", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/video/", 
+            "version": "0.1.2"
+        }, 
+        {
+            "download_link": "https://github.com/MetalChris/repository.metalchris/raw/master/zips/repository.metalchris/repository.metalchris-2.0.4.zip", 
+            "kind": "Video", 
+            "plugin_name": "Charlie Rose", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.video.charlierose/", 
+            "released": "2017-05-09", 
+            "summary": "Charlie Rose", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/video/", 
+            "version": "0.0.3"
+        }, 
+        {
+            "download_link": "https://offshoregit.com/xbmchub/xbmc-hub-repo/raw/master/repository.xbmchub/repository.xbmchub-1.0.6.zip", 
+            "kind": "Skins", 
+            "plugin_name": "Angry Bird Movie (Krypton)", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/skin.angry.birds.krypton/", 
+            "released": "2017-05-09", 
+            "summary": "Angry Birds Movie", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/skins/", 
+            "version": "1.2"
+        }, 
+        {
+            "download_link": "https://offshoregit.com/xbmchub/xbmc-hub-repo/raw/master/repository.xbmchub/repository.xbmchub-1.0.6.zip", 
+            "kind": "Skins", 
+            "plugin_name": "Angry Birds Movie (Jarvis)", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/skin.angry.birds/", 
+            "released": "2017-05-09", 
+            "summary": "Angry Birds Movie", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/skins/", 
+            "version": "1.0"
+        }, 
+        {
+            "download_link": "http://offshoregit.com/iCanuck/iCanuck-Repo/raw/master/repository.icanuck/repository.icanuck-3.1.0.zip", 
+            "kind": "Skins", 
+            "plugin_name": "Bello Nero", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/skin.bellonero/", 
+            "released": "2017-05-09", 
+            "summary": "A GUI for Kodi Media Center", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/skins/", 
+            "version": "3.0.8n"
+        }, 
+        {
+            "download_link": "http://offshoregit.com/iCanuck/iCanuck-Repo/raw/master/repository.icanuck/repository.icanuck-3.1.0.zip", 
+            "kind": "Skins", 
+            "plugin_name": "Bello Nero - Gotham", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/skin.bellonero-gotham/", 
+            "released": "2017-05-09", 
+            "summary": "A GUI for Kodi Media Center", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/skins/", 
+            "version": "2.0.8n"
+        }, 
+        {
+            "download_link": "https://offshoregit.com/bubbles/repository/repository.bubbles/repository.bubbles-1.2.0.zip", 
+            "kind": "Skins", 
+            "plugin_name": "Bubbles Aeon Nox", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/skin.bubbles.aeon.nox/", 
+            "released": "2017-05-09", 
+            "summary": "Bubbles Aeon Nox Customization", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/skins/", 
+            "version": "1.0.0"
+        }, 
+        {
+            "download_link": "http://offshoregit.com/iCanuck/iCanuck-Repo/raw/master/repository.icanuck/repository.icanuck-3.1.0.zip", 
+            "kind": "Skins", 
+            "plugin_name": "Carbon", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/skin.carbon/", 
+            "released": "2017-05-09", 
+            "summary": "", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/skins/", 
+            "version": "1.0.0"
+        }, 
+        {
+            "download_link": "http://offshoregit.com/iCanuck/iCanuck-Repo/raw/master/repository.icanuck/repository.icanuck-3.1.0.zip", 
+            "kind": "Skins", 
+            "plugin_name": "Carbon", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/skin.carbon-gotham/", 
+            "released": "2017-05-09", 
+            "summary": "", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/skins/", 
+            "version": "0.3.0"
+        }, 
+        {
+            "download_link": "http://offshoregit.com/iCanuck/iCanuck-Repo/raw/master/repository.icanuck/repository.icanuck-3.1.0.zip", 
+            "kind": "Skins", 
+            "plugin_name": "Carbon", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/skin.carbon-isengard/", 
+            "released": "2017-05-09", 
+            "summary": "", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/skins/", 
+            "version": "2.0.0"
+        }, 
+        {
+            "download_link": "https://offshoregit.com/xbmchub/xbmc-hub-repo/raw/master/repository.xbmchub/repository.xbmchub-1.0.6.zip", 
+            "kind": "Skins", 
+            "plugin_name": "Classic Steampunked (Jarvis)", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/skin.classic.steampunked/", 
+            "released": "2017-05-09", 
+            "summary": "Classic Steampunked", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/skins/", 
+            "version": "1.1"
+        }, 
+        {
+            "download_link": "https://github.com/elmerohueso/xbmc.repo.elmerohueso/raw/master/download/xbmc.repo.elmerohueso/xbmc.repo.elmerohueso-1.0.zip", 
+            "kind": "Skins", 
+            "plugin_name": "Confluence++", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/skin.confluenceFTVkiosk/", 
+            "released": "2017-05-09", 
+            "summary": "Confluence skin by Jezz_X. (XBMC's default skin), modified by elmerohueso.", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/skins/", 
+            "version": "3.0.4"
+        }, 
+        {
+            "download_link": "https://github.com/elmerohueso/xbmc.repo.elmerohueso/raw/master/download/xbmc.repo.elmerohueso/xbmc.repo.elmerohueso-1.0.zip", 
+            "kind": "Skins", 
+            "plugin_name": "Confluence++ (Helix)", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/skin.confluenceplusplus.helix/", 
+            "released": "2017-05-09", 
+            "summary": "Confluence skin by Jezz_X. (XBMC's default skin), modified by elmerohueso.", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/skins/", 
+            "version": "1.0.4"
+        }, 
+        {
+            "download_link": "https://offshoregit.com/xbmchub/xbmc-hub-repo/raw/master/repository.xbmchub/repository.xbmchub-1.0.6.zip", 
+            "kind": "Skins", 
+            "plugin_name": "Hallowe'en (Jarvis)", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/skin.halloween/", 
+            "released": "2017-05-09", 
+            "summary": "Hallowe'en", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/skins/", 
+            "version": "1.1"
+        }, 
+        {
+            "download_link": "http://offshoregit.com/iCanuck/iCanuck-Repo/raw/master/repository.icanuck/repository.icanuck-3.1.0.zip", 
+            "kind": "Skins", 
+            "plugin_name": "iOS-X", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/skin.iOS-X/", 
+            "released": "2017-05-09", 
+            "summary": "", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/skins/", 
+            "version": "0.6.0"
+        }, 
+        {
+            "download_link": "http://offshoregit.com/iCanuck/iCanuck-Repo/raw/master/repository.icanuck/repository.icanuck-3.1.0.zip", 
+            "kind": "Skins", 
+            "plugin_name": "iOS-X - Helix", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/skin.iOS-X-helix/", 
+            "released": "2017-05-09", 
+            "summary": "", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/skins/", 
+            "version": "0.6.0h"
+        }, 
+        {
+            "download_link": "http://offshoregit.com/iCanuck/iCanuck-Repo/raw/master/repository.icanuck/repository.icanuck-3.1.0.zip", 
+            "kind": "Skins", 
+            "plugin_name": "iOS-X - Jarvis", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/skin.iOS-X-jarvis/", 
+            "released": "2017-05-09", 
+            "summary": "", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/skins/", 
+            "version": "1.0.0"
+        }, 
+        {
+            "download_link": "https://offshoregit.com/xbmchub/xbmc-hub-repo/raw/master/repository.xbmchub/repository.xbmchub-1.0.6.zip", 
+            "kind": "Skins", 
+            "plugin_name": "LoVe IS", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/skin.love.is/", 
+            "released": "2017-05-09", 
+            "summary": "LoVe IS", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/skins/", 
+            "version": "1.0"
+        }, 
+        {
+            "download_link": "https://offshoregit.com/xbmchub/xbmc-hub-repo/raw/master/repository.xbmchub/repository.xbmchub-1.0.6.zip", 
+            "kind": "Skins", 
+            "plugin_name": "Paradise (Jarvis)", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/skin.paradise/", 
+            "released": "2017-05-09", 
+            "summary": "Paradise", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/skins/", 
+            "version": "1.02"
+        }, 
+        {
+            "download_link": "https://offshoregit.com/xbmchub/xbmc-hub-repo/raw/master/repository.xbmchub/repository.xbmchub-1.0.6.zip", 
+            "kind": "Skins", 
+            "plugin_name": "Peppa Pig (Krypton)", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/skin.peppa.pig.krypton/", 
+            "released": "2017-05-09", 
+            "summary": "Peppa Pig", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/skins/", 
+            "version": "1.0"
+        }, 
+        {
+            "download_link": "https://offshoregit.com/xbmchub/xbmc-hub-repo/raw/master/repository.xbmchub/repository.xbmchub-1.0.6.zip", 
+            "kind": "Skins", 
+            "plugin_name": "Santa's Village (Jarvis)", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/skin.santasvillage/", 
+            "released": "2017-05-09", 
+            "summary": "Santa's Village", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/skins/", 
+            "version": "1.0"
+        }, 
+        {
+            "download_link": "https://offshoregit.com/xbmchub/xbmc-hub-repo/raw/master/repository.xbmchub/repository.xbmchub-1.0.6.zip", 
+            "kind": "Skins", 
+            "plugin_name": "Sky (Jarvis)", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/skin.sky/", 
+            "released": "2017-05-09", 
+            "summary": "Sky skin modded by ClassicNancy. Thank you Eddage for your Unity skin. Thank you to terrytibbs from whom I ported the sky guide epg.", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/skins/", 
+            "version": "1.0"
+        }, 
+        {
+            "download_link": "https://offshoregit.com/xbmchub/xbmc-hub-repo/raw/master/repository.xbmchub/repository.xbmchub-1.0.6.zip", 
+            "kind": "Skins", 
+            "plugin_name": "Sky(Krypton)", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/skin.sky.krypton/", 
+            "released": "2017-05-09", 
+            "summary": "Sky skin modded by ClassicNancy. Thank you Eddage for your Unity skin. Thank you to terrytibbs from whom I ported the sky guide epg.", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/skins/", 
+            "version": "1.2"
+        }, 
+        {
+            "download_link": "https://offshoregit.com/xbmchub/xbmc-hub-repo/raw/master/repository.xbmchub/repository.xbmchub-1.0.6.zip", 
+            "kind": "Skins", 
+            "plugin_name": "Star Wars VII (Jarvis)", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/skin.star.wars/", 
+            "released": "2017-05-09", 
+            "summary": "Star Wars VII", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/skins/", 
+            "version": "1.4"
+        }, 
+        {
+            "download_link": "https://offshoregit.com/xbmchub/xbmc-hub-repo/raw/master/repository.xbmchub/repository.xbmchub-1.0.6.zip", 
+            "kind": "Skins", 
+            "plugin_name": "Star Wars VII (Krypton)", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/skin.star.wars.krypton/", 
+            "released": "2017-05-09", 
+            "summary": "Star Wars VII", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/skins/", 
+            "version": "1.5"
+        }, 
+        {
+            "download_link": "https://offshoregit.com/xbmchub/xbmc-hub-repo/raw/master/repository.xbmchub/repository.xbmchub-1.0.6.zip", 
+            "kind": "Skins", 
+            "plugin_name": "Super Mario Galaxy (Jarvis)", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/skin.super.mario.jarvis/", 
+            "released": "2017-05-09", 
+            "summary": "Super Mario Galaxy", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/skins/", 
+            "version": "1.3"
+        }, 
+        {
+            "download_link": "https://offshoregit.com/xbmchub/xbmc-hub-repo/raw/master/repository.xbmchub/repository.xbmchub-1.0.6.zip", 
+            "kind": "Skins", 
+            "plugin_name": "Super Mario Galaxy (Krypton)", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/skin.super.mario.krypton/", 
+            "released": "2017-05-09", 
+            "summary": "Super Mario Galaxy", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/skins/", 
+            "version": "1.5"
+        }, 
+        {
+            "download_link": "https://offshoregit.com/xbmchub/xbmc-hub-repo/raw/master/repository.xbmchub/repository.xbmchub-1.0.6.zip", 
+            "kind": "Skins", 
+            "plugin_name": "The Godfather (Jarvis)", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/skin.thegodfather/", 
+            "released": "2017-05-09", 
+            "summary": "The Godfather", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/skins/", 
+            "version": "1.1"
+        }, 
+        {
+            "download_link": "http://offshoregit.com/iCanuck/iCanuck-Repo/raw/master/repository.icanuck/repository.icanuck-3.1.0.zip", 
+            "kind": "Skins", 
+            "plugin_name": "tvOS-X - Isengard", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/skin.tvOS-X-isengard/", 
+            "released": "2017-05-09", 
+            "summary": "Modified from Fastcolors, SiO2-ATV4 - A simple and handy visually Skin based on AppleTv4", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/skins/", 
+            "version": "0.9.12"
+        }, 
+        {
+            "download_link": "http://offshoregit.com/iCanuck/iCanuck-Repo/raw/master/repository.icanuck/repository.icanuck-3.1.0.zip", 
+            "kind": "Skins", 
+            "plugin_name": "tvOS-X - Jarvis", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/skin.tvOS-X-jarvis/", 
+            "released": "2017-05-09", 
+            "summary": "Modified from Fastcolors, SiO2-ATV4 - A simple and handy visually Skin based on AppleTv4", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/skins/", 
+            "version": "1.9.12"
+        }, 
+        {
+            "download_link": "http://offshoregit.com/iCanuck/iCanuck-Repo/raw/master/repository.icanuck/repository.icanuck-3.1.0.zip", 
+            "kind": "Skins", 
+            "plugin_name": "tvOS-X - Krypton", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/skin.tvOS-X-krypton/", 
+            "released": "2017-05-09", 
+            "summary": "Modified from Fastcolors, SiO2-ATV4 - A simple and handy visually Skin based on AppleTv4", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/skins/", 
+            "version": "2.9.12"
+        }, 
+        {
+            "download_link": "https://offshoregit.com/xbmchub/xbmc-hub-repo/raw/master/repository.xbmchub/repository.xbmchub-1.0.6.zip", 
+            "kind": "Skins", 
+            "plugin_name": "Winter Wonderland (Jarvis)", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/skin.winter.wonderland/", 
+            "released": "2017-05-09", 
+            "summary": "Winter Wonderland", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/skins/", 
+            "version": "1.1"
+        }, 
+        {
+            "download_link": "https://offshoregit.com/xbmchub/xbmc-hub-repo/raw/master/repository.xbmchub/repository.xbmchub-1.0.6.zip", 
+            "kind": "Skins", 
+            "plugin_name": "Xredium (Jarvis)", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/skin.xredium/", 
+            "released": "2017-05-09", 
+            "summary": "Xredium", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/skins/", 
+            "version": "1.1"
+        }, 
+        {
+            "download_link": "https://offshoregit.com/Hamid_PaK/repository/repository.hamid_pak/repository.hamid_pak-1.0.0.zip", 
+            "kind": "Audio", 
+            "plugin_name": "AccuRadio", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.audio.accuradio/", 
+            "released": "2017-05-09", 
+            "summary": "http://www.accuradio.com/", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/audio/", 
+            "version": "1.1.0"
+        }, 
+        {
+            "download_link": "http://dmdsoftware.net/repository.ddurdle/repository.ddurdle.zip", 
+            "kind": "Audio", 
+            "plugin_name": "Amazon Cloud Drive", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.video.acd/", 
+            "released": "2017-05-09", 
+            "summary": "Plays music and video from your Amazon Cloud Drive account", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/audio/", 
+            "version": "0.2.13"
+        }, 
+        {
+            "download_link": "https://offshoregit.com/echocoder/main/zips/repository.echo/repository.echo-2.01.zip", 
+            "kind": "Audio", 
+            "plugin_name": "Anfield Index Podcast", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.audio.anfieldindex/", 
+            "released": "2017-05-09", 
+            "summary": "Twitter Support: @EchoCoder", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/audio/", 
+            "version": "1.01"
+        }, 
+        {
+            "download_link": "https://github.com/zag2me/repository.urepo/raw/master/repository.urepo.zip", 
+            "kind": "Audio", 
+            "plugin_name": "AudioBooks", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/script.audiobooks/", 
+            "released": "2017-05-09", 
+            "summary": "Play AudioBooks", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/audio/", 
+            "version": "100.8.1"
+        }, 
+        {
+            "download_link": "https://offshoregit.com/rw86/rw86-repo/zips/repository.rw86/repository.rw86-3.0.0.zip", 
+            "kind": "Audio", 
+            "plugin_name": "BBC Podcasts", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.audio.bbcpodcasts.rayw1986/", 
+            "released": "2017-05-09", 
+            "summary": "Listen to the BBC Podcasts", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/audio/", 
+            "version": "0.0.1"
+        }, 
+        {
+            "download_link": "https://offshoregit.com/Nemzzy668/repository.streamarmy/zips/repository.StreamArmy/repository.StreamArmy-3.1.zip", 
+            "kind": "Audio", 
+            "plugin_name": "BeatZ By Stream Army", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.audio.beatz/", 
+            "released": "2017-05-09", 
+            "summary": "Beatz By Stream Army", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/audio/", 
+            "version": "1.0.3"
+        }, 
+        {
+            "download_link": "https://offshoregit.com/xbmchub/xbmc-hub-repo/raw/master/repository.xbmchub/repository.xbmchub-1.0.6.zip", 
+            "kind": "Audio", 
+            "plugin_name": "Bin@ural", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.audio.binaural/", 
+            "released": "2017-05-09", 
+            "summary": "Audio and Video Music Streaming", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/audio/", 
+            "version": "1.0.0a"
+        }, 
+        {
+            "download_link": "http://dmdsoftware.net/repository.ddurdle/repository.ddurdle.zip", 
+            "kind": "Audio", 
+            "plugin_name": "Box", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.video.box/", 
+            "released": "2017-05-09", 
+            "summary": "Plays video and music from your Box.com/Box.net service", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/audio/", 
+            "version": "0.1.4"
+        }, 
+        {
+            "download_link": "https://offshoregit.com/xbmchub/xbmc-hub-repo/raw/master/repository.xbmchub/repository.xbmchub-1.0.6.zip", 
+            "kind": "Audio", 
+            "plugin_name": "Broadcastify", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.audio.radioreference/", 
+            "released": "2017-05-09", 
+            "summary": "Broadcastify", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/audio/", 
+            "version": "1.1.7"
+        }, 
+        {
+            "download_link": "https://github.com/MetalChris/repository.metalchris/raw/master/zips/repository.metalchris/repository.metalchris-2.0.4.zip", 
+            "kind": "Audio", 
+            "plugin_name": "Buddha Radio", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.audio.buddha/", 
+            "released": "2017-05-09", 
+            "summary": "Buddha Radio", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/audio/", 
+            "version": "1.0.3"
+        }, 
+        {
+            "download_link": "http://dmdsoftware.net/repository.ddurdle/repository.ddurdle.zip", 
+            "kind": "Audio", 
+            "plugin_name": "gdrive", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.video.gdrive/", 
+            "released": "2017-05-09", 
+            "summary": "Plays music and video from your Google Drive account", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/audio/", 
+            "version": "0.8.05"
+        }, 
+        {
+            "download_link": "http://offshoregit.com/podgod/repo/zips/repository.podgod/repository.podgod-1.7.zip", 
+            "kind": "Audio", 
+            "plugin_name": "Hey Now", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.video.heynow/", 
+            "released": "2017-05-09", 
+            "summary": "The Howard Stern Show", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/audio/", 
+            "version": "1.8.5"
+        }, 
+        {
+            "download_link": "https://offshoregit.com/metalkettle/zips/repository.metalkettle/repository.metalkettle-1.7.3.zip", 
+            "kind": "Audio", 
+            "plugin_name": "House Mixes", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.audio.housemixes/", 
+            "released": "2017-05-09", 
+            "summary": "", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/audio/", 
+            "version": "1.1.6"
+        }, 
+        {
+            "download_link": "https://github.com/MetalChris/repository.metalchris/raw/master/zips/repository.metalchris/repository.metalchris-2.0.4.zip", 
+            "kind": "Audio", 
+            "plugin_name": "Internet Archive [Audio]", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.audio.internetarchive/", 
+            "released": "2017-05-09", 
+            "summary": "Internet Archive", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/audio/", 
+            "version": "3.0.7"
+        }, 
+        {
+            "download_link": "https://github.com/MetalChris/repository.metalchris/raw/master/zips/repository.metalchris/repository.metalchris-2.0.4.zip", 
+            "kind": "Audio", 
+            "plugin_name": "Internet Radio", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.audio.internet-radio/", 
+            "released": "2017-05-11", 
+            "summary": "Internet Radio", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/audio/", 
+            "version": "0.0.2"
+        }, 
+        {
+            "download_link": "https://offshoregit.com/metalkettle/zips/repository.metalkettle/repository.metalkettle-1.7.3.zip", 
+            "kind": "Audio", 
+            "plugin_name": "Its All About The Music", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.video.iaatm/", 
+            "released": "2017-05-09", 
+            "summary": "", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/audio/", 
+            "version": "1.0.6"
+        }, 
+        {
+            "download_link": "https://offshoregit.com/xbmchub/xbmc-hub-repo/raw/master/repository.xbmchub/repository.xbmchub-1.0.6.zip", 
+            "kind": "Audio", 
+            "plugin_name": "Jango", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.audio.jango/", 
+            "released": "2017-05-09", 
+            "summary": "Free Internet Radio that plays music you'll love!", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/audio/", 
+            "version": "0.8.8"
+        }, 
+        {
+            "download_link": "https://github.com/LS80/repository.leopold/raw/master/repository.leopold/repository.leopold-3.0.0.zip", 
+            "kind": "Audio", 
+            "plugin_name": "Kermode and Mayo's Film Review", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.video.kermodeandmayo/", 
+            "released": "2017-05-09", 
+            "summary": "", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/audio/", 
+            "version": "0.5.2"
+        }, 
+        {
+            "download_link": "https://github.com/MrEntertainment/backupREPO/raw/master/zips/repository.entertainmentrepobackup/repository.entertainmentrepobackup-1.1.4.zip", 
+            "kind": "Audio", 
+            "plugin_name": "koollondon", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.audio.koollondon/", 
+            "released": "2017-05-09", 
+            "summary": "koollondon", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/audio/", 
+            "version": "9.4.9"
+        }, 
+        {
+            "download_link": "https://github.com/NitroCSIA/nitrocsia-xbmc-addons/raw/master/repository.nitrocsia.zip", 
+            "kind": "Audio", 
+            "plugin_name": "LDS Videos", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.video.ldsvideos/", 
+            "released": "2017-05-09", 
+            "summary": "Videos from lds.org, byutv.org, and mormonchannel.org", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/audio/", 
+            "version": "1.0.3"
+        }, 
+        {
+            "download_link": "http://dmdsoftware.net/repository.ddurdle/repository.ddurdle.zip", 
+            "kind": "Audio", 
+            "plugin_name": "MediaFire", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.video.mediafire/", 
+            "released": "2017-05-09", 
+            "summary": "Plays video and music from your MediaFire service", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/audio/", 
+            "version": "0.2.0"
+        }, 
+        {
+            "download_link": "https://offshoregit.com/xbmchub/xbmc-hub-repo/raw/master/repository.xbmchub/repository.xbmchub-1.0.6.zip", 
+            "kind": "Audio", 
+            "plugin_name": "MP3 Streams", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.audio.mp3streams/", 
+            "released": "2017-05-09", 
+            "summary": "A music streaming collection", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/audio/", 
+            "version": "1.2.4"
+        }, 
+        {
+            "download_link": "https://github.com/LS80/repository.leopold/raw/master/repository.leopold/repository.leopold-3.0.0.zip", 
+            "kind": "Audio", 
+            "plugin_name": "MP3 Tales", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.audio.mp3tales/", 
+            "released": "2017-05-09", 
+            "summary": "MP3 Tales", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/audio/", 
+            "version": "1.4.0"
+        }, 
+        {
+            "download_link": "http://offshoregit.com/iCanuck/iCanuck-Repo/raw/master/repository.icanuck/repository.icanuck-3.1.0.zip", 
+            "kind": "Audio", 
+            "plugin_name": "Music Box", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.audio.musicbox/", 
+            "released": "2017-05-09", 
+            "summary": "Music Box", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/audio/", 
+            "version": "0.1.5"
+        }, 
+        {
+            "download_link": "http://dmdsoftware.net/repository.ddurdle/repository.ddurdle.zip", 
+            "kind": "Audio", 
+            "plugin_name": "OneDrive", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.video.onedrive/", 
+            "released": "2017-05-09", 
+            "summary": "Plays video and music from your OneDrive service", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/audio/", 
+            "version": "0.4.0"
+        }, 
+        {
+            "download_link": "http://dmdsoftware.net/repository.ddurdle/repository.ddurdle.zip", 
+            "kind": "Audio", 
+            "plugin_name": "ownCloud", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.video.owncloud/", 
+            "released": "2017-05-09", 
+            "summary": "Plays video and music from your ownCloud service", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/audio/", 
+            "version": "0.4.11"
+        }, 
+        {
+            "download_link": "https://github.com/k3oni/repository.k3oni.xbmc-addons/archive/master.zip", 
+            "kind": "Audio", 
+            "plugin_name": "Pandora", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/script.xbmc.pandora/", 
+            "released": "2017-05-09", 
+            "summary": "Pandora Radio", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/audio/", 
+            "version": "1.2.12"
+        }, 
+        {
+            "download_link": "https://offshoregit.com/anxdpanic/repository/zips/repository.anxdpanic/repository.anxdpanic-0.9.3.zip", 
+            "kind": "Audio", 
+            "plugin_name": "PlayThis", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.video.playthis/", 
+            "released": "2017-05-09", 
+            "summary": "Find and resolve media from a url to play or open.", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/audio/", 
+            "version": "3.1.1"
+        }, 
+        {
+            "download_link": "https://github.com/MetalChris/repository.metalchris/raw/master/zips/repository.metalchris/repository.metalchris-2.0.4.zip", 
+            "kind": "Audio", 
+            "plugin_name": "Radionomy", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.audio.radionomy/", 
+            "released": "2017-05-09", 
+            "summary": "Discover thousands of streaming radio stations", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/audio/", 
+            "version": "0.0.4"
+        }, 
+        {
+            "download_link": "https://github.com/MrEntertainment/backupREPO/raw/master/zips/repository.entertainmentrepobackup/repository.entertainmentrepobackup-1.1.4.zip", 
+            "kind": "Audio", 
+            "plugin_name": "Rave player", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.audio.raveplayer/", 
+            "released": "2017-05-09", 
+            "summary": "No1 for oldskool Stream 1000s and 1000s of Dj sets, mixtapes and ravepacks from over 30 sites all in one place so OiOi lets get xbmc raving to the sound of the oldskool", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/audio/", 
+            "version": "2.0.2"
+        }, 
+        {
+            "download_link": "https://github.com/MrEntertainment/backupREPO/raw/master/zips/repository.entertainmentrepobackup/repository.entertainmentrepobackup-1.1.4.zip", 
+            "kind": "Audio", 
+            "plugin_name": "Rinse FM", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.audio.rinsefmplayer/", 
+            "released": "2017-05-09", 
+            "summary": "Rinse FM player Lock in LIVE: 106.8 FM in London or http://radio.rinse.fm/ - find out who's playing right now here: http://rinse.fm/player/Studio.  Call or SMS: +44 (0)7539 863 117. BBM instant messaging: 21FF5BFF", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/audio/", 
+            "version": "1.0.9"
+        }, 
+        {
+            "download_link": "http://andrewovens.com/xbmc/repository.byalongshot.zip", 
+            "kind": "Audio", 
+            "plugin_name": "Songza", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.audio.songza/", 
+            "released": "2017-05-09", 
+            "summary": "Plays music from the popular online service Songza", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/audio/", 
+            "version": "1.1.3"
+        }, 
+        {
+            "download_link": "https://github.com/zag2me/repository.urepo/raw/master/repository.urepo.zip", 
+            "kind": "Audio", 
+            "plugin_name": "Sonos", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/script.sonos/", 
+            "released": "2017-05-09", 
+            "summary": "Sonos Controller", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/audio/", 
+            "version": "100.1.1"
+        }, 
+        {
+            "download_link": "https://offshoregit.com/metalkettle/zips/repository.metalkettle/repository.metalkettle-1.7.3.zip", 
+            "kind": "Audio", 
+            "plugin_name": "Spreaker", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.audio.spreaker/", 
+            "released": "2017-05-09", 
+            "summary": "", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/audio/", 
+            "version": "1.0.4"
+        }, 
+        {
+            "download_link": "https://offshoregit.com/metalkettle/zips/repository.metalkettle/repository.metalkettle-1.7.3.zip", 
+            "kind": "Audio", 
+            "plugin_name": "Themes", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.audio.televisiontunes/", 
+            "released": "2017-05-09", 
+            "summary": "Browse TelevisionTunes.com", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/audio/", 
+            "version": "0.0.9"
+        }, 
+        {
+            "download_link": "https://github.com/zag2me/repository.urepo/raw/master/repository.urepo.zip", 
+            "kind": "Audio", 
+            "plugin_name": "TIDAL2", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.audio.tidal2/", 
+            "released": "2017-05-09", 
+            "summary": "Extended version of the TIDAL music add-on", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/audio/", 
+            "version": "2.0.0-beta7"
+        }, 
+        {
+            "download_link": "https://offshoregit.com/metalkettle/zips/repository.metalkettle/repository.metalkettle-1.7.3.zip", 
+            "kind": "Audio", 
+            "plugin_name": "Tonido Client", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.video.tonido-client/", 
+            "released": "2017-05-09", 
+            "summary": "", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/audio/", 
+            "version": "1.0.0"
+        }, 
+        {
+            "download_link": "https://github.com/MrEntertainment/backupREPO/raw/master/zips/repository.entertainmentrepobackup/repository.entertainmentrepobackup-1.1.4.zip", 
+            "kind": "Audio", 
+            "plugin_name": "TS5 player (Capital XTRA)", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.audio.ts5player/", 
+            "released": "2017-05-09", 
+            "summary": "TS5 player", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/audio/", 
+            "version": "1.1.9"
+        }, 
+        {
+            "download_link": "https://github.com/moneymaker365/xbmc-xbmcplus-plugins/raw/master/download/repository.xbmcplus.xbmc-plugins/repository.xbmcplus.xbmc-plugins-1.4.zip", 
+            "kind": "Audio", 
+            "plugin_name": "VEVO", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.video.vevo/", 
+            "released": "2017-05-09", 
+            "summary": "Music Videos from VEVO", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/audio/", 
+            "version": "0.8.2"
+        }, 
+        {
+            "download_link": "https://offshoregit.com/xbmchub/xbmc-hub-repo/raw/master/repository.xbmchub/repository.xbmchub-1.0.6.zip", 
+            "kind": "Audio", 
+            "plugin_name": "What the Furk", 
+            "plugin_url": "https://www.tvaddons.ag/kodi-addons/show/plugin.video.whatthefurk/", 
+            "released": "2017-05-09", 
+            "summary": "Browse and stream videos and music from furk.net", 
+            "url": "https://www.tvaddons.ag/kodi-addons/category/audio/", 
+            "version": "2.2.2"
+        }
+    ], 
+    "kind": "kodi_plugin", 
+    "source": "https://www.tvaddons.ag/kodi-addons/"
+}

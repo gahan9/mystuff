@@ -118,7 +118,7 @@ def main(base_url):
         main_dict['items'] = item_list
         print()
     with open('video_plugin.json', 'w') as fp:
-        json.dump(data, fp, sort_keys=True, indent=4)
+        json.dump(main_dict, fp, sort_keys=False, indent=4)
     # file_output = open('plugin_dictionary.txt', 'w')
     # file_output.write(str(main_dict))
     # file_output.close()
