@@ -74,10 +74,10 @@ def main(base_url):
 
         internal_page = OpenPage(categories_url)  # <class 'bs4.BeautifulSoup'>
         sub_page2 = LoadTag(internal_page, 'ul', 'addonList')  # <class 'bs4.element.ResultSet'>
-        plugin_dictionary = {'kind': categories_name, 'url': categories_url}
         for items in sub_page2:
             print('.', end='')
             for plugins in items.findAll('li'):
+                plugin_dictionary = {'kind': categories_name, 'url': categories_url}
                 print('.', end='')
                 plugin_name = LoadUrlList(plugins, 'img', 'alt')  # <type 'list'>
                 plugin_url = LoadUrlList(plugins, 'a', 'href')  # <type 'list'>
