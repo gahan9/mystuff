@@ -1,0 +1,63 @@
+"""
+Kodi-17 : Krypton custom build instruction
+
+Follow steps provided at    http://kodi.wiki/view/Compiling
+
+<XBMC_SRC> = E:\xbmc-Krypton\ (can be different depending on system)
+
+Learn somewhat NSIS (to customize installer) from below links 
+    QuickStart : http://nsis.sourceforge.net/Simple_tutorials
+    Detailed : http://nsis.sourceforge.net/Docs/
+"""
+
+Logo changes to be made @
+        @ : <XBMC_SRC>\media
+    for Windows :
+        @ : <XBMC_SRC>\tools\windows\packaging\media
+    for linux :
+        @ : <XBMC_SRC>\tools\Linux\packaging\media
+    for android :
+        @ : <XBMC_SRC>\tools\android\packaging\media
+
+To change build name
+    @ : <XBMC_SRC>\version.txt
+
+
+To change skin -------- for kodi 17 (xbmc.gui version should not be greater than 5.12.0 specified in addon.xml of skin folder)
+    @ : <XBMC_SRC>\project\cmake\CMakeLists.txt
+        ADD CORE_SOURCE_DIR
+            list(APPEND SKINS "${CORE_SOURCE_DIR}/addons/skin.mimic\;${CORE_SOURCE_DIR}")
+    @ : <XBMC_SRC>\system\settings\settings.xml
+        CHANGE SKIN NAME
+            i.e. change <default>skin.mimic</default>
+                        <default>Your skin name</default>
+
+    @ : <XBMC_SRC>\system\addon-manifest.xml
+        ADD SKIN NAME
+            i.e. add entry of skin <addon>skin.mimic</addon>
+                                    <addon>Your skin name</addon>
+                for skin.mimic need to resolve few more package to download and add it to in manifest:
+                      <addon>script.module.pil</addon>
+                      <addon>script.skinshortcuts</addon>
+                      <addon>script.toolbox</addon>
+                      <addon>script.module.simplejson</addon>
+                      <addon>resource.images.studios.white</addon>
+                      <addon>script.module.unidecode</addon>
+                      <addon>script.skin.helper.service</addon>
+                      <addon>script.module.requests</addon>
+                    also make sure addon exists in <XBMC_SRC>\kodi-build\addons and <XBMC_SRC>\addons
+
+    @ : <XBMC_SRC>\Makefile.in
+        CHANGE SKIN_DIRS
+            ESTUARY_MEDIA=addons/skin.mimic/media
+            SKIN_DIRS=$(ESTUARY_MEDIA)
+        COMMENT block - skin textures
+            i.e.
+                # skin textures
+                ifeq (@USE_TEXTUREPACKER@,1)
+                skins: @TEXTUREPACKER@
+                   $(MAKE) -C $(ESTUARY_MEDIA)
+                   $(MAKE) -C $(ESTOUCHY_MEDIA)
+                else
+                skins:
+                endif
