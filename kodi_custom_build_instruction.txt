@@ -1,14 +1,20 @@
 """
 Kodi-17 : Krypton custom build instruction
 
-Follow steps provided at    http://kodi.wiki/view/Compiling
+Follow steps provided at    
+    http://kodi.wiki/view/Compiling
+    or
+    https://github.com/xbmc/xbmc/tree/master/docs
 
 <XBMC_SRC> = E:\xbmc-Krypton\ (can be different depending on system)
 
 Learn somewhat NSIS (to customize installer) from below links 
     QuickStart : http://nsis.sourceforge.net/Simple_tutorials
     Detailed : http://nsis.sourceforge.net/Docs/
+
+
 """
+
 
 Logo changes to be made @
         @ : <XBMC_SRC>\media
@@ -33,7 +39,7 @@ To change skin -------- for kodi 17 (xbmc.gui version should not be greater than
                         <default>Your skin name</default>
 
     @ : <XBMC_SRC>\system\addon-manifest.xml
-        ADD SKIN NAME
+        ADD adon entries
             i.e. add entry of skin <addon>skin.mimic</addon>
                                     <addon>Your skin name</addon>
                 for skin.mimic need to resolve few more package to download and add it to in manifest:
@@ -61,3 +67,327 @@ To change skin -------- for kodi 17 (xbmc.gui version should not be greater than
                 else
                 skins:
                 endif
+
+*********** Specific changes for Ceyes ****************
+    C:\XBMC-Krypton\xbmc\xbmc\interfaces\json-rpc\AddonsOperations.cpp
+
+*******************************************************
+*********** Specific changes for WizeTV (installer NSIS) ****************
+@ : <XBMC_SRC>\system\addon-manifest.xml
+        ADD adon entries
+            <addon>plugin.program.test</addon>
+To copy files in appdata\Roaming : place this code in 
+    file : 
+    before : Helpre function
+        ; *************************************************************
+        ; Custom Function by __gahan__ to replace substring
+        !define StrRep "!insertmacro StrRep"
+        !macro StrRep output string old new
+            Push `${string}`
+            Push `${old}`
+            Push `${new}`
+            !ifdef __UNINSTALL__
+                Call un.StrRep
+            !else
+                Call StrRep
+            !endif
+            Pop ${output}
+        !macroend
+         
+        !macro Func_StrRep un
+            Function ${un}StrRep
+                Exch $R2 ;new
+                Exch 1
+                Exch $R1 ;old
+                Exch 2
+                Exch $R0 ;string
+                Push $R3
+                Push $R4
+                Push $R5
+                Push $R6
+                Push $R7
+                Push $R8
+                Push $R9
+         
+                StrCpy $R3 0
+                StrLen $R4 $R1
+                StrLen $R6 $R0
+                StrLen $R9 $R2
+                loop:
+                    StrCpy $R5 $R0 $R4 $R3
+                    StrCmp $R5 $R1 found
+                    StrCmp $R3 $R6 done
+                    IntOp $R3 $R3 + 1 ;move offset by 1 to check the next character
+                    Goto loop
+                found:
+                    StrCpy $R5 $R0 $R3
+                    IntOp $R8 $R3 + $R4
+                    StrCpy $R7 $R0 "" $R8
+                    StrCpy $R0 $R5$R2$R7
+                    StrLen $R6 $R0
+                    IntOp $R3 $R3 + $R9 ;move offset by length of the replacement string
+                    Goto loop
+                done:
+         
+                Pop $R9
+                Pop $R8
+                Pop $R7
+                Pop $R6
+                Pop $R5
+                Pop $R4
+                Pop $R3
+                Push $R0
+                Push $R1
+                Pop $R0
+                Pop $R1
+                Pop $R0
+                Pop $R2
+                Exch $R1
+            FunctionEnd
+        !macroend
+        !insertmacro Func_StrRep ""
+        !insertmacro Func_StrRep "un."
+        ; *************************************************************
+    
+    after : ;Store installation folder in Section SecAPP
+    ;-----Copy files to Appdata\Roaming\WizeTV\addons by __gahan__
+    ${StrRep} $0 $LOCALAPPDATA "Local" "Roaming" 
+    CopyFiles /SILENT "$PROGRAMFILES\WizeTV\addons\skin.mimic\*" "$0\WizeTV\addons\skin.mimic"
+    ;-----
+
+
+----------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------
+                                                    ANDROID BUILD
+----------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------
+"""
+Helpful instruction to refer from:
+https://github.com/xbmc/xbmc/blob/Krypton/docs/README.android
+or
+http://forum.kodi.tv/showthread.php?tid=306050
+
+"""
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+                   ********************                   My Steps                   ********************                   
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+Step : 1
+---------
+    follow first 3 steps till SDK and NDK setup
+        these the configuration steps are same as mentioned in https://github.com/xbmc/xbmc/blob/Krypton/docs/README.android
+
+in my step location are as follow
+android-sdk & android-ndk @ : /opt/
+androideabi @ : /opt/
+
+Path setup
+export KODI_HOME = /$HOME/kodi-android
+export PREFIX = ${KODI_HOME}/xbmc-depends
+export NDK_HOME = /opt/android-ndk-r12b
+export SDK_HOME = /opt/android-sdk-linux
+
+Step : 2
+----------------------
+Set up the Android tool chain
+----------------------
+$ cd /opt/android-ndk-r12b
+$ cd build/tools
+$ ./make-standalone-toolchain.sh --ndk-dir=../../ --install-dir=/opt/android-ndk-r12b/arm-linux-androideabi-4.9-vanilla/android-21 --platform=android-21 --toolchain=arm-linux-androideabi-4.9
+
+Step : 3
+----------------------
+Creat debug key to sign for the APK
+----------------------
+$ keytool -genkey -keystore ~/.android/debug.keystore -v -alias \
+androiddebugkey -dname "CN=Android Debug,O=Android,C=US" -keypass \
+android -storepass android -keyalg RSA -keysize 2048 -validity 10000
+
+Step : 4
+----------------------
+Get the source code — this gets me Kodi version 17 RC1
+VERSION_MAJOR 17 / VERSION_MINOR 2 / VERSION_TAG RC1
+VERSION_CODE 170901 / ADDON_API 17.1.901
+----------------------
+$ cd $HOME
+$ git clone -b Krypton git://github.com/xbmc/xbmc.git kodi-android
+$ cd kodi-android
+
+Step:5
+----------------------
+Building dependencies
+----------------------
+$ cd $HOME/kodi-android/tools/depends
+$ ./bootstrap
+$ ./configure --with-tarballs=$HOME/xbmc-tarballs --host=arm-linux-androideabi --with-sdk-path=/opt/android-sdk-linux --with-ndk=/opt/android-ndk-r12b --with-toolchain=/opt/android-ndk-r12b/arm-linux-androideabi-4.9-vanilla/android-21 --prefix=$HOME/xbmc-depends
+
+-- this next two steps would take a while. I did not follow the advice to use make -j
+$ make
+|||||||||||| Now this stage you may get many kind of errors:
+|if| leaving directory :|try| possible reason delete package and `$ make` again and make sure internet connection is stable
+|if| C compiler cannot make executables (gcc working.. no)  :|try| reconfigure from "Step : 2" wisely
+|Never use sudo|
+$ make -C target/binary-addons
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+****************************************************************************************************************************
+How to build Kodi Krypton for Android with no compiler errors.
+This is based on xbmc/docs/README.android. I just filled in
+the blanks that README.android had. The APK was tested on
+Amazon FireTV.
+
+After many hours of trying to compile Kodi for Android, I thought I could
+share my steps to help prevent headaches. This is a step by step guide.
+This will work with both Windows 7, and OSX (because we are using Virtual box.)
+
+There are less things to go wrong when you start with a fresh install of the 
+operating system.
+-----------------------------------------------
+Starting Environment:
+Ubuntu 16.04 LTS 64 bit(running on Windows 7 Virtual Box 5.1.14)
+javac 1.8.0_121
+openjdk version "1.8.0_121"
+OpenJDK Runtime Environment (build 1.8.0_121-8u121-b13-0ubuntu1.16.04.2-b13)
+OpenJDK 64-Bit Server VM (build 25.121-b13, mixed mode)
+gcc (Ubuntu 5.4.0-6ubuntu1~16.04.4) 5.4.0 20160609
+-----------------------------------------------
+
+** Here are the steps:
+
+----------------------
+1) Install VirtualBox, then make a Linux Virtual Machine
+----------------------
+VirtualBox on Windows 7 host. A 30GB expandable disk for Linux is plenty.
+Ubuntu 16.04 LTS 64 bit(running on Windows 7 Virtual Box)
+
+----------------------
+2) Prepare the Ubuntu installation:
+----------------------
+$ sudo apt-get update
+$ sudo apt-get install default-jdk
+$ sudo apt-get install build-essential default-jdk git curl autoconf \
+unzip zip zlib1g-dev gawk gperf cmake
+
+$ sudo apt-get install lib32stdc++6 lib32z1 lib32z1-dev
+$ sudo apt-get install libcurl4-openssl-dev 
+
+----------------------
+3) Get Android SDK & NDK
+----------------------
+a) SDK tools
+$ mkdir $HOME/android-sdk-linux
+
+get the sdk tools from the link below:
+https://dl.google.com/android/repository...-linux.zip
+uncompress tools_r25.2.3-linux.zip to: /$HOME/android-sdk-linux/
+
+$ cd /$HOME/android-sdk-linux/tools
+$ ./android update sdk -u -t platform,platform-tool
+$ ./android update sdk --all -u -t build-tools-20.0.0
+
+b) NDK
+get the NDK from the link below
+https://dl.google.com/android/repository...x86_64.zip
+uncompress android-ndk-r12b-linux-x86_64.zip to /$HOME/
+so you'll have: /$HOME/android-ndk-r12b
+
+----------------------
+4) Set up the Android tool chain
+----------------------
+$ cd /$HOME/android-ndk-r12b
+$ cd build/tools
+$ ./make-standalone-toolchain.sh --ndk-dir=../../ --install-dir=/${HOME}/arm-linux-androideabi-4.9-vanilla/android-21 --platform=android-21 --toolchain=arm-linux-androideabi-4.9
+
+----------------------
+5) Creat debug key to sign for the APK
+----------------------
+$ keytool -genkey -keystore ~/.android/debug.keystore -v -alias \
+androiddebugkey -dname "CN=Android Debug,O=Android,C=US" -keypass \
+android -storepass android -keyalg RSA -keysize 2048 -validity 10000
+
+----------------------
+6) Get the source code — this gets me Kodi version 17 RC1
+VERSION_MAJOR 17 / VERSION_MINOR 1 / VERSION_TAG RC1
+VERSION_CODE 170901 / ADDON_API 17.0.901
+----------------------
+$ cd $HOME
+$ git clone -b Krypton git://github.com/xbmc/xbmc.git kodi-krypton
+$ cd kodi-krypton
+
+----------------------
+8) Building dependencies
+----------------------
+$ cd $HOME/kodi-krypton/tools/depends
+$ ./bootstrap
+$ ./configure --with-tarballs=/$HOME/xbmc-tarballs --host=arm-linux-androideabi --with-sdk-path=/$HOME/android-sdk-linux --with-ndk=/$HOME/android-ndk-r12b --with-toolchain=/$HOME/arm-linux-androideabi-4.9-vanilla/android-21 --prefix=/$HOME/xbmc-depends
+
+-- this next two steps would take a while. I did not follow the advice to use make -j
+$ make
+$ make -C target/binary-addons
+
+----------------------
+9) Building Kodi.Finally!!!! The instructions in the readme.Android are not updated.
+The two lines with * are completely different than the README file.
+----------------------
+$ cd $HOME/kodi-krypton
+* $ make -C tools/depends/target/cmakebuildsys 
+* $ cd /kodi-krypton/build
+$ make
+$ make apk
+
+you’ll get your apk in $HOME/kodi-krypton
+
+****************************************************************************************************************************
+
+----------------------------------------------------------------------------------------------------------------------------
+-----------------------
+Additional help manual
+-----------------------
+
+I'm having similar problems. Below is my setup for the toolchain, my build process and config.log and the tail end of my log file but can provide the entire log file if interested.
+--my build
+#!/bin/bash
+
+export KODI_HOME=/home/spart/xbmc-master
+export PREFIX=${KODI_HOME}/xbmc-depends
+export NDK_HOME=/home/spart/Android/android-ndk-r12
+export SDK_HOME=/home/spart/Android/Sdk/
+
+cd ${KODI_HOME}/tools/depends
+#git clean -xfd
+#git reset --hard
+#git pull --rebase
+make distclean
+
+./bootstrap
+echo "done bootstraping about to configure"
+
+./configure --with-toolchain=${NDK_HOME}/toolchains/arm-linux-androideabi-4.9/android-21 --with-ndk=${NDK_HOME} --with-sdk-path=${SDK_HOME} --prefix=${PREFIX} --host=arm-linux-androideabi --with-sdk=android-24 --enable-neon
+
+echo "done configuring about to make"
+
+export PATH=/usr/bin/:$PATH
+make
+echo "done make"
+
+#make -C tools/depends/target/xbmc
+#echo "done make -C tools/depends/target/xbmc about to make apk"
+
+#make apk
+#echo "done make apk"
+--creating my toolchain
+./make-standalone-toolchain.sh --ndk-dir=../../ \
+--install-dir=/home/spart/Android/android-ndk-r12/toolchains/arm-linux-androideabi-4.9/android-24 --platform=android-24 \
+--toolchain=arm-linux-androideabi-4.9
+
+---config.log from xbmc-master
+http://pastebin.com/EFPTFDmd
+
+--tail end of the output from the console is 
+http://pastebin.com/azrE4ivK
+
+--tail end of the log file created when I redirect output to a log file(couldn't past the entire log file since it exceeded the max size).
+http://pastebin.com/jmzJzBH5
+
+----------------------------------------------------------------------------------------------------------------------------
