@@ -222,6 +222,7 @@ $ cd $HOME/kodi-android/tools/depends
 $ ./bootstrap
 $ ./configure --with-tarballs=$HOME/xbmc-tarballs --host=arm-linux-androideabi --with-sdk-path=/opt/android-sdk-linux --with-ndk=/opt/android-ndk-r12b --with-toolchain=/opt/android-ndk-r12b/arm-linux-androideabi-4.9-vanilla/android-21 --prefix=$HOME/xbmc-depends
 
+
 -- this next two steps would take a while. I did not follow the advice to use make -j
 $ make
 |||||||||||| Now this stage you may get many kind of errors:
@@ -229,8 +230,21 @@ $ make
 |if| C compiler cannot make executables (gcc working.. no)  :|try| reconfigure from "Step : 2" wisely
 |Never use sudo|
 $ make -C target/binary-addons
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+$ make -C target/xbmc
 
+
+from <SRC> run below commands:
+
+$ make
+$ make apk
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+NOTE : ALWAYS REMOVE THESE FOLDERS IF ANY CHANGE MADE IN ADDONS
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+quixom@quixom:~/kodi-android$ rm -rf tools/android/packaging/assets/*
+quixom@quixom:~/kodi-android$ rm -rf /home/quixom/xbmc-depends/arm-linux-androideabi-android-21/share/wizetv/*
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ****************************************************************************************************************************
 How to build Kodi Krypton for Android with no compiler errors.
 This is based on xbmc/docs/README.android. I just filled in
