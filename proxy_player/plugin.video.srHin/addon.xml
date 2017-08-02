@@ -1,22 +1,23 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="plugin.video.serialIndia" name="serial Ind" version="0.0.1" provider-name="Mark42">
+<addon id="plugin.video.srHin" name="serial Ind" version="0.0.1" provider-name="Mark42">
 	<requires>
 		<import addon="xbmc.python" version="2.19.0"/>
 		<import addon="script.module.requests"/>
+		<import addon="script.module.beautifulsoup4"/> 
 	</requires>
 	<extension point="xbmc.python.pluginsource" library="default.py">
 		<provides>video</provides>
 	</extension>
-    <extension point="xbmc.service" library="startup.py" start="startup"/>
+	<extension point="xbmc.service" library="startup.py" start="startup"/>
 	<extension point="xbmc.addon.metadata">
-        <news>Initial release</news>
-        <assets>
-            <icon>icon.png</icon>
-            <fanart>fanart.jpg</fanart>
-        </assets>
-        <summary lang="en">Plugin for watching tv serials of ind</summary>
-        <description lang="en">Plugin for watching tv serials of ind in regional language</description>
-        <disclaimer lang="en"></disclaimer>
+		<news>Initial release</news>
+		<assets>
+			<icon>icon.png</icon>
+			<fanart>fanart.jpg</fanart>
+		</assets>
+		<summary lang="en">Plugin for watching tv serials of ind</summary>
+		<description lang="en">Plugin for watching tv serials of ind in regional language</description>
+		<disclaimer lang="en"></disclaimer>
 		<language></language>
 		<platform>all</platform>
 		<license></license>
