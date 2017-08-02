@@ -1,7 +1,12 @@
 import xbmc
 import xbmcgui
+import xbmcplugin
 import requests
+import urllib
+import json
 from bs4 import BeautifulSoup
+
+_handle = int(sys.argv[1])
 
 ADDON_ID = "plugin.video.srHin"
 PLUGIN_URL = "plugin://" + ADDON_ID + "/"
@@ -12,9 +17,10 @@ URL_hin = "https://www.fifastop.com/"
 NEW_VID_URL_hin = URL_hin + "newvideos.php?&page="
 SEARCH_QUERY = URL_hin + "search.php?keywords=00000" + "&video-id="
 RSS = URL_hin + "rss.php"  # xml content available at url
+VID_URL = URL_hin + "videos.php?vid="
 
 
-def main_list(name, link, since_time, back_url=None, nextPageToken=1, thumb=None, isFolder=False):
+def main_list(name, link, since_time, action=None, back_url=None, nextPageToken=1, thumb=None, isFolder=False):
 	xbmc.log('IN FUN=main_list()......', 2)  # log : NOTICE
 	# xbmc.log('name : ' + str(name), 2)  # log : NOTICE
 	u = PLUGIN_URL
@@ -22,12 +28,25 @@ def main_list(name, link, since_time, back_url=None, nextPageToken=1, thumb=None
 	if not thumb:
 		thumb = xbmc.translatePath("special://home/addons/{}/icon.png".format(ADDON_ID))
 	u += "&thumb=" + urllib.quote_plus(str(thumb))
-	u += "&action=" + str(since_time)
+	u += "&since_time=" + str(since_time)
+	try:
+		vid = link.split("vid=")[-1]
+		link = VID_URL + vid
+		xbmc.log(">>>> In try", 2)
+		xbmc.log(link, 2)
+		action = "play"
+	except:
+		link =get_playable_link(link)
+		xbmc.log(">>>> In except", 2)
+		xbmc.log(link, 2)
+		action = "get_play_link"
+	# action = "get_play_link" # for test
+	u += "&action=" + str(action)
 	u += "&link=" + str(link)
 	u += "&back_url=" + str(back_url)
 	nextPageToken = nextPageToken + 1
 	u += "&nextPageToken=" + str(nextPageToken)
-	xbmc.log('url ..........................: ' + urllib.unquote_plus(str(u)), 2)  # log : NOTICE
+	# xbmc.log('url ..........................: ' + urllib.unquote_plus(str(u)), 2)  # log : NOTICE
 	list_name = "{} ([B][COLOR lightseagreen]{}[/COLOR lightseagreen][/B])".format(name, since_time)
 	liz = xbmcgui.ListItem(label=name, iconImage="", thumbnailImage=urllib.unquote_plus(thumb))
 	liz.setInfo(type="video", infoLabels={"label": name, "title": name})
@@ -36,10 +55,9 @@ def main_list(name, link, since_time, back_url=None, nextPageToken=1, thumb=None
 	if not link.endswith(".mp4"):
 		isFolder = True
 	xbmcplugin.addDirectoryItem(abs(int(sys.argv[1])), u, liz, isFolder)
-	xbmcplugin.addDirectoryItem(handle=abs(int(sys.argv[1])), url='{0}?nextPageToken={1}'.format(PLUGIN_URL, nextPageToken), listitem=xbmcgui.ListItem(label='Next Page >>>'), isFolder=True)
 
 
-def link_getter(url=NEW_VID_URL_hin,page=1):
+def link_getter(url=NEW_VID_URL_hin, page=1):
 	# print(proxy_fetcher())
 	response = requests.get(url+str(page))
 	soup = BeautifulSoup(response.content, "html.parser")
@@ -78,7 +96,7 @@ def proxy_fetcher(url=URL_POOL[0]):
 
 
 def get_playable_link(url):
-	response = requests.get(url)
+	response = requests.get(urllib.unquote_plus(url))
 	soup = BeautifulSoup(response.content, "html.parser")
 	url = soup.find_all("link", {"rel":"video_src"})[0]["href"]
 	if url.startswith("http://video.fifastop.com/"):
@@ -89,12 +107,15 @@ def get_playable_link(url):
 def show_list(flag=0, page=1, s_link=None):
 	if flag == 0:
 		xbmc.log(">> flag 0", 2)
-		data_set = link_getter()
-		title = data_single["title"]
-		link = data_single["link"]
-		since_time = data_single["since_time"]
-		since_num_only = data_single["since_num_only"]
-		main_list(name=title, link=link, since_time=since_time, back_url=URL_hin)
+		data_set = link_getter(page=page)
+		for data_single in data_set:
+			title = data_single["title"]
+			link = data_single["link"]
+			since_time = data_single["since_time"]
+			since_num_only = data_single["since_num_only"]
+			main_list(name=title, link=link, since_time=since_time, back_url=URL_hin, action="get_play_link", isFolder=False)
+		page = page + 1
+		xbmcplugin.addDirectoryItem(handle=abs(int(sys.argv[1])), url='{0}?nextPageToken={1}'.format(PLUGIN_URL, page), listitem=xbmcgui.ListItem(label='Next Page >>>'), isFolder=True)
 	elif flag == 1:
 		xbmc.log(">> flag 1", 2)
 		play_link = get_playable_link(s_link)
@@ -123,7 +144,26 @@ def main():
 		if "link" in param:
 			if param["link"].endswith(".mp4"):
 				xbmc.log("> In param : playing", 2)
-				xbmc.Player().play(param["link"])
+				play_this = get_playable_link(param["link"])
+				xbmc.Player().play(play_this)
+			if "action" in param:
+				if param["action"] == "play":
+					xbmc.log("> In param link : playing......" + str(param["link"]), 2)
+					path = urllib.unquote_plus(param["link"])
+					xbmcgui.Dialog().ok("URL", path)
+					r = requests.head(path, allow_redirects=True)
+					xbmc.log("in try with response.....: {}".format(r), 2)
+					path = r.url
+					xbmc.log("in try with new url......: {}".format(path), 2)
+					# path = param["link"]
+					# play_item = xbmcgui.ListItem(path=path)
+					# xbmcplugin.setResolvedUrl(_handle, True, listitem=play_item)
+					# xbmc.executebuiltin("PlayMedia(param['link'])")
+					xbmc.log("playing the path/url::::: {}".format(path), 2)
+					xbmc.Player().play(path)
+				if param["action"] == "get_play_link":
+					xbmc.log("> In param get_play_link : playing...." + str(get_playable_link(param["link"])), 2)
+					xbmc.Player().play(get_playable_link(param["link"]))
 			else:
 				xbmc.log("> In param : listing", 2)
 				show_list(param["link"], param["nextPageToken"])
