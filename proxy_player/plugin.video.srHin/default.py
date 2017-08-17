@@ -21,10 +21,11 @@ SEARCH_QUERY = URL_hin + "search.php?keywords="  # ex: search.php?keywords=XXXXX
 RSS = URL_hin + "rss.php"  # xml content available at url
 VID_URL = URL_hin + "videos.php?vid="
 POPULAR_VID_URL = URL_hin + "topvideos.php?&page="
-URL_hin_DICT = {"newvideos":NEW_VID_URL_hin, "popularvideos": POPULAR_VID_URL, "search":SEARCH_QUERY}
+MOST_WATCH = []
+URL_hin_DICT = {"newvideos":NEW_VID_URL_hin, "popularvideos": POPULAR_VID_URL, "search":SEARCH_QUERY, "most_watch":MOST_WATCH}
 
 
-def main_list(name, link, since_time="", action=None, back_url=None, nextPageToken=1, thumb=None, isFolder=False, isPlayable=False):
+def main_list(name, link, since_time="", action=None, back_url=None, nextPageToken=0, thumb=None, isFolder=False, isPlayable=False):
 	xbmc.log('IN FUN=main_list()......', 2)  # log : NOTICE
 	# xbmc.log('name : ' + str(name), 2)  # log : NOTICE
 	u = PLUGIN_URL
@@ -39,7 +40,7 @@ def main_list(name, link, since_time="", action=None, back_url=None, nextPageTok
 		xbmc.log(">>>> In if", 2)
 		# xbmc.log(link, 2)
 		action = "play"
-		isPlayable = True
+		# isPlayable = True
 	# action = "get_play_link" # for test
 	u += "&action=" + str(action)
 	u += "&link=" + str(link)
@@ -114,8 +115,8 @@ def show_list(flag="main", page=1, s_link=None):
 			since_time = data_single["since_time"]
 			since_num_only = data_single["since_num_only"]
 			main_list(name=title, link=link, since_time=since_time, back_url=URL_hin, action="play", isFolder=False)
-		page = page + 1
-		xbmcplugin.addDirectoryItem(handle=abs(int(sys.argv[1])), url='{0}?link={1}&nextPageToken={1}'.format(PLUGIN_URL, URL_hin_DICT["newvideos"], page), listitem=xbmcgui.ListItem(label='Next Page >>>'), isFolder=True)
+		page = int(page) + 1
+		xbmcplugin.addDirectoryItem(handle=abs(int(sys.argv[1])), url='{0}?link={1}&nextPageToken={2}&action={3}'.format(PLUGIN_URL, URL_hin_DICT["newvideos"], page, flag), listitem=xbmcgui.ListItem(label='Next Page >>>'), isFolder=True)
 	elif flag=="popular_list":
 		xbmc.log(">> flag popular_list", 2)
 		data_set = link_getter(url=POPULAR_VID_URL, page=page)
@@ -126,7 +127,7 @@ def show_list(flag="main", page=1, s_link=None):
 			since_num_only = data_single["since_num_only"]
 			main_list(name=title, link=link, since_time=since_time, back_url=URL_hin, action="play", isFolder=False)
 		page = page + 1
-		xbmcplugin.addDirectoryItem(handle=abs(int(sys.argv[1])), url='{0}?link={1}&nextPageToken={2}'.format(PLUGIN_URL, URL_hin_DICT["popularvideos"], page), listitem=xbmcgui.ListItem(label='Next Page >>>'), isFolder=True)
+		xbmcplugin.addDirectoryItem(handle=abs(int(sys.argv[1])), url='{0}?link={1}&nextPageToken={2}&action={3}'.format(PLUGIN_URL, URL_hin_DICT["popularvideos"], page, flag), listitem=xbmcgui.ListItem(label='Next Page >>>'), isFolder=True)
 	elif flag == "search":
 		search_string = xbmcgui.Dialog().input("Enter Search String", type=xbmcgui.INPUT_ALPHANUM)
 		url = SEARCH_QUERY + urllib.quote_plus(search_string)
@@ -164,7 +165,12 @@ def main():
 		xbmc.log("> In param : params==> {}".format(param), 2)
 		if "action" in param:
 			if param["action"] == "new_list":
-				show_list(flag="new_list")
+				if not "nextPageToken" in param or param["nextPageToken"] < 1:
+					show_list(flag="new_list")
+				elif "nextPageToken" in param and param["nextPageToken"] > 1:
+					show_list(flag=param["action"], page=param["nextPageToken"])
+				else:
+					xbmcgui.Dialog().ok("SrHin", "You are at end of this page")
 			elif param["action"] == "popular_list":
 				show_list(flag="popular_list")
 			elif param["action"] == "play":
@@ -181,10 +187,8 @@ def main():
 				# xbmc.executebuiltin("PlayMedia(param['link'])")
 				xbmc.log("playing the path/url::::: {}".format(path), 2)
 				xbmc.Player().play(path)
-			# elif param["action"] == "get_play_link":
-			# 	xbmc.log("> In param get_play_link : playing...." + str(get_playable_link(param["link"])), 2)
-			# 	xbmc.Player().play(get_playable_link(param["link"]))
-
+			elif param["action"] == "search":
+				show_list(flag="search")
 		else:
 			xbmc.log("> In param : listing", 2)
 			show_list(param["link"], param["nextPageToken"])
@@ -194,6 +198,9 @@ def main():
 
 
 if __name__ == "__main__":
+	xbmc.executebuiltin('UpdateAddonRepos()')
+	xbmc.sleep(200)
+	xbmc.executebuiltin('UpdateLocalAddons()')
 	main()
 	# data_set = link_getter(NEW_VID_URL_hin)
 	xbmcplugin.endOfDirectory(_handle,  cacheToDisc=False)
