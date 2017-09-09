@@ -1,0 +1,3 @@
+[B]Version 3.0[/B]
+- repo for new cEyes build
+- includes some special addons

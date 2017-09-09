@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="repository.repo" name="Repo" version="0.0.2" provider-name="Anonymous">
+	<extension point="xbmc.addon.repository" name="Repository">
+		<info compressed="false">https://betarepo.000webhostapp.com/static/repo/addons.xml</info>
+		<checksum>https://betarepo.000webhostapp.com/static/repo/addons.xml.md5</checksum>
+		<datadir zip="true">https://betarepo.000webhostapp.com/static/repo/zips</datadir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>Install specific Addons</summary>
+		<description>Download and install addons.</description>
+		<platform>all</platform>
+	</extension>
+</addon>
