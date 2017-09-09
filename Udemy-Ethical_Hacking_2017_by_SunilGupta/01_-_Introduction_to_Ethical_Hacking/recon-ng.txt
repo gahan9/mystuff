@@ -1,0 +1,37 @@
+RECON-NG
+
+Show workspaces
+> workspaces list
+
+Add workspace
+> workspaces add kali.org
+
+> show domains
+> load netcraft
+> show options
+
+set source
+> set SOURCE yahoo.com
+
+find all subdomains/domains
+> run
+> show hosts
+
+Resolve IP address
+
+> load resolve
+> use recon/hosts-hosts/resolve
+> show hosts
+
+show location and latitude,longitude of domain/subdomains
+> load freegeoip
+> show options
+> run
+> show hosts
+
+Get street address (from lat and long)
+> show locations
+> add locations
+> load reverse_geocode
+> show options
+>run
