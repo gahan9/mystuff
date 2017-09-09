@@ -1,73 +1,57 @@
-def generate_prime_numbers(n):
-    prime = [True for i in range(n+1)]
-    p=2
-    while(p*p <= n):
-        # If prime[p] is not changed, then it is a prime
-        if (prime[p] == True):
-            # Update all multiples of p
-            for i in range(p*2, n+1, p):
-                prime[i] = False
-        p+=1
-    lis =[]
-    # Print all prime numbers
-    for p in range(2, n):
-        if prime[p]:
-            lis.append(p)
-    return lis
-
-
 def answer(l):
-    print("---------")
-    sorted_list = sorted(l, reverse=True)
-    total_numbers = len(sorted_list)
-        
-    prime_numbers = generate_prime_numbers(sorted_list[0])
-    check_div = lambda num1, num2 : num2%num1==0
-    isPrime = lambda num : num in prime_numbers
-
-    pairs=[]
-    pair_count = 0
-    ones_occurance = sorted_list.count(1)
+    # print("-------------------------------------------")
+    sorted_list = sorted(l)
     # print(sorted_list)
-    for z in range(total_numbers-2):
-        # tup=()
-        pair_lvl = 0
-        cur_z = sorted_list[z]
-        if isPrime(cur_z) and ones_occurance <=1:
-            # sorted_list.pop(z)
-            continue
-        # elif cur_z == sorted_list[z-1]:
-        #     continue
+    # check_div = lambda num1, num2 : num2%num1==0
+    successor_dict = {}
+    pair_count = 0
+
+    # get successors of all elements at end of the for loop (worst case : 185ms, best case : <1ms (minimum in micro seconds))
+    for x in sorted_list:
+        # if sorted_list.count(x) >=3 and x not in successor_dict.keys():
+        #     pair_count += 1
+        if x not in successor_dict.keys():
+            successor_dict[x] = []
+            for y in sorted_list[sorted_list.index(x)+1::]:
+                if y%x==0:
+                    if y not in successor_dict[x]:
+                        successor_dict[x].append(y)
+                    for z in sorted_list[sorted_list.index(y)+1::]:
+                        if z%y==0:
+                            if z not in successor_dict[x]:
+                                successor_dict[x].append(z)
+                        if z%x==0:
+                            if z not in successor_dict[x]: 
+                                successor_dict[x].append(z)
         else:
-            # print("success at.. {0}".format(z))
-            list2=sorted_list[0:z] + sorted_list[z+1::]
-            # print(sorted_list, list2)
-            for y in range(len(list2)-1):
-                cur_y = list2[y]
-                if isPrime(cur_y) and 1 not in l:
-                    # list2.pop(y)
-                    # sorted_list.pop(sorted_list.index(list2[y]))
-                    continue
-                # elif cur_y == list2[y-1]:
-                #     continue
-                elif check_div(cur_y, cur_z):
-                    # tup = (cur_y, cur_z)
-                    list3=list2[0:y] + list2[y+1::]
-                    # print(list3)
-                    for x in range(len(list3)):
-                        cur_x = list3[x]
-                        if check_div(cur_x, cur_y):
-                            tup = (cur_x, cur_y, cur_z)
-                            if tup not in pairs:
-                                pair_count +=1
-                                pairs.append(tup)
-    # print(pairs)
+            pass
+    final_successor_dict= {i:sorted(successor_dict[i]) for i in successor_dict}
+    # print("unsorted element: {0} \nsorted element: {1} ".format(successor_dict, final_successor_dict))
+
+    # up_to now pair_count will be 0 only if no same number is in list more than twice
+    elements_evaluated = []
+    for elements in successor_dict:
+        if elements not in elements_evaluated:
+            elements_evaluated.append(elements)
+            for sub_element in successor_dict[elements]:
+                if sub_element not in elements_evaluated:
+                    elements_evaluated.append(sub_element)
+                    sub_element_length = len(successor_dict[sub_element])
+                    if not sub_element_length == 0:
+                        pair_count += sub_element_length
+
+
     return pair_count
 
 
-
-
-
+from random import randint
+val_lis = [randint(1,555555) for val in range(2000)]
+print(answer(val_lis))
 print(answer([1, 2, 3, 4, 5, 6]))
 print(answer([1, 1, 1]))
 print(answer([1, 3, 6, 12, 12]))
+print(answer([97, 1, 3, 4, 12, 24]))
+print(answer([2, 3, 4, 5, 8, 12, 24, 40, 60]))
+print(answer([2, 3]))
+print(answer([2, 3, 4]))
+
