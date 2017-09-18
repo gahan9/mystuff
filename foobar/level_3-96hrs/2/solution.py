@@ -1,6 +1,6 @@
 from fractions import Fraction
 from pprint import pprint
-import operator
+import collections
 
 loop_probability = lambda x : Fraction(1, 1-x)
 
@@ -76,8 +76,9 @@ def answer(m):
         if states not in stage_probability:
             stage_probability[states] = Fraction(0)
 
-    stage_probability = dict(sorted(stage_probability.items(), key=operator.itemgetter(1), reverse=False))
-    print(stage_probability)
+    # stage_probability = dict(sorted(stage_probability.items(), key=operator.itemgetter(1), reverse=False))
+    stage_probability = collections.OrderedDict(sorted(stage_probability.items()))
+    # print(stage_probability)
     max_denominator = max([v.denominator for k,v in stage_probability.items()])
 
     final_state_probability = []
@@ -89,13 +90,13 @@ def answer(m):
         else:
             multiplier = 1
         final_state_probability.append(int(stage_probability[terminal].numerator * multiplier))
-        print("terminal {} : {} --> {}".format(terminal, stage_probability[terminal], int(terminal.numerator * multiplier)))
+        # print("terminal {} : {} --> {}".format(terminal, stage_probability[terminal], int(terminal.numerator * multiplier)))
     final_state_probability.append(max_denominator)
     return final_state_probability
 
 print(answer([[0, 2, 1, 0, 0], [0, 0, 0, 3, 4], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0]]))
 print(answer([[0, 1, 0, 0, 0, 1], [4, 0, 0, 3, 2, 0], [0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0]]))
-# print(answer([[0, 1, 0, 0, 0, 1], [4, 0, 2, 3, 2, 1], [9, 1, 0, 0, 0, 1], [0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0]]))
+print(answer([[0, 1, 0, 0, 0, 1], [4, 0, 2, 3, 2, 1], [9, 1, 0, 0, 0, 1], [0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0]]))
 """
 {0: [(1, Fraction(1, 2)), (5, Fraction(1, 2))],
  1: [(0, Fraction(1, 3)),
