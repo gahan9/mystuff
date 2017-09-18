@@ -6,6 +6,7 @@ from pprint import pprint
 loop_probability = lambda x : Fraction(1, 1-x)
 
 paths = []
+probability = None
 def find_paths_from(current_path, d, next_stage_probability):
     # current_path: [0]
     # next_stage_probability: {0: [(1, Fraction(1, 2)), (5, Fraction(1, 2))], 1: [(0, Fraction(4, 9)), (3, Fraction(1, 3)), (4, Fraction(2, 9))], 2: [], 3: [], 4: [], 5: []}
@@ -14,11 +15,14 @@ def find_paths_from(current_path, d, next_stage_probability):
     future_nodes = d[current_path[-1]]
     # print("future_nodes {}".format(future_nodes))
     if future_nodes:
-        for node in future_nodes:
-            if node not in current_path:
-                [find_paths_from(current_path + [node], d, next_stage_probability)]
-        # [find_paths_from(current_path + [node], d, next_stage_probability) for node in future_nodes if node not in current_path]
+        # for node in future_nodes:
+        #     if node not in current_path:
+        #         if next_stage_probability[node]:
+        #             print(">> from node: {} to {}".format(node, next_stage_probability[node]))
+        #         [find_paths_from(current_path + [node], d, next_stage_probability, probability)]
+        [find_paths_from(current_path + [node], d, next_stage_probability) for node in future_nodes if node not in current_path]
     else:
+        # print(">> {}".format(current_path))
         paths.append(current_path)
 
 
@@ -54,7 +58,7 @@ def answer(m):
             count2 +=1
         count+=1
 
-    print(next_stage_probability)
+    pprint(next_stage_probability)
 
     final_state_probability = []
     find_paths_from([0], d, next_stage_probability)
@@ -67,7 +71,8 @@ def answer(m):
             # print(next_to_current)
             if path[x] in d[path[x+1]] and path[x+1] in d[path[x]] and next_to_current:
                 pass
-                stage_probability[path[-1]] = stage_probability[path[-1]] * loop_probability(current_to_next * next_to_current[0])
+                stage_probability[path[-1]] = stage_probability[path[-1]] * current_to_next * loop_probability(current_to_next * next_to_current[0])
+                print(stage_probability[path[-1]], current_to_next * next_to_current[0], loop_probability(current_to_next * next_to_current[0]))
             else:
                 stage_probability[path[-1]] = stage_probability[path[-1]] * current_to_next
 
@@ -79,5 +84,18 @@ def answer(m):
 
 # print(answer([[0, 2, 1, 0, 0], [0, 0, 0, 3, 4], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0]]))
 print(answer([[0, 1, 0, 0, 0, 1], [4, 0, 0, 3, 2, 0], [0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0]]))
+print(answer([[0, 1, 0, 0, 0, 1], [4, 0, 2, 3, 2, 1], [9, 1, 0, 0, 0, 1], [0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0]]))
+"""
+{0: [(1, Fraction(1, 2)), (5, Fraction(1, 2))],
+ 1: [(0, Fraction(1, 3)),
+     (2, Fraction(1, 6)),
+     (3, Fraction(1, 4)),
+     (4, Fraction(1, 6)),
+     (5, Fraction(1, 12))],
+ 2: [(0, Fraction(9, 11)), (1, Fraction(1, 11)), (5, Fraction(1, 11))],
+ 3: [],
+ 4: [],
+ 5: []}
+"""
 # print(answer())
 # print(answer())
