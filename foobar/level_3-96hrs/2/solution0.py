@@ -60,10 +60,10 @@ def find_all_paths(next_stage_probability, start, end, path=[]):
 
 
 def answer(m):
-    # print("***********************")
-    # from pprint import pprint
-    # print("matrix is:")
-    # pprint(m)
+    print("***********************")
+    from pprint import pprint
+    print("matrix is:")
+    pprint(m)
     # global paths
     paths = []
     terminals = []
@@ -74,12 +74,12 @@ def answer(m):
             stage_probability[rows] = 0
 
     next_stage_probability, d = calculate_probability_of_node(m, terminals)
-    # print("next_stage_probability: {}".format(next_stage_probability))
+    print("next_stage_probability: {}".format(next_stage_probability))
 
     paths_to_terminal = {}
     for terminal in terminals:
         paths_to_terminal[terminal] = find_all_paths(next_stage_probability=next_stage_probability, start=0, end=terminal)
-    # print("paths_to_terminal: {}".format(paths_to_terminal))
+    print("paths_to_terminal: {}".format(paths_to_terminal))
 
     # this is important stage where next_stage_probability is your tree and you need to calculate probability to reach to states in terminals which are values 0 rows in matrix
     terminal_probability = {}
@@ -100,6 +100,7 @@ def answer(m):
                     this_path_probability = this_path_probability * current_to_next
                     # loop_list = set(loop_list) - {source}
                     # print(">> ",path, (source, destination),loop_list, this_path_probability)
+                    print("path: {} \t source: {} \t destination: {} \t loop_list: {} \t this_path_probability: {} \t".format(path, source, destination, loop_list, this_path_probability))
                     if loop_list:
                         for loop_state in loop_list:
                             # print((source, loop_state))
@@ -112,12 +113,13 @@ def answer(m):
                                                 loop_val = next_stage_probability[key_state][next_state] * next_stage_probability[next_state][key_state]
                                                 this_path_probability = this_path_probability * loop_probability(loop_val)
                                                 considered_loop.append((key_state, next_state))
-                    # print(this_path_probability)
+                                                print("s: {} \t d: {} \t loop_val: {} \t this_path_probability: {} \t break_val: {}".format(key_state, next_state, loop_val, this_path_probability, loop_probability(loop_val)))
+                    print(this_path_probability)
                 probability_for_this_terminal = probability_for_this_terminal + this_path_probability
                 terminal_probability[terminal_state] = probability_for_this_terminal
         else:
             terminal_probability[terminal_state] = Fraction(0)
-    # print(terminal_probability)
+    print(terminal_probability)
     max_denominator = max([v.denominator for k,v in terminal_probability.items()])
 
     final_state_probability = []
@@ -136,9 +138,9 @@ def answer(m):
 
 # test cases below
 # print(answer([[0, 2, 1, 0, 0], [0, 0, 0, 3, 4], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0]]))
-print(answer([[0, 7, 0, 5], [2, 0, 3, 0], [0, 6, 0, 0], [0, 0, 0, 0]]))
-print(answer([[0, 1, 0, 0, 0, 1], [4, 0, 0, 3, 2, 0], [0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0]]))
-print(answer([[0, 3, 1, 0, 0, 0], [0, 0, 0, 7, 0, 0], [0, 0, 0, 2, 0, 1], [0, 0, 0, 0, 5, 0], [0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0]]))
-print(answer([[0, 3, 2, 0, 0, 0], [0, 0, 0, 1, 0, 1], [0, 0, 0, 7, 0, 0], [0, 0, 5, 0, 4, 0], [0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0]]))
-print(answer([[0, 3, 2, 0, 0, 0], [0, 0, 0, 1, 0, 1], [0, 0, 0, 7, 0, 0], [0, 0, 0, 0, 4, 5], [0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0]]))
-print(answer([[0, 1, 0, 0, 0, 1], [4, 0, 2, 3, 2, 1], [9, 1, 0, 0, 0, 1], [0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0]]))
+print(answer([[0, 7, 0, 5], [2, 0, 3, 0], [2, 5, 0, 0], [0, 0, 0, 0]]))
+# print(answer([[0, 1, 0, 0, 0, 1], [4, 0, 0, 3, 2, 0], [0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0]]))
+# print(answer([[0, 3, 1, 0, 0, 0], [0, 0, 0, 7, 0, 0], [0, 0, 0, 2, 0, 1], [0, 0, 0, 0, 5, 0], [0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0]]))
+# print(answer([[0, 3, 2, 0, 0, 0], [0, 0, 0, 1, 0, 1], [0, 0, 0, 7, 0, 0], [0, 0, 5, 0, 4, 0], [0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0]]))
+# print(answer([[0, 3, 2, 0, 0, 0], [0, 0, 0, 1, 0, 1], [0, 0, 0, 7, 0, 0], [0, 0, 0, 0, 4, 5], [0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0]]))
+# print(answer([[0, 1, 0, 0, 0, 1], [4, 0, 2, 3, 2, 1], [9, 1, 0, 0, 0, 1], [0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0]]))
