@@ -98,14 +98,8 @@ def answer(m):
             multiplier = 1
         final_state_probability.append(int(stage_probability[terminal].numerator * multiplier))
         # print("terminal {} : {} --> {}".format(terminal, stage_probability[terminal], int(terminal.numerator * multiplier)))
-    if sum(final_state_probability) == max_denominator:
-        final_state_probability.append(max_denominator)
-        return final_state_probability
-    else:
-        import random
-        l = [random.randint(0,i+1*i+1) for i in range(len(terminals))]
-        l.append(sum(l))
-        return l
+    final_state_probability.append(max_denominator)
+    return final_state_probability
 # print(answer([[0, 2, 1, 0, 0], [0, 0, 0, 3, 4], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0]]))
 print(answer([[0, 7, 0, 5], [2, 0, 3, 0], [0, 0, 0, 0], [0, 6, 0, 0], [0, 0, 0, 0]]))
 print(answer([[0, 1, 0, 0, 0, 1], [4, 0, 0, 3, 2, 0], [0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0]]))
