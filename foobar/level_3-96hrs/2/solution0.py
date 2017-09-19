@@ -1,0 +1,113 @@
+from fractions import Fraction
+from pprint import pprint
+import collections
+
+loop_probability = lambda x : Fraction(1, 1-x)
+
+
+def calculate_probability_of_node(matrix, terminals):
+    d={}
+    count =0
+    next_stage_probability={}
+    for row in matrix:
+        count2=0
+        if count in terminals:
+            d[count] = []
+        current_row_denominator = sum(row)
+        d[count] = []
+        for element in row:
+            if element != 0:
+                if count in next_stage_probability:
+                    next_stage_probability[count].update({count2: Fraction(element, current_row_denominator)})
+                else:
+                    next_stage_probability[count] = ({count2: Fraction(element, current_row_denominator)})
+                d[count].append(count2)
+            count2 +=1
+        count+=1
+    return next_stage_probability, d
+
+
+def find_all_paths(next_stage_probability, start, end, path=[]):
+    path = path + [start]
+    if start == end:
+        return [path]
+    if not next_stage_probability.has_key(start):
+        return []
+    paths = []
+    for node in next_stage_probability[start]:
+        if node not in path:
+            newpaths = find_all_paths(next_stage_probability, node, end, path)
+            for newpath in newpaths:
+                paths.append(newpath)
+    return paths
+
+
+def answer(m):
+    pprint(m)
+    global paths
+    paths = []
+    terminals = []
+    stage_probability = {}
+    for rows in range(len(m)):
+        if sum(m[rows]) == 0:
+            terminals.append(rows)
+            stage_probability[rows] = 0
+
+    next_stage_probability, d = calculate_probability_of_node(m, terminals)
+    print("next_stage_probability: {}".format(next_stage_probability))
+    paths_to_terminal = {}
+    for terminal in terminals:
+        paths_to_terminal[terminal] = find_all_paths(next_stage_probability=next_stage_probability, start=0, end=terminal)
+    print("paths_to_terminal: {}".format(paths_to_terminal))
+
+    terminal_probability = {}
+    for terminal_state in paths_to_terminal:
+        if paths_to_terminal[terminal_state]:
+            probability_for_this_terminal = 0
+            considered_loop = []
+            for path in paths_to_terminal[terminal_state]:
+                this_path_probability = 1
+                for x in range(len(path)-1):
+                    source, destination = path[x], path[x+1]
+                    current_to_next = next_stage_probability[source][destination]
+                    loop_list = [v for v,k in next_stage_probability.items() if source in k and v in next_stage_probability[source]]
+
+                    this_path_probability = this_path_probability * current_to_next
+                    print(path, (source, destination),loop_list, this_path_probability)
+                    if loop_list:
+                        for loop_state in loop_list:
+                            print((source, loop_state))
+                            if not considered_loop.__contains__((source, loop_state)) and not considered_loop.__contains__((loop_state, source)):
+                                loop_val = next_stage_probability[source][loop_state] * next_stage_probability[loop_state][source]
+                                this_path_probability = this_path_probability * loop_probability(loop_val)
+                    print(this_path_probability)
+                    # else:
+                        # this_path_probability = this_path_probability * current_to_next
+                    # print(path, (source, destination),loop_list, this_path_probability)
+                probability_for_this_terminal = probability_for_this_terminal + this_path_probability
+                terminal_probability[terminal_state] = probability_for_this_terminal
+        else:
+            terminal_probability[terminal_state] = Fraction(0)
+    print(terminal_probability)
+    max_denominator = max([v.denominator for k,v in terminal_probability.items()])
+
+    final_state_probability = []
+    for terminal in terminal_probability:
+        current_denominator = terminal_probability[terminal].denominator
+        if not  current_denominator == max_denominator:
+            multiplier = max_denominator / current_denominator
+            # print(multiplier)
+        else:
+            multiplier = 1
+        final_state_probability.append(int(terminal_probability[terminal].numerator * multiplier))
+        # print("terminal {} : {} --> {}".format(terminal, stage_probability[terminal], int(terminal.numerator * multiplier)))
+    final_state_probability.append(max_denominator)
+    return final_state_probability
+
+# print(answer([[0, 2, 1, 0, 0], [0, 0, 0, 3, 4], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0]]))
+# print(answer([[0, 7, 0, 5], [2, 0, 3, 0], [0, 0, 0, 0], [0, 6, 0, 0], [0, 0, 0, 0]]))
+print(answer([[0, 1, 0, 0, 0, 1], [4, 0, 0, 3, 2, 0], [0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0]]))
+# print(answer([[0, 3, 1, 0, 0, 0], [0, 0, 0, 7, 0, 0], [0, 0, 0, 2, 0, 1], [0, 0, 0, 0, 5, 0], [0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0]]))
+# print(answer([[0, 3, 2, 0, 0, 0], [0, 0, 0, 1, 0, 1], [0, 0, 0, 7, 0, 0], [0, 0, 5, 0, 4, 0], [0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0]]))
+# print(answer([[0, 3, 2, 0, 0, 0], [0, 0, 0, 1, 0, 1], [0, 0, 0, 7, 0, 0], [0, 0, 0, 0, 4, 5], [0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0]]))
+# print(answer([[0, 1, 0, 0, 0, 1], [4, 0, 2, 3, 2, 1], [9, 1, 0, 0, 0, 1], [0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0]]))
