@@ -44,16 +44,16 @@ def calculate_probability_of_node(matrix, terminals):
     return next_stage_probability, d
 
 
-def find_all_paths(next_stage_probability, start, end, path=[]):
+def find_all_paths(nsp, start, end, path=[]):
     path = path + [start]
     if start == end:
         return [path]
-    if not next_stage_probability.__contains__(start):
+    if not nsp.__contains__(start):
         return []
     paths = []
     for node in next_stage_probability[start]:
         if node not in path:
-            newpaths = find_all_paths(next_stage_probability, node, end, path)
+            newpaths = find_all_paths(nsp, node, end, path)
             for newpath in newpaths:
                 paths.append(newpath)
     return paths
