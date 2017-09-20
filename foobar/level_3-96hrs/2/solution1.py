@@ -49,31 +49,63 @@ def answer(m):
 
     next_nodes = calculate_probability_of_node(m, terminals)
     print(next_nodes)
-    _final = main(matrix=m, terminals=terminals, _next=next_nodes)
+    # _final = main(matrix=m, terminals=terminals, _next=next_nodes)
+    for terminal in terminals:
+        for row in range(len(m)):
+            if row >0:
+                break
+            print("row: {}".format(row))
+            if not row in terminals:
+                for value in m[row]:
+                    if value:
+                        current_value_index = m[row].index(value)
+                        _final = main(matrix=m, start=value, row_index=row+1, end=terminal)
+                        print(_final)
+
+def main(matrix, start, row_index, end, last_node=None, probability_set={}, path=[], last_probability=1, loops=[]):
+    path = path + [start]
+    print(last_probability)
+    # temp.append(start)
+    # current_value_index = matrix[row_index].index(start)
+    # if start == end:
+    visits=[]
+    sum_of_row = sum(matrix[row_index])
+    if sum_of_row != 0:
+        for node in matrix[row_index]:
+            if node:
+                if node not in path:
+                    last_probability = last_probability * Fraction(node, sum_of_row)
+                    return main(matrix, start=node, last_node=start, row_index=row_index+1, end=end)
+                elif row_index > matrix[row_index].index(node) and node not in visits:
+                    visits.append(node)
+                    loop_destination = Fraction(matrix[matrix[row_index].index(node)], sum(matrix[matrix[row_index].index(node)]))
+                    last_probability = last_probability * loop_probability(Fraction() * Fraction(value, sum(matrix[row])))
+                    return main(matrix, start=node, last_node=start, row_index=row_index+1, end=end)
+
+    # newpaths = main(matrix, start=node, last_node=start, row_index=row_index+1, end=end)
 
 
-def main(matrix, terminals, _next, probability_set={}, elements_travelled=[], last_probability=1):
-    for row in range(len(matrix)):
-        print("row: {}".format(row))
-        current_path = []
-        if not row in terminals:
-            for value in matrix[row]:
-                if value:
-                    current_value_index = matrix[row].index(value)
-                    current_value = value
-                    current_path.append(value)
-                    if value not in probability_set:
-                        probability_set[value] = 1
-                    if current_value < row:
-                        print(Fraction(value, sum(matrix[row])))
-                        # print(loop_probability(Fraction() * Fraction(value, sum(matrix[row]))))
-                        probability_set[value] = probability_set[value] * loop_probability(Fraction() * Fraction(value, sum(matrix[row])))
-                        print(last_probability)
-                        print("loop at: {} and {}".format(row, matrix[row].index(value)))
-                    elif matrix[row].index(value) > row:
-                        last_probability = last_probability * Fraction(value, sum(matrix[row]))
-                        # print(Fraction(value, sum(matrix[row])))
-                        print(last_probability)
+        # current_path = []
+        #
+        #
+        # if not row in terminals:
+        #     for value in matrix[row]:
+        #         if value:
+        #             current_value_index = matrix[row].index(value)
+        #             current_value = value
+        #             current_path.append(value)
+        #             if value not in probability_set:
+        #                 probability_set[value] = 1
+        #             if current_value < row:
+        #                 print(Fraction(value, sum(matrix[row])))
+        #                 # print(loop_probability(Fraction() * Fraction(value, sum(matrix[row]))))
+        #                 probability_set[value] = probability_set[value] * loop_probability(Fraction() * Fraction(value, sum(matrix[row])))
+        #                 print(last_probability)
+        #                 print("loop at: {} and {}".format(row, matrix[row].index(value)))
+        #             elif matrix[row].index(value) > row:
+        #                 last_probability = last_probability * Fraction(value, sum(matrix[row]))
+        #                 # print(Fraction(value, sum(matrix[row])))
+        #                 print(last_probability)
 
 
 
