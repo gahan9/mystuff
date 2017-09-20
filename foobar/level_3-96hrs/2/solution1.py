@@ -38,12 +38,21 @@ def find_all_paths(next_stage_probability, start, end, path=[]):
 
 
 def answer(m):
+    len_d = len(m)
+    nodes = {key:[] for key in range(len_d)}
+    for i in range(len_d):
+    	s = sum(m[i])
+    	if s<1: continue
+    	for j in range(len_d):
+    		if m[i][j]>0: nodes[i].append(j)
+    		m[i][j] = Fraction( m[i][j] , s)
+    # print(m)
     print("-"*50)
-    from pprint import pprint
     print("matrix is:")
+    from pprint import pprint
     pprint(m)
     terminals = []
-    for rows in range(len(m)):
+    for rows in range(len_d):
         if sum(m[rows]) == 0:
             terminals.append(rows)
 
@@ -51,12 +60,8 @@ def answer(m):
     print(next_nodes)
     # _final = main(matrix=m, terminals=terminals, _next=next_nodes)
     for terminal in terminals:
-        if not 0 in terminals:
-            for value in m[row]:
-                if value:
-                    current_value_index = m[row].index(value)
-                    _final = main(matrix=m, start=value, row_index=row+1, end=terminal)
-                    print(_final)
+        _final = main(matrix=m, start=[0], row_index=0, end=terminal)
+        print(_final)
 
 def main(matrix, start, row_index, end, last_node=None, probability_set={}, path=[], last_probability=1, loops=[]):
     path = path + [start]
