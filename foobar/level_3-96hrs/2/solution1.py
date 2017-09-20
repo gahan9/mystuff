@@ -51,23 +51,15 @@ def answer(m):
     print(next_nodes)
     # _final = main(matrix=m, terminals=terminals, _next=next_nodes)
     for terminal in terminals:
-        for row in range(len(m)):
-            if row >0:
-                break
-            print("row: {}".format(row))
-            if not row in terminals:
-                for value in m[row]:
-                    if value:
-                        current_value_index = m[row].index(value)
-                        _final = main(matrix=m, start=value, row_index=row+1, end=terminal)
-                        print(_final)
+        if not 0 in terminals:
+            for value in m[row]:
+                if value:
+                    current_value_index = m[row].index(value)
+                    _final = main(matrix=m, start=value, row_index=row+1, end=terminal)
+                    print(_final)
 
 def main(matrix, start, row_index, end, last_node=None, probability_set={}, path=[], last_probability=1, loops=[]):
     path = path + [start]
-    print(last_probability)
-    # temp.append(start)
-    # current_value_index = matrix[row_index].index(start)
-    # if start == end:
     visits=[]
     sum_of_row = sum(matrix[row_index])
     if sum_of_row != 0:
@@ -77,13 +69,12 @@ def main(matrix, start, row_index, end, last_node=None, probability_set={}, path
                     last_probability = last_probability * Fraction(node, sum_of_row)
                     return main(matrix, start=node, last_node=start, row_index=row_index+1, end=end)
                 elif row_index > matrix[row_index].index(node) and node not in visits:
-                    visits.append(node)
+                    # visits.append(node)
                     loop_destination = Fraction(matrix[matrix[row_index].index(node)], sum(matrix[matrix[row_index].index(node)]))
-                    last_probability = last_probability * loop_probability(Fraction() * Fraction(value, sum(matrix[row])))
+                    last_probability = last_probability * loop_probability(last_probability * Fraction(value, sum(matrix[row])))
                     return main(matrix, start=node, last_node=start, row_index=row_index+1, end=end)
-
-    # newpaths = main(matrix, start=node, last_node=start, row_index=row_index+1, end=end)
-
+                elif sum(matrix[row_index+1]) == 0:
+                    return last_probability
 
         # current_path = []
         #
