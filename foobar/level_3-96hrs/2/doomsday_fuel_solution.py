@@ -25,13 +25,13 @@ def answer(m):
     return output
 
 
-def fuse(start_row, start, v2, end_row):
+def fuse(start_row, start, end_row, end):
     lenV = len(start_row)
-    indices = (set(range(lenV))-{start, end_row})
-    sum2 = sum(v2)
+    indices = (set(range(lenV))-{start, end})
+    sum2 = sum(end_row)
     out = [0 for i in start_row]
     for i in indices:
-        out[i] = sum2 * start_row[i] + start_row[end_row] * v2[i]
+        out[i] = sum2 * start_row[i] + start_row[end] * end_row[i]
     gc = gcd_list(out)
     output = [int(i / gc) for i in out]
     return output
