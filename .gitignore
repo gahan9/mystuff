@@ -2,3 +2,4 @@ s.py
 reg_only_alphanum.txt
 demo_email.py
 .idea/
+__pycache__
