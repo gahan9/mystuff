@@ -24,16 +24,19 @@ class VideoMaker(object):
     def __init__(self, *args, **kwargs):
         print_log("{:^25}".format("__INITIALIZED__"))
         self.supported_extension = ['jpg', 'jpeg', 'png']
+        self.codec = kwargs['codec'] if 'codec' in kwargs else "mp4v"
+        self.fps = kwargs['fps'] if 'fps' in kwargs else 5
+        self.is_color = kwargs['is_color'] if 'is_color' in kwargs else True
 
-    def make_video(self, content, source_path=None, target_path=None, codec="mp4v", duration=5, video_fps=5, is_color=True):
-        four_cc = cv2.VideoWriter_fourcc(*codec)
+    def make_video(self, content, source_path=None, target_path=None, duration=5):
+        four_cc = cv2.VideoWriter_fourcc(*self.codec)
         out_vid = content.split(".")[0] + ".mp4"
         image_file = os.path.join(source_path, content)
         img = cv2.imread(image_file)
         height, width, channels = img.shape
         size = img.shape[1], img.shape[0]
         target_path = os.path.join(target_path, out_vid)
-        vid = cv2.VideoWriter(target_path, four_cc, video_fps, (width, height), is_color)
+        vid = cv2.VideoWriter(target_path, four_cc, self.fps, (width, height), self.is_color)
         x = 0
         while True:
             if not os.path.exists(image_file):
@@ -42,24 +45,28 @@ class VideoMaker(object):
                 img = cv2.resize(img, size)
             vid.write(img)
             x += 1
-            if x > duration*video_fps:
+            if x > duration * self.fps:
                 break
         vid.release()
         cv2.destroyAllWindows()
         return vid
 
-    def execute(self, path=None, duration=5):
+    def execute(self, path=None, duration=5, target_path=None):
         contents = os.listdir(path)
-        target_path = os.path.join(path, ".cache")
+        target_path = target_path if target_path else os.path.join(path, ".cache")
         if not os.path.exists(target_path):
-            os.mkdir(target_path)
+            try:
+                os.mkdir(target_path)
+            except Exception as e:
+                print_log(e)
+                os.makedirs(target_path)
         if contents:
             for content in contents:
                 content_extension = content.split(".")[-1]
                 if content_extension in self.supported_extension:
                     self.make_video(content, source_path=path, target_path=target_path, duration=duration)
                     print("Process for {} completed".format(content))
-            return "Processing completed"
+            return {"status": "Processing completed", "target_path": target_path}
 
 
 if __name__ == "__main__":
@@ -68,6 +75,6 @@ if __name__ == "__main__":
     even_path = os.path.join(working_dir, 'target2')
     paths = [odd_path, even_path]
     obj = VideoMaker()
-    for path in paths:
-        print(obj.execute(path=path, duration=50))
+    for location in paths:
+        print(obj.execute(path=location, duration=50))
 
