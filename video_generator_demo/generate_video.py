@@ -25,15 +25,15 @@ class VideoMaker(object):
         print_log("{:^25}".format("__INITIALIZED__"))
         self.supported_extension = ['jpg', 'jpeg', 'png']
 
-    def make_video(self, content, source_path=None, target_path=None, format="mp4v", fps=5, is_color=True):
-        four_cc = cv2.VideoWriter_fourcc(*format)
+    def make_video(self, content, source_path=None, target_path=None, codec="mp4v", duration=5, video_fps=5, is_color=True):
+        four_cc = cv2.VideoWriter_fourcc(*codec)
         out_vid = content.split(".")[0] + ".mp4"
         image_file = os.path.join(source_path, content)
         img = cv2.imread(image_file)
         height, width, channels = img.shape
         size = img.shape[1], img.shape[0]
         target_path = os.path.join(target_path, out_vid)
-        vid = cv2.VideoWriter(target_path, four_cc, fps, (width, height), is_color)
+        vid = cv2.VideoWriter(target_path, four_cc, video_fps, (width, height), is_color)
         x = 0
         while True:
             if not os.path.exists(image_file):
@@ -42,13 +42,13 @@ class VideoMaker(object):
                 img = cv2.resize(img, size)
             vid.write(img)
             x += 1
-            if x > fps*fps:
+            if x > duration*video_fps:
                 break
         vid.release()
         cv2.destroyAllWindows()
         return vid
 
-    def execute(self, path=None):
+    def execute(self, path=None, duration=5):
         contents = os.listdir(path)
         target_path = os.path.join(path, ".cache")
         if not os.path.exists(target_path):
@@ -57,7 +57,8 @@ class VideoMaker(object):
             for content in contents:
                 content_extension = content.split(".")[-1]
                 if content_extension in self.supported_extension:
-                    self.make_video(content, source_path=path, target_path=target_path)
+                    self.make_video(content, source_path=path, target_path=target_path, duration=duration)
+                    print("Process for {} completed".format(content))
             return "Processing completed"
 
 
@@ -68,5 +69,5 @@ if __name__ == "__main__":
     paths = [odd_path, even_path]
     obj = VideoMaker()
     for path in paths:
-        print(obj.execute(path=path))
+        print(obj.execute(path=path, duration=50))
 
