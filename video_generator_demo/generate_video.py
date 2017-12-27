@@ -26,14 +26,14 @@ class VideoMaker(object):
         self.supported_extension = ['jpg', 'jpeg', 'png']
 
     def make_video(self, content, source_path=None, target_path=None, format="mp4v", fps=5, is_color=True):
-        four_cc = cv2.VideoWriter_fourcc(*'mp4v')
-        out_vid = content.split(".")[0] + ".mkv"
+        four_cc = cv2.VideoWriter_fourcc(*format)
+        out_vid = content.split(".")[0] + ".mp4"
         image_file = os.path.join(source_path, content)
         img = cv2.imread(image_file)
         height, width, channels = img.shape
         size = img.shape[1], img.shape[0]
         target_path = os.path.join(target_path, out_vid)
-        vid = cv2.VideoWriter(target_path, four_cc, 5, (width, height), is_color)
+        vid = cv2.VideoWriter(target_path, four_cc, fps, (width, height), is_color)
         x = 0
         while True:
             if not os.path.exists(image_file):
@@ -42,7 +42,7 @@ class VideoMaker(object):
                 img = cv2.resize(img, size)
             vid.write(img)
             x += 1
-            if int(x) > int(fps)*5:
+            if x > fps*fps:
                 break
         vid.release()
         cv2.destroyAllWindows()
