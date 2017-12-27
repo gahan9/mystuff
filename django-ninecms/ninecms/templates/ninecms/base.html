@@ -1,0 +1,62 @@
+{% load staticfiles %}
+{% load ninecms_extras %}
+{% load i18n %}
+{% get_current_language as LANGUAGE_CODE %}
+{% comment %}
+
+Base template
+Author: George Karakostas
+Copyright: Copyright 2015, George Karakostas
+Licence: BSD-3
+Email: gkarak@9-dev.com
+
+{% endcomment %}
+<!DOCTYPE html>
+{# <!--suppress JSUnresolvedLibraryURL --> #}
+<html lang="{{ LANGUAGE_CODE }}">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}{{ title }}{% endblock %}</title>
+    {% block meta %}
+        {% if node.summary %}<meta name="description" content="{{ node.summary|striptags }}">{% endif %}
+        <meta name="author" content="{{ author }}">
+        <meta name="keywords" content="{{ keywords }}">
+        <meta name="generator" content="9cms">
+    {% endblock %}
+    {% block head %}
+        <link rel="stylesheet" href="{% static 'ninecms/style.css' %}">
+        <link rel="shortcut icon" type="image/png" href="{% static 'ninecms/images/favicon.ico' %}"/>
+    {% endblock head %}
+</head>
+
+<body {% block body_attrs %}class="{{ classes }}"{% endblock %}>
+    {#  <!--suppress HtmlUnknownAnchorTarget --> #}
+    {% block body_top %}<a href="#top" id="top-link">^</a>{% endblock %}
+
+    {% block body_loader %}
+        <div id="loader">
+            <div class="loader-container">
+                <div class="wow pulse" data-wow-iteration="infinite" data-wow-duration="3s">
+                    {% block site_name %}{% endblock %}
+                </div>
+            </div>
+        </div>
+    {% endblock %}
+
+    <!--[if lt IE 9]><div id="ie8" class="alert alert-warning">Your browser version is deprecated</div><![endif]-->
+
+    <div id="page">
+        {% block content %}{% endblock %}
+    </div>
+
+    {#  <!--suppress HtmlUnknownAnchorTarget --> #}
+    {% block body_bottom %}<a href="#bottom" id="bottom-link"></a>{% endblock %}
+    {% block body_scripts %}
+        <script src="{% static 'ninecms/layout.js' %}"></script>
+    {% endblock %}
+
+</body>
+</html>
