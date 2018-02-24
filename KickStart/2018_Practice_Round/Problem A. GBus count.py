@@ -33,7 +33,10 @@ if __name__ == "__main__":
     # input case 1
     t = int(input())  # read a line with a single integer total test case (T)
     for i in range(1, t + 1):
-        number_of_buses = int(input())  # read number of buses from input
+        try:
+            number_of_buses = int(input())  # read number of buses from input
+        except:
+            number_of_buses = int(input())
         cities = [int(s) for s in input().strip().split(" ")]  # read a list of integers, total cities
         gbus_relation = bus_obj.get_gbus_relation(city_list=cities)
         # print("Case #{}: {} {}".format(i, n + m, n * m))
