@@ -33,10 +33,10 @@ if __name__ == "__main__":
     # input case 1
     t = int(input())  # read a line with a single integer total test case (T)
     for i in range(1, t + 1):
-        try:
-            number_of_buses = int(input())  # read number of buses from input
-        except:
-            number_of_buses = int(input())
+        inp = input()
+        if i > 1:
+            inp = input()
+        number_of_buses = int(inp)  # read number of buses from input
         cities = [int(s) for s in input().strip().split(" ")]  # read a list of integers, total cities
         gbus_relation = bus_obj.get_gbus_relation(city_list=cities)
         # print("Case #{}: {} {}".format(i, n + m, n * m))
@@ -45,5 +45,7 @@ if __name__ == "__main__":
         gbus_through_city = []
         for cities in range(1, total_cities_for_lookup + 1):
             city = int(input())
-            gbus_through_city.append(bus_obj.gbus_lookup(gbus_relation, city))
+            pass_through_gbus = bus_obj.gbus_lookup(gbus_relation, city)
+            if pass_through_gbus:
+                gbus_through_city.append(pass_through_gbus)
         print("Case #{}: {}".format(i, " ".join(gbus_through_city)))
