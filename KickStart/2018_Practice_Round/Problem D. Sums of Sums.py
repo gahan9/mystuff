@@ -50,6 +50,7 @@ if __name__ == "__main__":
         t = Thread(target=sum_obj.get_sub_array_sum, args=(initial_elements, total_elements))
         t.start()
         target_lis = sum_obj.sum_list
+        # target_lis = sum_obj.get_sub_array_sum(initial_elements, total_elements)
         for q in range(1, queries + 1):
             start, end = [int(s) for s in input().strip().split(" ")]
             print(sum_obj.get_result(start, end, target_lis))
