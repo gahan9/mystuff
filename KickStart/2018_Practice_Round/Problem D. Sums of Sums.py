@@ -8,6 +8,7 @@ Alice took her array and found all N*(N+1)/2 non-empty subarrays of it. She foun
 Alice has given the initial array to Bob, along with Q queries of the form "what is the sum of the numbers from index Li to Ri, inclusive, in the new array?" Now Bob's in trouble! Can you help him out?
 """
 from itertools import combinations
+from threading import Thread
 
 
 class SumsOfSums(object):
@@ -32,6 +33,7 @@ class SumsOfSums(object):
             for j in range(1, lis_size+1):
                 if i < j:
                     final_list.append(sum(lis[i:j]))
+        self.sum_list = sorted(final_list)
         return sorted(final_list)
 
 
@@ -45,7 +47,9 @@ if __name__ == "__main__":
         initial_elements = [int(s) for s in input().strip().split(" ")]
         sum_obj = SumsOfSums(initial_elements)
         print("Case #{}:".format(p))
-        target_lis = sum_obj.get_sub_array_sum(initial_elements, total_elements)
+        t = Thread(target=sum_obj.get_sub_array_sum, args=(initial_elements, total_elements))
+        t.start()
+        target_lis = sum_obj.sum_list
         for q in range(1, queries + 1):
             start, end = [int(s) for s in input().strip().split(" ")]
             print(sum_obj.get_result(start, end, target_lis))
