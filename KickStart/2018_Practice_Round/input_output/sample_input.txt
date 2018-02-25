@@ -1,13 +1,12 @@
 2
-1
-SFO
-DFW
-4
-MIA
-ORD
-DFW
-JFK
-SFO
-DFW
-JFK
-MIA
+5 5
+5 4 3 2 1
+1 1
+1 10
+1 15
+3 8
+4 11
+
+3 1
+2 3 2
+1 6
