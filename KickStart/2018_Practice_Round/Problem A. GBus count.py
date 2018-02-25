@@ -18,13 +18,13 @@ We need to find out how many GBuses go through a particular city.
 class GBus(object):
     @staticmethod
     def get_gbus_relation(city_list):
-        return {city_list[x]: city_list[x+1] for x in range(0, len(city_list)-1, 2)}
+        return [(city_list[x], city_list[x+1]) for x in range(0, len(city_list)-1, 2)]
 
     @staticmethod
     def gbus_lookup(relations, lookup_city):
         result = 0
-        for key, value in relations.items():
-            if key <= lookup_city <= value:
+        for y in relations:
+            if y[0] <= lookup_city <= y[1]:
                 result += 1
         return str(result)
 
