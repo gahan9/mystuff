@@ -1,42 +1,42 @@
 class Graph(object):
-    def __init__(self, graph_dict=None, *args, **kwargs):
-        # This(self.default_graph) is a dictionary whose keys are the nodes of the graph.
-        # For each key, the corresponding value is a list containing the nodes
-        # that are connected by a direct arc from this node
-        if graph_dict:
-            self.__default_graph = graph_dict
-        else:
-            # initializes a graph object  If no dictionary or None is given
-            self.__default_graph = {'A': ['B', 'C'],
-                                    'B': ['C', 'D'],
-                                    'C': ['D'],
-                                    'D': ['C'],
-                                    'E': ['F'],
-                                    'F': ['C']}
+    def __init__(self, *args, **kwargs):
+        self.explored_path = {}
 
-    def find_shortest_path(self, graph, start, end, path=[]):
+    def find_path(self, graph, start, end, path=[]):
         """
-        find shortest path from one node to other in given graph
-        :param graph: graph structure
+        simple function to determine a path between two nodes
+        algorithm paradigm: backtracking
         :param start: start node
         :param end: end node
         :param path: explored path between start and end nodes
-        :return: shortest path between two nodes
+                    This argument is used to avoid cycles
+        :return:a list of nodes (including the start and end nodes) comprising the path.
+                When no path can be found, it returns None
         """
-
-        path = path + [start]
+        if self.path_exist((start, end)):
+            return self.explored_path[(start, end)]
+        path = path + [start]  # creates a new list.
+        # If we had written "path.append(start)" instead,
+        # we would have modified the variable 'path' in the caller
         if start == end:
-            return path
-        if start not in graph:
-            return None
-        shortest = None  # maintain a variable to check with every new explored path, replace existing with shortest one
-        for node in graph[start]:
-            if node not in path:
-                new_path = self.find_shortest_path(graph, node, end, path)
+            return path  # start and end node are same
+        for node in graph[start]:  # explore nodes in corresponding start node
+            if node not in path:  # If current node is unexplored then proceed ahead
+                if (node, end) in self.explored_path:
+                    # print("HIT", node, end)
+                    new_path = self.explored_path[(node, end)]
+                else:
+                    # print("Miss", start, end)
+                    new_path = self.find_path(graph, node, end, path)  # find path from current node(as start node) to end node
                 if new_path:
-                    if not shortest or len(new_path) < len(shortest):
-                        shortest = new_path
-        return shortest
+                    self.explored_path[(start, end)] = new_path[len(path)-1:]
+                    # print("returning...", start, end, path, new_path[len(path)-1:])
+                    return new_path  # if new_path found between nodes then return the new_path
+        # self.explored_path[(start, end)] = path
+        return None  # no path can be found, returns None
+
+    def path_exist(self, _tuple):
+        return bool(_tuple in self.explored_path)
 
 
 def main():
@@ -52,7 +52,9 @@ def main():
     gift_count = {}
     for _ in range(visit_days):
         start_home, end_home = map(int, input().split())
-        for i in graph_obj.find_shortest_path(adj_list, start_home, end_home):
+        _path = graph_obj.find_path(adj_list, start_home, end_home)
+        # print(graph_obj.explored_path, _path)
+        for i in _path:
             gift_count[i] = gift_count.setdefault(i, 0) + 1
     print(max(gift_count.values()))
 
