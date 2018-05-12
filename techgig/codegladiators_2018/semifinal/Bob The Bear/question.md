@@ -32,20 +32,14 @@ Second line of input contains N space separated integers representing the conten
 Third line of input contains N space separated integers representing the contents of array **time**.
 
 The last line of input is kept blank.
-  
-  
 
 ##### Constraints
 
-1 <= N <= 1000
+    1 <= N <= 1000
 
-1 <= len[i] <= 1000, 000, 000
+    1 <= len[i] <= 1000, 000, 000
 
-0 <= time[i] <= 1000, 000, 000
-
-  
-  
-  
+    0 <= time[i] <= 1000, 000, 000
 
 ##### Output Format
 
@@ -55,13 +49,13 @@ An integer representing the maximum number of salmons Bob can catch.
 
 ###### Input
 
-5
-2 4 4 2 4
-1 4 1 6 4
+    5
+    2 4 4 2 4
+    1 4 1 6 4
 
 ###### Output
 
-5
+    5
 
 ###### Explanation
 

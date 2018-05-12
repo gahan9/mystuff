@@ -6,6 +6,7 @@ class Graph(object):
         """
         simple function to determine a path between two nodes
         algorithm paradigm: backtracking
+        :param graph: graph
         :param start: start node
         :param end: end node
         :param path: explored path between start and end nodes
@@ -22,14 +23,8 @@ class Graph(object):
             return path  # start and end node are same
         for node in graph[start]:  # explore nodes in corresponding start node
             if node not in path:  # If current node is unexplored then proceed ahead
-                if (node, end) in self.explored_path:
-                    # print("HIT", node, end)
-                    new_path = self.explored_path[(node, end)]
-                else:
-                    # print("Miss", start, end)
-                    new_path = self.find_path(graph, node, end, path)  # find path from current node(as start node) to end node
+                new_path = self.find_path(graph, node, end, path)  # find path from current node(as start node) to end node
                 if new_path:
-                    self.explored_path[(start, end)] = new_path[len(path)-1:]
                     # print("returning...", start, end, path, new_path[len(path)-1:])
                     return new_path  # if new_path found between nodes then return the new_path
         # self.explored_path[(start, end)] = path
