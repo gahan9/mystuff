@@ -4,18 +4,6 @@ class BobTheBear(object):
         self.salmon_size = salmon_len_
         self.salmon_time = salmon_time_
         self.salmon_map = list(zip(self.salmon_size, self.salmon_time))
-    #     self.longest_salmon = max(self.salmon_size)
-    #     self.salmon_map = dict(zip(self.salmon_size, self.salmon_time))
-    #
-    # @property
-    # def get_endpoint_of_longest(self):
-    #     return self.longest_salmon + self.salmon_map.get(self.longest_salmon)
-    #
-    # def initialize_matrix(self):
-    #     try:
-    #         return np.zeros((self.salmons, self.get_endpoint_of_longest), int)
-    #     except MemoryError as e:
-    #         raise e
 
     @staticmethod
     def get_end_points(zipped_lis):
@@ -33,7 +21,9 @@ class BobTheBear(object):
                 if i in range(j[0], sum(j) + 1):
                     dict_[i] = dict_.setdefault(i, 0) + 1
         # return mapped dict values
-        return list(map(lambda x: (x, dict_[x]), dict_))
+        d = list(map(lambda x: (x, dict_[x]), dict_))
+        print(d)
+        return d
 
     def get_max_salmons(self):
         first_max = max(self.generate_dict(self.salmon_map), key=lambda x: x[1])
@@ -50,5 +40,8 @@ if __name__ == "__main__":
     # salmons_ = int('5')
     # salmon_len = list(map(int, '2 4 4 2 4'.split()))
     # salmon_time = list(map(int, '1 4 1 6 4'.split()))
-    b = BobTheBear(salmons_, salmon_len, salmon_time)
-    print(b.get_max_salmons())
+    if salmons_ <= 2:
+        print(salmons_)
+    else:
+        b = BobTheBear(salmons_, salmon_len, salmon_time)
+        print(b.get_max_salmons())
