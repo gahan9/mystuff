@@ -44,11 +44,11 @@ class BobTheBear(object):
 
 
 if __name__ == "__main__":
-    # sal_ = int(input())
-    # len_ = list(map(int, input().split()))
-    # time_ = list(map(int, input().split()))
-    salmons_ = int('5')
-    salmon_len = list(map(int, '2 4 4 2 4'.split()))
-    salmon_time = list(map(int, '1 4 1 6 4'.split()))
+    salmons_ = int(input())
+    salmon_len = list(map(int, input().split()))
+    salmon_time = list(map(int, input().split()))
+    # salmons_ = int('5')
+    # salmon_len = list(map(int, '2 4 4 2 4'.split()))
+    # salmon_time = list(map(int, '1 4 1 6 4'.split()))
     b = BobTheBear(salmons_, salmon_len, salmon_time)
     print(b.get_max_salmons())
