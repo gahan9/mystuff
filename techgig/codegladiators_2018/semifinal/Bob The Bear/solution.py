@@ -22,15 +22,18 @@ class BobTheBear(object):
                     dict_[i] = dict_.setdefault(i, 0) + 1
         # return mapped dict values
         d = list(map(lambda x: (x, dict_[x]), dict_))
-        print(d)
         return d
 
     def get_max_salmons(self):
+        total_salmon = 0
         first_max = max(self.generate_dict(self.salmon_map), key=lambda x: x[1])
+        total_salmon += first_max[1]
         remaining_salmon = [i for i in self.salmon_map if first_max[0] not in range(i[0], sum(i) + 1)]
-        second_max = max(self.generate_dict(remaining_salmon), key=lambda x: x[1])
+        if remaining_salmon:
+            second_max = max(self.generate_dict(remaining_salmon), key=lambda x: x[1])
+            total_salmon += second_max[1]
         # print(first_max, second_max)
-        return first_max[1] + second_max[1]
+        return total_salmon
 
 
 if __name__ == "__main__":
@@ -40,8 +43,5 @@ if __name__ == "__main__":
     # salmons_ = int('5')
     # salmon_len = list(map(int, '2 4 4 2 4'.split()))
     # salmon_time = list(map(int, '1 4 1 6 4'.split()))
-    if salmons_ <= 2:
-        print(salmons_)
-    else:
-        b = BobTheBear(salmons_, salmon_len, salmon_time)
-        print(b.get_max_salmons())
+    b = BobTheBear(salmons_, salmon_len, salmon_time)
+    print(b.get_max_salmons())
