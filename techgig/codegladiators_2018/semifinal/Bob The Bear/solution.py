@@ -3,7 +3,7 @@ class BobTheBear(object):
         self.salmons = salmons
         self.salmon_size = salmon_len_
         self.salmon_time = salmon_time_
-        self.salmon_map = list(zip(self.salmon_size, self.salmon_time))
+        self.salmon_map = list(zip(self.salmon_time, self.salmon_size))
 
     @staticmethod
     def get_end_points(zipped_lis):
@@ -21,19 +21,23 @@ class BobTheBear(object):
                 if i in range(j[0], sum(j) + 1):
                     dict_[i] = dict_.setdefault(i, 0) + 1
         # return mapped dict values
-        d = list(map(lambda x: (x, dict_[x]), dict_))
-        return d
+        return list(map(lambda x: (x, dict_[x]), dict_))
 
     def get_max_salmons(self):
         total_salmon = 0
-        first_max = max(self.generate_dict(self.salmon_map), key=lambda x: x[1])
+        max_points = self.generate_dict(self.salmon_map)
+        first_max = max(max_points, key=lambda x: x[1])
         total_salmon += first_max[1]
-        remaining_salmon = [i for i in self.salmon_map if first_max[0] not in range(i[0], sum(i) + 1)]
-        if remaining_salmon:
-            second_max = max(self.generate_dict(remaining_salmon), key=lambda x: x[1])
-            total_salmon += second_max[1]
-        # print(first_max, second_max)
-        return total_salmon
+        possible_first_max = [i for i in max_points if i[1] == first_max[1]]
+        salmons_max = []
+        for first_maxima in possible_first_max:
+            temp_sum = first_maxima[1]
+            remaining_salmon = [i for i in self.salmon_map if first_maxima[0] not in range(i[0], sum(i) + 1)]
+            if remaining_salmon:
+                second_max = max(self.generate_dict(remaining_salmon), key=lambda x: x[1])
+                temp_sum += second_max[1]
+            salmons_max.append(temp_sum)
+        return max(salmons_max)
 
 
 if __name__ == "__main__":
@@ -45,3 +49,8 @@ if __name__ == "__main__":
     # salmon_time = list(map(int, '1 4 1 6 4'.split()))
     b = BobTheBear(salmons_, salmon_len, salmon_time)
     print(b.get_max_salmons())
+    """
+        13
+        1 1 1 1 1 1 1 1 1 2 4 5 9
+        3 5 5 6 7 7 9 9 9 6 2 4 1
+    """
