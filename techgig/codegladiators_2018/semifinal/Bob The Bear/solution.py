@@ -4,6 +4,7 @@ class BobTheBear(object):
         self.salmon_size = salmon_len_
         self.salmon_time = salmon_time_
         self.salmon_map = list(zip(self.salmon_time, self.salmon_size))
+        self.salmon_endpoints = [sum(i) for i in self.salmon_map]
 
     @staticmethod
     def get_end_points(zipped_lis):
@@ -15,7 +16,8 @@ class BobTheBear(object):
 
     def generate_dict(self, zipped_lis):
         dict_ = {}
-        possible_endpoints = self.get_end_points(zipped_lis)
+        # possible_endpoints = self.get_end_points(zipped_lis)
+        possible_endpoints = range(min(self.salmon_endpoints), max(self.salmon_endpoints) + 1)
         for i in possible_endpoints:
             for j in zipped_lis:
                 if i in range(j[0], sum(j) + 1):
@@ -42,15 +44,15 @@ class BobTheBear(object):
 
 if __name__ == "__main__":
     salmons_ = int(input())
-    salmon_len = list(map(int, input().split()))
+    salmon_size = list(map(int, input().split()))
     salmon_time = list(map(int, input().split()))
     # salmons_ = int('5')
-    # salmon_len = list(map(int, '2 4 4 2 4'.split()))
+    # salmon_size = list(map(int, '2 4 4 2 4'.split()))
     # salmon_time = list(map(int, '1 4 1 6 4'.split()))
-    b = BobTheBear(salmons_, salmon_len, salmon_time)
+    b = BobTheBear(salmons_, salmon_size, salmon_time)
     print(b.get_max_salmons())
     """
-        13
-        1 1 1 1 1 1 1 1 1 2 4 5 9
-        3 5 5 6 7 7 9 9 9 6 2 4 1
+13
+1 1 1 1 1 1 1 1 1 2 4 5 9
+3 5 5 6 7 7 9 9 9 6 2 4 1
     """
