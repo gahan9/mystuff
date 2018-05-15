@@ -16,8 +16,7 @@ class BobTheBear(object):
 
     def generate_dict(self, zipped_lis):
         dict_ = {}
-        # possible_endpoints = self.get_end_points(zipped_lis)
-        possible_endpoints = range(min(self.salmon_endpoints), max(self.salmon_endpoints) + 1)
+        possible_endpoints = self.get_end_points(zipped_lis)
         for i in possible_endpoints:
             for j in zipped_lis:
                 if i in range(j[0], sum(j) + 1):
@@ -30,9 +29,9 @@ class BobTheBear(object):
         max_points = self.generate_dict(self.salmon_map)
         first_max = max(max_points, key=lambda x: x[1])
         total_salmon += first_max[1]
-        possible_first_max = [i for i in max_points if i[1] == first_max[1]]
+        # possible_first_max = [i for i in max_points if i[1] == first_max[1]]
         salmons_max = []
-        for first_maxima in possible_first_max:
+        for first_maxima in max_points:
             temp_sum = first_maxima[1]
             remaining_salmon = [i for i in self.salmon_map if first_maxima[0] not in range(i[0], sum(i) + 1)]
             if remaining_salmon:
