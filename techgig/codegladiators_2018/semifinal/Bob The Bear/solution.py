@@ -3,40 +3,30 @@ class BobTheBear(object):
         self.salmons = salmons
         self.salmon_size = salmon_len_
         self.salmon_time = salmon_time_
-        self.salmon_map = list(zip(self.salmon_time, self.salmon_size))
-        self.salmon_endpoints = [sum(i) for i in self.salmon_map]
-
-    @staticmethod
-    def get_end_points(zipped_lis):
-        possible_endpoints = set()
-        for i in zipped_lis:
-            possible_endpoints.add(i[0])
-            possible_endpoints.add(sum(i))
-        return possible_endpoints
+        self.salmon_map = list(map(lambda x, y: (x, x+y), self.salmon_time, self.salmon_size))
+        self.salmon_endpoints = set(self.salmon_time + [i[1] for i in self.salmon_map])
 
     def generate_dict(self, zipped_lis):
         dict_ = {}
-        possible_endpoints = self.get_end_points(zipped_lis)
-        for i in possible_endpoints:
+        for i in self.salmon_endpoints:
             for j in zipped_lis:
-                if i in range(j[0], sum(j) + 1):
+                if i in range(j[0], j[1] + 1):
                     dict_[i] = dict_.setdefault(i, 0) + 1
         # return mapped dict values
-        return list(map(lambda x: (x, dict_[x]), dict_))
+        return dict_
+        # return list(map(lambda x: (x, dict_[x]), dict_))
 
     def get_max_salmons(self):
-        total_salmon = 0
-        max_points = self.generate_dict(self.salmon_map)
-        first_max = max(max_points, key=lambda x: x[1])
-        total_salmon += first_max[1]
-        # possible_first_max = [i for i in max_points if i[1] == first_max[1]]
+        salmons_count_on_endpoint = self.generate_dict(self.salmon_map)
         salmons_max = []
-        for first_maxima in max_points:
-            temp_sum = first_maxima[1]
-            remaining_salmon = [i for i in self.salmon_map if first_maxima[0] not in range(i[0], sum(i) + 1)]
-            if remaining_salmon:
-                second_max = max(self.generate_dict(remaining_salmon), key=lambda x: x[1])
-                temp_sum += second_max[1]
+        for endpoint, salmon in salmons_count_on_endpoint.items():
+            temp_sum = salmon
+            remaining_salmon = self.generate_dict([i for i in self.salmon_map if endpoint not in range(i[0], i[1] + 1)])
+            try:
+                second_max = max(remaining_salmon, key=lambda x: remaining_salmon[x])
+                temp_sum += remaining_salmon[second_max]
+            except ValueError:
+                pass
             salmons_max.append(temp_sum)
         return max(salmons_max)
 
