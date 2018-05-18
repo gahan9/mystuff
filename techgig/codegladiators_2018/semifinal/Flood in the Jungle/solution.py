@@ -1,5 +1,5 @@
 import math
-from collections import OrderedDict
+from collections import defaultdict
 from itertools import permutations
 
 
@@ -15,19 +15,19 @@ class FloodInJungle(object):
         return math.sqrt((coordinate1[0] - coordinate2[0])**2 + (coordinate1[1] - coordinate2[1])**2)
 
     def get_paths(self):
-        paths = []
         for path in self.permutations:
             # print(path, '|', list(map(lambda x: self.data[x], path)))
-            data_set = self.data
             p = []
             for nxt in path:  # path[i] = ((1, 10), (5, 10), (8, 10))
                 # nxt = path[i]
+                monkey_sum = 0
                 try:
                     prev = p[-1]
                     if self.euclidean_distance(prev, nxt) <= self.threshold:
-                        prev_monkey, prev_limit, prev_idx = data_set[prev]
+                        prev_monkey, prev_limit, prev_idx = self.data[prev]
+                        monkey_sum += prev_monkey
                         # nxt_monkey, nxt_limit, nxt_idx = data_set[nxt]
-                        if prev_monkey <= prev_limit:
+                        if monkey_sum <= prev_limit:
                             # print(">>> ", prev, nxt, self.euclidean_distance(prev, nxt), p)
                             p.append(nxt)
                     else:
@@ -37,18 +37,15 @@ class FloodInJungle(object):
             # print(p)
             # print(len(p))
             if len(p) is self.data_size:
-                paths.append(p)
-            break
-        if paths:  # [[0, 1, 2], [1, 0, 2], [2, 0, 1]]
-            return ' '.join(map(str, [self.data[i][2] for i in paths[0]]))
-        else:
-            return -1
+                return ' '.join(map(str, [self.data[i][2] for i in p]))
+                # paths.append(p)
+        return -1
 
 
 if __name__ == "__main__":
     total_trees, total_capacity = input().split()
     total_trees, total_capacity = int(total_trees), float(total_capacity)
-    coordinates = OrderedDict()
+    coordinates = defaultdict()
     index = 0
     for _ in range(total_trees):
         x, y, monkeys, capacity = map(int, input().split())
