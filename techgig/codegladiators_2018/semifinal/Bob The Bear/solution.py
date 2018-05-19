@@ -7,7 +7,7 @@ class BobTheBear(object):
         self.salmon_endpoints = set(self.salmon_time + [i[1] for i in self.salmon_map])
 
     def generate_result(self):
-        salmon_count = []
+        salmon_count = 0
         for i in self.salmon_endpoints:
             for j in self.salmon_endpoints:
                 if i is not j:
@@ -16,8 +16,8 @@ class BobTheBear(object):
                         range_ = range(k[0], k[1] + 1)
                         if i in range_ or j in range_:
                             temp_sum += 1
-                    salmon_count.append(temp_sum)
-        return max(salmon_count)
+                    salmon_count = temp_sum if temp_sum > salmon_count else salmon_count
+        return salmon_count
 
 
 if __name__ == "__main__":
