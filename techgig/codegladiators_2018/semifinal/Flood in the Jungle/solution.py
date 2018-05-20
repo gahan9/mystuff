@@ -10,7 +10,7 @@ class FloodInJungle(object):
         self.data_size = len(self.data)
         self.permutations = permutations(self.data.keys(), self.data_size)
         self.non_capable_tree = non_capable_tree
-        self.euclidean_dict = self.construct_dict()
+        # self.euclidean_dict = self.construct_dict()
         self.meetup_tree = []
 
     @staticmethod
@@ -27,28 +27,18 @@ class FloodInJungle(object):
         return d
 
     def get_paths(self):
-        if len(self.non_capable_tree) == 1:
-            end_tree = self.non_capable_tree[0]
-            idx = self.data[end_tree][2]
-            reach1 = list(self.data.keys())[:idx]
-            reach2 = list(self.data.keys())[idx+1:]
-            reach3 = reach1 + reach2
-            if self.sub_calc(reach3, [end_tree]):
-                return idx
-            elif self.sub_calc(reach1, [end_tree]) and self.sub_calc(reach2, [end_tree]):
-                return idx
-            else:
-                return -1
+        paths = []
         for path in self.permutations:
             # print(path, '|', list(map(lambda x: self.data[x], path)))
+            data_set = self.data
             p = []
+            monkey_sum = 0
             for nxt in path:  # path[i] = ((1, 10), (5, 10), (8, 10))
                 # nxt = path[i]
-                monkey_sum = 0
                 try:
                     prev = p[-1]
                     if self.euclidean_distance(prev, nxt) <= self.threshold:
-                        prev_monkey, prev_limit, prev_idx, capability_ = self.data[prev]
+                        prev_monkey, prev_limit, prev_idx = data_set[prev]
                         monkey_sum += prev_monkey
                         # nxt_monkey, nxt_limit, nxt_idx = data_set[nxt]
                         if monkey_sum <= prev_limit:
@@ -61,11 +51,15 @@ class FloodInJungle(object):
             # print(p)
             # print(len(p))
             if len(p) is self.data_size:
-                return ' '.join(map(str, [self.data[i][2] for i in p]))
-                # paths.append(p)
-        return self.calculate()
+                paths.append(p)
+            break
+        if paths:  # [[0, 1, 2], [1, 0, 2], [2, 0, 1]]
+            return ' '.join(map(str, [self.data[i][2] for i in paths[0]]))
+        else:
+            return -1
 
     def sub_calc(self, dataset, elem):
+        meet_up_trees = []
         size = len(dataset)
         flag = True
         for i in self.data.keys():
@@ -75,7 +69,7 @@ class FloodInJungle(object):
             return flag
         for i in permutations(dataset, size):
             path = list(i) + elem
-            print(path)
+            # print(path)
             p = []
             monkey_sum = 0
             for nxt in path:
@@ -95,49 +89,22 @@ class FloodInJungle(object):
             print(p, size)
             if len(p) is size + 1:
                 return True
+                # meet_up_trees.append(self.data[p[-1]][2])
         return False
 
-    def find_all_paths(self, graph, start, end, path=[]):
-        path = path + [start]
-        if start == end:
-            return [path]
-        if start not in graph:
-            return []
-        paths = []  # maintain a list to store all explored path
-        for node in graph[start]:
-            if node not in path:
-                new_paths = self.find_all_paths(graph, node, end, path)
-                for new_path in new_paths:
-                    if len(new_path) is self.data_size:
-                        # print(">>>", new_path[-1], self.data[new_path[-1]][2])
-                        self.meetup_tree.append(self.data[new_path[-1]][2])
-                        paths.append(new_path)  # add new path to list instead of returning it.
-        return paths
-
     def calculate(self):
-        if len(self.non_capable_tree) == 1:
-            end_tree = self.non_capable_tree[0]
-            idx = self.data[end_tree][2]
+        for i, j in self.data.items():
+            idx = self.data[i][2]
             reach1 = list(self.data.keys())[:idx]
             reach2 = list(self.data.keys())[idx+1:]
             reach3 = reach1 + reach2
-            if self.sub_calc(reach3, [end_tree]):
+            if self.sub_calc(reach3, [i]):
                 return idx
-            elif self.sub_calc(reach1, [end_tree]) and self.sub_calc(reach2, [end_tree]):
+            elif self.sub_calc(reach1, [i]) and self.sub_calc(reach2, [i]):
                 return idx
             else:
                 return -1
-        else:
-            for i in self.data.keys():
-                for j in self.data.keys():
-                    if i is not j:
-                        _paths = self.find_all_paths(self.euclidean_dict, i, j)
-                        if _paths:
-                            pass
-            if self.meetup_tree:
-                return ' '.join(map(str, sorted(set(self.meetup_tree))))
-            else:
-                return -1
+        return -1
 
 
 if __name__ == "__main__":
@@ -149,13 +116,15 @@ if __name__ == "__main__":
     for _ in range(total_trees):
         x, y, monkeys, capacity = map(int, input().split())
         capability = 1 if monkeys <= capacity else 0
-        coordinates[(x, y)] = [monkeys, capacity, index, capability]
+        coordinates[(x, y)] = [monkeys, capacity, index]
         if not capability:
             non_capable_trees.append((x, y))
         index += 1
     f = FloodInJungle(coordinates, total_capacity, non_capable_trees)
     if len(non_capable_trees) > 1:
         print("-1")
+    elif len(non_capable_trees) == 1:
+        print(coordinates[non_capable_trees[0]][2])
     else:
         print(f.get_paths())
 
@@ -193,7 +162,7 @@ if __name__ == "__main__":
 8 10 0 0
 15 10 0 0
 
--1
+2
 
 
 4 2.0
