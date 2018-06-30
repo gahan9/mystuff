@@ -62,24 +62,15 @@ def main():
     except Exception as e:
         y = ""
     x_len, y_len = len(x), len(y)
+    val = abs(max(x_len, y_len) - over_lcs(x, y, x_len, y_len))
     if x_len is y_len:
         operation_cost = 0
-        while True:
-            match = lcs(x, y)
-            operation_cost += abs(match.b - match.a) if match.a != match.b else match.a
-            x = x[match.a + match.size:]
-            y = y[match.b + match.size:]
-            # print(">>> x: {} \t y: {}".format(x, y))
-            if match.size == 0:
-                operation_cost += abs(len(x) - len(y))
-                break
-        # x_len, y_len = len(x), len(y)
-        # diff = x_len, y_len
-        # operation_cost += diff
-
-        return operation_cost
-    else:
-        return abs(max(x_len, y_len) - over_lcs(x, y, x_len, y_len))
+        match = lcs(x, y)
+        operation_cost += max(match.b, match.a)
+        x = x[match.a + match.size:]
+        y = y[match.b + match.size:]
+        return val + operation_cost + abs(len(x) - len(y))
+    return val
 
 
 if __name__ == "__main__":
