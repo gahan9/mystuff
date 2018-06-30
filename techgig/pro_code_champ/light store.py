@@ -34,32 +34,25 @@ Output
 
 """
 
-
-def lcs(X, Y):
-    # find the length of the strings
-    m = len(X)
-    n = len(Y)
-
-    # declaring the array for storing the dp values
-    L = [[None] * (n + 1) for i in range(m + 1)]
-
-    """Following steps build L[m+1][n+1] in bottom up fashion
-    Note: L[i][j] contains length of LCS of X[0..i-1]
-    and Y[0..j-1]"""
-    for i in range(m + 1):
-        for j in range(n + 1):
-            if i == 0 or j == 0:
-                L[i][j] = 0
-            elif X[i - 1] == Y[j - 1]:
-                L[i][j] = L[i - 1][j - 1] + 1
-            else:
-                L[i][j] = max(L[i - 1][j], L[i][j - 1])
-
-    # L[m][n] contains the length of LCS of X[0..n-1] & Y[0..m-1]
-    return L[m][n]
+from difflib import SequenceMatcher
 
 
-# end of function lcs
+def lcs(string1, string2):
+    match = SequenceMatcher(None, string1, string2).find_longest_match(0, len(string1), 0, len(string2))
+
+    # print(match)  # -> Match(a=0, b=15, size=9)
+    # print(string1[match.a: match.a + match.size])  # -> apple pie
+    # print(string2[match.b: match.b + match.size])
+    return match
+
+
+def over_lcs(X, Y, m, n):
+    if m == 0 or n == 0:
+       return 0
+    elif X[m-1] == Y[n-1]:
+       return 1 + over_lcs(X, Y, m-1, n-1)
+    else:
+       return max(over_lcs(X, Y, m, n-1), over_lcs(X, Y, m-1, n))
 
 
 def main():
@@ -68,11 +61,25 @@ def main():
         y = input().strip()
     except Exception as e:
         y = ""
-    x_len = len(x)
-    y_len = len(y)
-    common = lcs(x, y)
-    print(common)
-    return abs(max(x_len, y_len) - common)
+    x_len, y_len = len(x), len(y)
+    if x_len is y_len:
+        operation_cost = 0
+        while True:
+            match = lcs(x, y)
+            operation_cost += abs(match.b - match.a) if match.a != match.b else match.a
+            x = x[match.a + match.size:]
+            y = y[match.b + match.size:]
+            # print(">>> x: {} \t y: {}".format(x, y))
+            if match.size == 0:
+                operation_cost += abs(len(x) - len(y))
+                break
+        # x_len, y_len = len(x), len(y)
+        # diff = x_len, y_len
+        # operation_cost += diff
+
+        return operation_cost
+    else:
+        return abs(max(x_len, y_len) - over_lcs(x, y, x_len, y_len))
 
 
 if __name__ == "__main__":
