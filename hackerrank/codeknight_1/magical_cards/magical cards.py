@@ -39,7 +39,7 @@ Hence, 3 ways are possible
 """
 
 from functools import reduce
-from itertools import permutations
+from collections import Counter
 
 
 def prime_factors(n):
@@ -59,14 +59,25 @@ def prime_factors(n):
 def factorial(n):
     if n <= 1:
         return 1
-    return reduce(lambda x, y: x * y, [1] + list(range(1, n + 1)))
+    return reduce(lambda x, y: x * y, list(range(1, n + 1)))
 
 
-def permutation(n):
-    return factorial(n) // factorial(n-1)
+def permutation(unique_numbers, total_number_count):
+    numerator = factorial(total_number_count)
+    denominator = 1
+    for i in unique_numbers.values():
+        denominator *= factorial(total_numbers-i)
+    return numerator // denominator
 
 
 total_numbers = int(input())
 
-for number in range(total_numbers):
-    print(len(set(permutations(prime_factors(int(input()))))))
+for _ in range(total_numbers):
+    number = int(input())
+    factors = prime_factors(number)
+    number_count = Counter(factors)
+    factor_len = len(factors)
+    if factor_len == len(number_count):
+        print(factorial(factor_len))
+    else:
+        print(permutation(number_count, factor_len))
