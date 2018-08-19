@@ -1,43 +1,41 @@
 import os
+import random
 
 import plotly
-import plotly.plotly as py
-import plotly.figure_factory as ff
+import plotly.graph_objs as go
 
-import numpy as np
 import pandas as pd
 from faker import Faker
 
 faker = Faker()
 
-df = pd.DataFrame([{'lat'    : faker.latitude(),
-                    'long'   : faker.longitude(),
-                    'country': faker.country(),
-                    'state'  : faker.state(),
-                    'city'   : faker.city(),
-                    'name'   : faker.name(),
-                    'cnt'    : faker.random_int()} for i in range(2000)])
-
-df_sample = pd.read_csv('https://raw.githubusercontent.com/plotly/datasets/master/laucnty16.csv')
-df_sample['State FIPS Code'] = df_sample['State FIPS Code'].apply(lambda x: str(x).zfill(2))
-df_sample['County FIPS Code'] = df_sample['County FIPS Code'].apply(lambda x: str(x).zfill(3))
-df_sample['FIPS'] = df_sample['State FIPS Code'] + df_sample['County FIPS Code']
+df_sample = pd.read_csv('https://raw.githubusercontent.com/gahan9/DSA_lab/51caebe72037acdc9fe8db87c0d8e4d456d5b9ca/sort/analysis.csv')
 
 colorscale = ["#f7fbff", "#ebf3fb", "#deebf7", "#d2e3f3", "#c6dbef", "#b3d2e9", "#9ecae1",
               "#85bcdb", "#6baed6", "#57a0ce", "#4292c6", "#3082be", "#2171b5", "#1361a9",
               "#08519c", "#0b4083", "#08306b"]
-endpts = list(np.linspace(1, 12, len(colorscale) - 1))
-fips = df_sample['FIPS'].tolist()
-values = [faker.random_int() for z in range(len(fips))]
+color = ["#ff7c00", "#a91f78", "#0432ff", "#00a643", "#a6f900", "#fffb00", "#ffd300", "#c8e000"]
+df_sample = df_sample.loc[df_sample['log10(DATA_SET)'] != 4.69]
+dfs = {}
+dfs['ascending'] = df_sample.loc[df_sample['DATA_SET_TYPE'] == ' ascending']
+dfs['descending'] = df_sample.loc[df_sample['DATA_SET_TYPE'] == ' descending']
+dfs['random'] = df_sample.loc[df_sample['DATA_SET_TYPE'] == ' random']
+dfs['same'] = df_sample.loc[df_sample['DATA_SET_TYPE'] == ' same']
 
-fig = ff.create_choropleth(
-    fips=fips, values=values,
-    binning_endpoints=endpts,
-    colorscale=colorscale,
-    show_state_data=False,
-    show_hover=True, centroid_marker={'opacity': 0},
-    asp=2.9, title='Result Sheet',
-    legend_title='Total Responses'
-)
-_path = os.path.join("/home/quixom/Desktop", 'temp.html')
-plotly.offline.plot(fig, validate=False, filename=_path)
+data = []
+cnt = 0
+for name, df in dfs.items():
+    x = df_sample['log10(DATA_SET)'].tolist()
+    # text = df_sample['ALGORITHM'].tolist()
+    algo = [i.split('_')[0] for i in df_sample['ALGORITHM'].tolist()]
+    y = [i*1000 for i in df_sample['TIME'].tolist()]
+    xx = list('_'.join(map(str, i)) for i in zip(algo, df_sample['DATA_SET_TYPE'].tolist()))
+    ht = list('-'.join(map(str, i)) for i in zip(x, y))
+    data += [go.Scatter(x=x, y=y, text=xx, hovertext=ht, name=name, marker=dict(color=color[cnt]))]
+    cnt += 1
+layout = go.Layout(title='titlE', barmode='group',
+                   xaxis={'title': 'algorithm and dataset type', 'tickformat': ',d'},
+                   yaxis={'title': 'time (ms)', 'tickformat': ',d'})
+_path = os.path.join(".", 'temp.html')
+fig = go.Figure(data=data, layout=layout)
+plotly.offline.plot(fig, validate=False, auto_open=False, filename=_path)
