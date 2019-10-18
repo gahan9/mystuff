@@ -1,4 +1,4 @@
-Django==1.11.3
+Django==1.11.23
 django-bootstrap-form==3.2.1
 django-tastypie==0.14.0 # API
 django-registration==2.2 # account logic, views and workflows
