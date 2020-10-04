@@ -1,3 +1,0 @@
-django-tastypie # API
-django-registration # account logic, views and workflows
-
