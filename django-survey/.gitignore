@@ -1,9 +1,0 @@
-media/data
-*.*~
-*.swp
-*.swo
-*.swn
-*.pyc
-local_settings.py
-survey.db
-
