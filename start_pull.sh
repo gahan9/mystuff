@@ -18,5 +18,5 @@ do
    cd $PROJECT_ROOT'/'$i
    echo "running git pull for $i.. from: "
    pwd
-   git pull origin master
+   git pull origin master --rebase
 done
